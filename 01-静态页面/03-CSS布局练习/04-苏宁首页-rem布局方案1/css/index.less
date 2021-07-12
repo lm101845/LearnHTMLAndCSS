@@ -1,0 +1,121 @@
+// 首页的样式less文件
+@import 'common';
+// @import是导入的意思，可以把一个样式文件导入到另一个样式文件里面去
+// @import是样式文件之间的相互导入
+// 可以加后缀名，也可以不加后缀名
+// link是把一个样式文件引入到html页面里面
+
+body {
+	min-width: 320px;
+	width: 15rem;
+	margin: 0 auto;
+	line-height: 1.5;
+	font-family: Arial, Helvetica;
+	background: #f2f2f2;
+}
+
+// 页面元素rem计算公式：页面元素宽度(88px) / html的字体大小(50px)
+@baseFont: 50;
+.search-content {
+	width: 15rem;
+	// 我们的整个设计稿是750px，你就照着750往死了写就行
+	// 最后到不同的屏幕下一适应就好
+	height: (88rem / @baseFont);
+	// 这个高度是个未知数，但是可以通过算法算出来
+	background-color: #ffc001;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	.classify {
+		width: (44rem / @baseFont);
+		height: (70rem / @baseFont);
+		// background-color: pink;
+		margin: (11rem / @baseFont) (25rem / @baseFont) (7rem / @baseFont)
+			(24rem / @baseFont);
+		background: url(../image/classify.png) no-repeat;
+		// 注意图片也要进行背景缩放
+		background-size: (44rem / @baseFont) (70rem / @baseFont);
+	}
+
+	.search {
+		flex: 1;
+		// background-color: purple;
+		input {
+			height: (66rem / @baseFont);
+			border-radius: (33rem / @baseFont);
+            // 让圆角的大小是高度的一半，就可以正好是圆角的效果了
+			background-color: #fff2cc;
+            border: 0;
+            margin-top: (12rem / @baseFont);
+            width: 100%;
+            // 不要让它有蓝色边框
+            outline: none;
+            font-size: (25rem / @baseFont);
+            padding-left: (55rem / @baseFont);
+            color: #757575;
+		}
+	}
+
+	.login {
+		width: (75rem / @baseFont);
+		height: (70rem / @baseFont);
+		// background-color: blue;
+		margin: (10rem / @baseFont);
+		// background: url(../image/login.png) no-repeat;
+		// background-size: (75rem / @baseFont) (70rem / @baseFont);
+		font-size: (25rem / @baseFont);
+		text-align: center;
+		color: #fff;
+		line-height: (70rem / @baseFont);
+	}
+}
+
+// banner
+.banner{
+    width: (750rem / @baseFont);
+    height: (368rem / @baseFont);
+    img{
+        width: 100%;
+        height: 100%;
+        // 里面的图片宽度和高度都是和父亲一样宽
+    }
+}
+
+// ad
+.ad{
+    display: flex;
+    a{
+        flex: 1;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+// nav
+nav{
+    width: (750rem / @baseFont);
+    a{
+        width: (150rem / @baseFont);
+        height: (140rem / @baseFont);
+        float: left;
+        text-align: center;
+        img{
+            width: (82rem / @baseFont);
+            height: (82rem / @baseFont);
+            display: block;
+            margin: (10rem / @baseFont) auto (-30rem/@baseFont);
+        }
+        span{
+            font-size: (20rem / @baseFont);
+            // text-align: center;
+            // 字居中对齐给a加！！！
+            color: #333;
+            margin-top:(5rem / @baseFont);
+            height: (28rem / @baseFont);
+            overflow: hidden;
+        }
+    }
+}

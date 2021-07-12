@@ -1,0 +1,125 @@
+body {
+	min-width: 320px;
+	max-width: 750px;
+	/* 加一句话，最大也不能超过750px */
+	width: 10rem;
+	/* 750/75=10 */
+	/* 因为flexible给我们划分了10等分，所以是10rem */
+	/* 使用了flexible以后我们就不用使用common.less做屏幕适配了 */
+	margin: 0 auto;
+	line-height: 1.5;
+	font-family: Arial, Helvetica;
+	background: #f2f2f2;
+}
+
+a {
+	text-decoration: none;
+	font-size: 0.333333rem;
+}
+/* 这个插件默认的html文字大小是cssroot ，即默认1rem = 16px */
+/* 我们这里默认1rem = 75px，所以需要进行修改一下*/
+
+/* 如果我们的屏幕超过了750px，那么我们就按照750设计稿来走，不会让我们页面超过750像素 */
+/* html{
+    font-size: 50px;
+} */
+@media screen and (min-width: 750px) {
+	/* 当前屏幕大于等于750px的时候我们再这么做 */
+	html {
+		font-size: 75px !important;
+		/* 此时我们强制页面使用75px，不再使用flexible.js提供的页面大小了 */
+		/* 而且这个还要提高一下权重 */
+	}
+}
+/* search-content */
+.search-content {
+	display: flex;
+	width: 10rem;
+	height: 1.173333rem;
+	background-color: #ffc001;
+  position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.classify {
+	width: 0.586667rem;
+	height: 0.933333rem;
+	background-color: pink;
+	margin: 0.146667rem 0.333333rem 0.133333rem;
+	background: url(../image/classify.png) no-repeat;
+	background-size: 0.586667rem 0.933333rem;
+	/* 背景也要缩放，父亲有多高我就有多高 */
+}
+
+.search {
+	flex: 1;
+	/* background-color: purple; */
+}
+
+.login {
+	width: 1rem;
+	height: 0.933333rem;
+	margin: 0.133333rem;
+	/* background-color: blue; */
+	color: #fff;
+	text-align: center;
+	line-height: 0.933333rem;
+}
+
+.search input {
+	width: 100%;
+	height: 0.88rem;
+	outline: none;
+	border: 0;
+	font-size: 0.333333rem;
+	background-color: #fff2cc;
+	margin-top: 0.133333rem;
+	border-radius: 0.44rem;
+	padding-left: 0.733333rem;
+	color: #757575;
+}
+
+.banner {
+	width: 10rem;
+	height: 4.9066rem;
+}
+
+.banner img {
+	width: 100%;
+	height: 100%;
+}
+.ad {
+    display: flex;
+  }
+  .ad a {
+    flex: 1;
+  }
+  .ad a img {
+    width: 100%;
+  }
+  nav {
+    width: 10rem;
+  }
+  nav a {
+    width: 2rem;
+    height: 1.8666rem;
+    float: left;
+    text-align: center;
+  }
+  nav a img {
+    width: 1.09333rem;
+    height: 1.09333rem;
+    display: block;
+    margin: 0.1333em auto -0.4rem;
+  }
+  nav a span {
+    font-size: 0.2666rem;
+    color: #333;
+    margin-top: 0.306667rem;
+    height: 0.37333rem;
+    /* overflow: hidden; */
+    display: block;
+  }
+  

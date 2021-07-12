@@ -1,0 +1,314 @@
+/***********************通用的样式***********************/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+.btn-register {
+  color: #ffffff;
+  background-color: #0ab4f7;
+  border-color: #f4f7f7;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  color: #ffffff;
+  background-color: #086df2;
+  border-color: #f4f7f7;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+  background-color: #0ab4f7;
+  border-color: #f4f7f7;
+}
+
+.btn-register .badge {
+  color: #0ab4f7;
+  background-color: #ffffff;
+}
+
+@font-face {
+  font-family: lk;
+  src: url("../fonts/lk.eot") format("embedded-opentype"),
+    url("../fonts/lk.svg") format("svg"),
+    url("../fonts/lk.ttf") format("truetype"),
+    url("../fonts/lk.woff") format("woff");
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: lk;
+  font-style: normal;
+}
+
+#lk_about,
+#lk_hot,
+#lk_link {
+  padding: 20px 0;
+}
+
+#lk_about .title,
+#lk_hot .title,
+#lk_link .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+/***********************通用的样式***********************/
+
+/***********************头部的样式***********************/
+#lk_header {
+}
+
+#lk_header .top-bar {
+  height: 40px;
+  line-height: 39px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#lk_header .top-bar .container .row > div + div {
+  border-left: 1px solid #e0e0e0;
+}
+
+#lk_header .top-bar .container .row .top-bar-1 a {
+  position: relative;
+}
+
+#lk_header .top-bar .container .row .top-bar-1 a img {
+  display: none;
+
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+  margin-top: -10px;
+
+  z-index: 9999;
+}
+
+#lk_header .top-bar .container .row .top-bar-1 a:hover img {
+  display: block;
+}
+
+.icon-phone::before {
+  content: "\e958";
+  font-size: 13px;
+}
+
+.icon-tel::before {
+  content: "\e942";
+  font-size: 13px;
+}
+
+#lk_header .navbar-lk {
+  background-color: #fff;
+  margin-bottom: 0;
+}
+
+#lk_header .navbar-lk .navbar-brand {
+  height: 70px;
+  padding: 10px 15px;
+}
+
+#lk_header .navbar-lk .navbar-nav a {
+  height: 70px;
+  line-height: 40px;
+}
+
+#lk_header .navbar-lk .navbar-nav li.active a,
+#lk_header .navbar-lk .navbar-nav li a:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #0ab4f7;
+}
+
+#lk_header .navbar-lk .navbar-toggle {
+  margin-top: 18px;
+}
+
+/***********************头部的样式***********************/
+
+/***********************焦点图的样式***********************/
+#lk_carousel {
+}
+
+#lk_carousel .item {
+  background: no-repeat center center;
+
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+@media screen and (min-width: 800px) {
+  #lk_carousel .item {
+    height: 410px;
+  }
+}
+/***********************焦点图的样式***********************/
+
+/***********************关于我们的样式***********************/
+#lk_about .row p {
+  line-height: 29px;
+  font-size: 15px;
+}
+/***********************关于我们的样式***********************/
+
+/***********************产品特色的样式***********************/
+#lk_product {
+  background-color: #f0f0f0;
+  padding: 30px 0;
+}
+
+#lk_product .nav {
+  font-size: 18px;
+}
+
+#lk_product .nav a {
+  color: #999;
+}
+
+#lk_product .nav li.active a {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #0ab4f7;
+  color: #000;
+}
+
+#lk_product .tab-content {
+  padding-top: 20px;
+}
+
+#lk_product .pd-left {
+  padding: 40px 0;
+}
+
+#pd_one_1 {
+  margin: 15px 0;
+}
+
+#pd_one_2 {
+  background-color: transparent;
+}
+
+#pd_one_4 {
+  margin: 15px 0;
+}
+
+#lk_product #pd_two_1 {
+  padding: 100px 0;
+}
+
+#lk_product #pd_two_1 h1 {
+  margin-bottom: 15px;
+}
+
+/***********************产品特色的样式***********************/
+
+/***********************热门课程的样式***********************/
+#lk_hot .lesson {
+  padding: 15px 10px;
+}
+
+#lk_hot .lesson .media-left {
+  width: 20%;
+}
+
+#lk_hot .lesson .media-body {
+  width: 60%;
+  vertical-align: middle;
+}
+
+#lk_hot .lesson .media-right {
+  width: 20%;
+  text-align: left;
+  font-size: 16px;
+  vertical-align: middle;
+}
+/***********************热门课程的样式***********************/
+
+/***********************友情链接的样式***********************/
+#lk_link .logos {
+  list-style: none;
+  text-align: center;
+}
+
+#lk_link .logos li {
+  display: inline-block;
+  padding: 20px 30px;
+}
+/***********************友情链接的样式***********************/
+
+/***********************尾部的样式***********************/
+#lk_footer {
+  width: 100%;
+  height: 200px;
+  background: url("../imgs/ft_bg.png ") no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  color: #fff;
+  font-size: 16px;
+}
+
+#lk_footer ul {
+  list-style: none;
+}
+
+#lk_footer .one,
+#lk_footer .two {
+  padding: 10px;
+  border-right: 1px solid #666;
+  height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lk_footer .one li {
+  line-height: 40px;
+}
+
+#lk_footer .one li a {
+  color: #fff;
+}
+
+#lk_footer .three {
+  padding: 10px 50px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#lk_footer .three a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+/***********************尾部的样式***********************/

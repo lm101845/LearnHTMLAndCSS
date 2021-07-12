@@ -1,0 +1,291 @@
+body {
+	width: 100%;
+	/* body的整个宽度就是100% */
+	/* body在整个合理的范围之内(320px-640px)都是按照100%来显示的 */
+	min-width: 320px;
+	/* 我们怕它无限拉伸，拉变形了，所以给它个min-width */
+	/* 最小宽度是320px，之后就不能再缩放了，再缩放就不能当智能手机看了 */
+	max-width: 640px;
+	/* max-width: 1080px; */
+	/* 现在：2021年3月2日，京东原版的最大宽度为1080px了，不过我还是根据老师视频来吧。 */
+	/* background-color: #ccc; */
+	margin: 0 auto;
+	/* 因为页面要在最中间，所以要让body居中对齐 */
+	font-family: -apple-system, Helvetica, sans-serif;
+	/* 原版字体 */
+	font-size: 14px;
+	color: #666;
+	line-height: 1.5;
+	/* height: 2000px; */
+}
+
+/* 点击高亮我们需要清除，设置为transparent，完成透明 */
+*{
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* 在移动端浏览器默认的外观在IOS上加上这个属性才能给按钮和输入框自定义样式 */
+input{
+	-webkit-appearance: none;
+}
+
+/* 禁用长按页面时弹出菜单 */
+img,a{
+	-webkit-touch-callout: none;
+}
+
+a{
+	color: #666;
+	text-decoration: none;
+}
+/* 顶部开始 */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img{
+	/* 让图片取出底部空白缝隙 */
+	vertical-align: middle;
+	/* 选择middle可以 */
+}
+.app {
+	height: 45px;
+	/* 现在高度是50px了 */
+	/* 父亲给了高，里面的孩子浮动的时候就不会有清除浮动的问题了 */
+}
+
+.app ul li {
+	height: 45px;
+	/* 这4个小li高度是定死的，和父盒子一样，是45px，但是宽度各不相同 */
+	/* 四个小li的宽度分为占百分比为：8,10,57,25 */
+	background-color: #232326;
+	float: left;
+	/* 所有的小li都是有宽度的，让它浮动起来就可以了 */
+	text-align: center;
+	/* 图片是可以text-align: center的，我以前都没注意过呢*/
+	/* 图片水平居中 */
+	line-height: 45px;
+	/* 图片垂直居中 */
+    color: #fff;
+}
+
+.app ul li:nth-child(1) {
+	/* 注意因为是ul的第一个孩子，所以这里ul是不能省略的 */
+	/* 有了结构伪类选择器，你就不用再给它起类名了 */
+	width: 8%;
+}
+
+.app ul li:nth-child(1) img {
+	width: 10px;
+	/* 我们只用改宽度就可以了，因为高度是等比例缩放的 */
+}
+
+.app ul li:nth-child(2) {
+	width: 10%;	
+}
+
+.app ul li:nth-child(2) img {
+	width: 30px;
+    /* 注意：图片默认和文字的基线对齐！！！ */
+	/* 所以我们需要加下面一段代码：让图片和文字居中对齐 */
+	/* vertical：垂直的；align:对齐 */
+	vertical-align: middle;
+}
+
+.app ul li:nth-child(3) {
+	width: 57%;
+}
+
+.app ul li:nth-child(4) {
+	width: 25%;
+	background-color: #cd2525;
+}
+
+/* 搜索开始 */
+.search-wrap{
+	/* position: relative; */
+	position: fixed;
+	/* 这个我们做到后面发现要把它改成固定定位才行 */
+	/* 相对定位依然是标准流，它飘到别的地方，它以前的地方(此时已经空了)还是保留着的 */
+	height: 44px;
+	/* 父盒子有高度啊，我对overflow:hidden还是不熟悉啊！！ */
+	/* background-color: pink; */
+	overflow: hidden;
+	/* 不写这个的话就会出现外边距空隙？？原理还是不熟悉啊！！！ */
+	min-width: 320px;
+	max-width: 640px;
+	width: 100%;
+	/* 加了固定定位的盒子一定要给宽，而且一定要在320和640之间的才可以 */
+}
+
+.search-btn{
+	position: absolute;
+	left: 0;
+	top: 0;
+	/* background-color: yellow; */
+	width: 40px;
+	height: 44px;
+	/* 左边脱标 */
+}
+
+.search-btn::before{
+	content: "";
+	display: block;
+	width: 20px;
+	height: 18px;
+	background: url(../images/s-btn.png) no-repeat;
+	/* 原图大小很大，需要缩放一下 */
+	background-size: 20px 18px;
+	margin:14px 0 0 15px;
+	/* 上右下左 */
+}
+
+.search-login{
+	position: absolute;
+	right: 0;
+	top: 0;
+	/* background-color: blue; */
+	width: 40px;
+	height: 44px;
+	/* 右边脱标 */
+	color: #fff;
+	line-height: 44px;
+	/* 字体垂直居中 */
+}
+
+.search{
+	/* height: 44px; */
+	/* 它的高度不是44px，要稍微小一点 */
+	height: 30px;
+	background-color: #fff;
+	/* 上下0，左右给个50吧 */
+	/* 这种做法有点类似于圣杯布局 */
+	margin:0 50px;
+	border-radius: 15px;
+	/* 再给搜索框一个小圆角 */
+	margin-top: 7px;
+	/* 父级元素内部有子元素，如果给子元素添加`margin-top`样式，那么父级元素也会跟着下来，造成外边距塌陷 */
+	/* 可以margin:7px 50px 0，但是老师没有这样写 */
+	position: relative;
+}
+
+.jd-icon{
+	width: 20px;
+	height: 15px;
+	/* 小图标是20*15的 */
+	position: absolute;
+	top: 8px;
+	left: 13px;
+	/* background-color: pink; */
+	background: url(../images/jd.png) no-repeat;
+	background-size: 20px 15px;
+}
+
+.jd-icon::after{
+	/* 插入小竖线 */
+	content: "";
+	display: block;
+	width: 1px;
+	height: 15px;
+	background-color: #ccc;
+	position: absolute;
+	right: -8px;
+	top: 0;
+}
+
+.sou{
+	width: 18px;
+	height: 15px;
+	/* 精灵图放大镜图片大小为18*15 */
+	/* background-color: blue; */
+	position: absolute;
+	top: 8px;
+	left: 50px;
+	/* 错误写法： */
+	/* background: url(../images/jd-sprites.png) no-repeat -166px 0; */
+	/* background-size: 18px 15px; */
+	/* 注意：缩放的话，是把整个图(这里是精灵图)缩放成多少大小 */
+	/* 所以不能像上面这样写 */
+
+	/* 知识点：二倍精灵图的做法 */
+	background: url(../images/jd-sprites.png) no-repeat -81px 0;
+	background-size: 200px auto;
+	/* 原来背景精灵图是400px，背景图也要缩放为原来的一半 */
+}
+
+/* 轮播图静态页面 */
+.slider img{
+	width: 100%;
+}
+
+/* 品牌日：里面3张图片，每张占宽度为33.33% */
+.brand div{
+	width: 33.33%;
+	float: left;
+}
+
+.brand div img{
+	width: 100%;
+}
+
+.brand{
+	overflow: hidden;
+	border-radius: 10px 10px 0 0;
+}
+/* 让盒子有多宽，图片就有多宽就可以了 */
+
+/* nav */
+nav{
+	padding-top: 5px;
+}
+
+nav a{
+	float: left;
+	width: 20%;
+	text-align: center;
+	/* 给a加text-align: center;里面的图片和文字就都会居中对齐了*/
+}
+
+nav a img{
+	width: 40px;
+	margin: 10px 0;
+}
+
+nav a span{
+	display: block;
+}
+
+/* news */
+
+.news{
+	margin-top: 20px;
+}
+
+.news img{
+	/* news里面的图片宽度都是100% */
+	width: 100%;
+}
+
+.news a{
+	float: left;
+	box-sizing: border-box;
+	/* 因为加了2像素的外边框，所以用盒子模型更好 */
+}
+.news a:nth-child(1){
+	width: 50%;
+}
+
+/* .news a:nth-child(2),
+.news a:nth-child(3){
+	width: 25%;
+} */
+
+.news a:nth-child(n+2){
+	/* 这样写，也表示第2个，第3个 */
+	/* n+2就是从第2个往后面选 */
+	width: 25%;
+	border-left: 1px solid #ccc;
+}
+

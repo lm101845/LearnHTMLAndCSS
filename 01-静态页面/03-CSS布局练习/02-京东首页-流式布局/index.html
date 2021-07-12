@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0,
+        user-scalable=no,
+        maxmum-scale=1.0,
+        minimum-scale=1.0"
+		/>
+		<!-- 引入我们的CSS初始化文件 -->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- 顶部 -->
+		<header class="app">
+			<ul>
+				<li>
+					<img src="images/close.png" alt="" />
+				</li>
+				<li>
+					<img src="images/logo.png" alt="" />
+				</li>
+				<li>打开京东APP，购物更轻松</li>
+				<li>立即打开</li>
+			</ul>
+		</header>
+
+		<!-- 搜索 -->
+		<div class="search-wrap">
+			<!-- 这个最大的盒子不要给宽度了，和body一样宽 -->
+			<!-- 但是要给高度，高度为44px -->
+			<!-- 因为中间搜索框要自适应，可以随着屏幕缩放改变长度 -->
+			<!-- 而它左右两边的按钮和登陆部分宽度是不变的 -->
+			<!-- 所以左右2边用定位来做，要脱标-->
+			<!-- 而中间的搜索框要用标准流来做，然后给它加margin-left,right -->
+			<!-- 并且中间的盒子只给高，千万不能给宽 -->
+			<div class="search-btn"></div>
+			<div class="search">
+				<!-- 接下来我们需要大量在search里面加一些定位的效果 -->
+				<div class="jd-icon"></div>
+				<!-- 右边是个放大镜，它是一个精灵图 -->
+				<!-- 以前的图片你爱怎么缩放就怎么缩放，但是精灵图你必须要注意一下位置才行 -->
+				<div class="sou"></div>
+			</div>
+			<div class="search-login">登陆</div>
+		</div>
+
+		<!-- 主体内容部分 -->
+		<div class="main-content">
+			<!-- 滑动图 -->
+			<div class="slider">
+				<img src="upload/banner.dpg" alt="" />
+				<!-- 图片太大，要进行缩放 -->
+				<!-- 父盒子有多宽，焦点图就要有多宽 -->
+				<!-- 这个图片要在搜索框下面，所以用固定定位比较好 -->
+				<!-- 因为我们拖动的时候，它是会变的，跑到上面去了 -->
+			</div>
+
+			<!-- 一个大盒子，里面装3个小盒子，每个小盒子里分别装图片，点击跳转到不同的链接 -->
+			<!-- 小家电品牌日 -->
+			<div class="brand">
+				<div>
+					<a href="#"><img src="upload/pic11.dpg" alt="" /></a>
+				</div>
+
+				<div>
+					<a href="#"><img src="upload/pic22.dpg" alt="" /></a>
+				</div>
+
+				<div>
+					<a href="#"><img src="upload/pic33.dpg" alt="" /></a>
+				</div>
+				<!-- 一排放3个盒子，每个盒子都一样大，则每个盒子都各占一份即可 -->
+			</div>
+
+			<!-- nav部分 -->
+			<nav>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+				<a href="">
+					<img src="upload/nav1.webp" alt="" />
+					<span>京东超市</span>
+				</a>
+			</nav>
+
+			<!-- 新闻模块 -->
+			<div class="news">
+				<a href="#">
+					<img src="upload/new1.dpg" alt="">
+					<!-- 注意不要缩放图片，要缩放a为50% -->
+				</a>
+
+				<a href="#">
+					<img src="upload/new2.dpg" alt="">
+					<!-- 注意不要缩放图片，要缩放a为50% -->
+				</a>
+
+				<a href="#">
+					<img src="upload/new3.dpg" alt="">
+					<!-- 注意不要缩放图片，要缩放a为50% -->
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

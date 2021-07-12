@@ -1,0 +1,947 @@
+/*这个CSS写公共样式的CSS--京东头部和尾部*/
+/*头和尾是公共样式要在base.css里面写*/
+
+/*设置版心*/
+.w{
+	/*版心宽度1190px,和实际京东版心宽度一致*/
+	width: 1190px;
+
+	/*版心要居中对齐，不居中对齐就没有价值了*/
+	/*margin:auto和margin:0 auto没有什么区别，都是块级元素居中*/
+	margin: auto;
+}
+
+/*设置一个类名：右浮动*/
+.fr{
+	float: right;
+}
+
+/*设置一个类名：左浮动*/
+.fl{
+	float: left;
+}
+
+ul{
+	/*把ul的内外边距都给去掉(ul是块级元素)，不然位置会在下面*/
+	/*这个margin:0 padding:0是单独写的！！！*/
+	/*这个我是真的想不出来*/
+	margin: 0;
+	padding: 0; 
+}
+li{
+	/*做快捷导航栏的时候用li做的，所以把通用样式写在这里*/
+	list-style: none;
+}
+/*字体图标因为所有CSS文件都要用，所以要放在base.css文件里面*/
+@font-face {
+  font-family: 'icomoon';
+  /*路径要记得修改一下，加个../才能找到fonts文件夹*/
+  src:url('../fonts/icomoon.eot?7kkyc2');
+  src:url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+      url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+      url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.style-red{
+	/*设置公共样式，京东主色调*/
+	/*后面加上!important提高优先级*/
+	color: #f10215 !important;
+}
+
+body{
+	/*京东的北京色*/
+	background-color: #f6f6f6;
+}
+
+input,button{
+	/*去掉它们的内边距*/
+	padding: 0;
+	/*去掉它们的外边框*/
+	border: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+img{
+	/*去除图片底侧缝隙，图片和文字的基线对齐*/
+	/*只要是图片底下都会有缝隙*/
+	/*这个我真的印象不深，也写不出来*/
+	vertical-align: top;
+}
+/*清除浮动*/
+.clearfix:before,.clearfix:after { 
+  content:"";
+  display: table;  /* 这句话可以出发BFC BFC可以清除浮动,BFC我们后面讲 */
+}
+.clearfix:after {
+ clear:both;
+}
+.clearfix {
+  *zoom:1;
+}
+
+/*如果实在不行就写个*号margin:0 padding:0了吧*/
+/*h1,h5,p{
+	margin: 0;
+}*/
+*{
+	/*京东原版有这个东西，可以这样写*/
+	/*到了工作的时候看公司有没有这个要求，允不允许，如果不允许自己再一个一个改*/
+	margin: 0;
+	padding: 0;
+}
+/*京东顶部开始了*/
+.J_event{
+	/*大盒子不用给宽，通栏，给个高度就可以了*/
+	/*大盒子高度和top图片(1190*80)高度一致*/
+
+	/*代码优化，孩子a有个高，没有用浮动和定位，
+	孩子会撑开父亲，所以父亲不用写高了*/
+	/*height: 80px;*/
+
+   /*大盒子背景色是黑色*/
+   background-color: #000;
+
+}
+
+.J_event a{
+	/*即使给a的类名w,让它宽度为1190px,有居中对齐的属性
+	但是a是行内元素，宽高无效，默认宽度就是它本身内容的宽度
+	所以要把它转换成块级元素才行。(margin只适用于有宽度的块级元素)*/
+	display: block;
+
+	/*给高是因为用背景图片做，不给高的话图片不显示*/
+	/*如果高度只给40px则只会显示一半，高度给160px会显示2张图片！*/
+	height: 80px;
+
+	/*图片用背景做，不用插入做。注意路径，前面有../*/
+	background: url(../images/top.jpg) no-repeat;
+
+	/*因为对齐方式是以a来对齐的，所以相对定位一定要给a加，不要给爷爷J_event加*/
+	position: relative;
+}
+
+.J_event a i{
+	/*给字体图标叉号设置大小20*20,背景色*/
+	width: 20px;
+	height: 20px;
+	/*background-color: pink;*/
+
+	/*给字体图标设置字体样式，这步不能省，注意双引号不要丢*/
+	font-family: "icomoon";
+	/*小查后有点歪，让它脉动回来*/
+	font-style: normal;
+	/*给字体图标叉号设置定位，让它跑到右上方去,不要顶在上面，留个空隙5px*/
+	/*子绝父相*/
+	position: absolute;
+	/*设置边偏移*/
+	right: 0;
+	top: 5px;
+	/*水平，垂直居中*/
+	text-align: center;
+	line-height: 20px;
+	/*设置颜色，半透明背景*/
+	color: #fff;
+	background: rgba(0,0,0,0.3);
+}
+/*京东顶部结束了*/
+
+
+
+/*快捷导航栏开始了*/
+.shortcut{
+	/*设置高度和背景颜色，宽度不用设置，通栏*/
+	height: 30px;
+	background-color: #e3e4e5;
+
+	/*细节：有个下边框*/
+	border-bottom: 1px solid #DDD;
+
+	/*字体颜色和大小*/
+	color: #9d9d9d;
+	font-size: 12px;
+
+	/*左右两个盒子都要垂直居中，所以直接给父亲shortcut加行高，行高会继承，
+	它的两个儿子行高也是父盒子的高度了*/
+	line-height: 30px;
+}
+
+.shortcut a{
+	/*shortcut里的a要单写一份，我不知道为什么？试了一下不写的话样式不会改*/
+	color: #9d9d9d;
+	font-size: 12px;
+	/*超链接取消下划线*/
+	text-decoration: none;
+}
+
+.shortcut .fr li{
+	/*让快捷导航栏里面的li(左)浮动起来*/
+	/*如果写成了右浮动那么字体顺序就变了,不对了*/
+	float: left;
+}
+
+.pos{
+	/*这句话必须要加上*/
+	font-family: "icomoon";
+	/*不要歪*/
+	font-style: normal;
+	/*字体图标颜色为#f10215,字体大小为14px*/
+	color: #f10215;
+	font-size: 14px
+}
+
+.shortcut .fl li{
+	margin-left: 200px;
+	/*后面写header的时候，发现123不在最左边，原来是li的高度是31.2px,
+	让123只能在北京后面了，所以手动给li一个高度来排错*/
+	height: 30px;
+	/*高度如果不行的话还可以overflow:hidden*/
+	overflow: hidden;
+}
+
+.shortcut a:hover{
+	/*右边一大段文件鼠标放上面会改变颜色*/
+	color: #c81623;
+}
+
+/*给小竖线设置宽(1px)高(10px)背景！！颜色(#ccc)*/
+/*li是块级元素呢*/
+.spacer{
+	width: 1px;
+	height: 10px;
+	/*color: #ccc;*/
+	/*注意，不是color,而是背景色！！！！！*/
+	background-color: #ccc;
+	/*小竖线离上面还有一段距离，用margin-top,不能用padding,因为padding会撑开盒子*/
+	/*上面10px,左右10px,下0*/
+	margin: 10px 10px 0;
+}
+
+/*我的京东，客户服务，网站导航这3个特殊，右边有个下拉按钮*/
+.dropdown{
+	/*右边多了一个下拉箭头小三角，宽度为15px，所以宽度要多加15px*/
+	/*用padding把这个盒子给挤开，padding一般不允许写内容的，用什么办法把小三角放上来呢*/
+	/*用定位！！！！！！！！！！！！！！*/
+	/*小三角也是用的字体图标*/
+	padding-right: 15px;
+	/*子绝父相*/
+	position: relative;
+}
+
+
+/*小三角字体图标在dropdown里面的i里*/
+.dropdown i{
+	font-family: "icomoon";
+	/*取消倾斜*/
+	font-style: normal;
+	/*给字体图标调一下大小*/
+	font-size: 16px; 
+	/*要用定位，不然因为基线对齐，字会往下掉*/
+	/*这个是难点*/
+	position: absolute;
+	/*设置边偏移*/
+	/*right: 0;*/
+	/*最后再调整一下*/
+	right: -2px;
+	/*top: 0;*/
+	/*最后再调整一下*/
+	top: -2px;
+
+}
+
+.erweima{
+	/*给盒子设定规格大小：和二维码图片(60*60)一样*/
+	width: 60px;
+	height: 60px;
+	border: 1px solid #ccc;
+	/*使用内边距撑一下，好看一点*/
+	padding: 3px;
+	/*让图片脱标，不要影响到别人*/
+	position: absolute;
+	/*设置边偏移:慢慢调*/
+	left: -8px;
+	top: 35px;
+}
+/*快捷导航栏结束了*/
+
+
+
+
+/*header部分开始了*/
+.header{
+	/*header的高度为140px*/
+	height: 140px;
+}
+
+.inner{
+	/*header有高，里面的w也要有高才行*/
+	height: 140px;
+	/*background-color: pink;*/
+	position: relative;
+}
+/*第一模块：左边的京东狗logo部分*/
+.logo{
+	/*给Logo来一个图片规格*/
+	width: 190px;
+	height: 170px;
+	position: absolute;
+	/*再往上走30px*/
+	top: -30px;
+	left: 0;
+	/*background-color: purple;*/
+
+	/*设置盒子阴影，直接抄网站上面的*/
+	box-shadow: 0 -12px 10px rgba(0,0,0,0.2); 
+
+}
+
+.logo a{
+	/*因为点击图片的每个角落，都有小手，所以要把a的规格弄成和父盒子一样大才行*/
+	/*先转换成块级元素*/
+	display: block;
+	/*宽高别想太多，直接100%即可----不对*/
+	/*宽高是和父亲有关系的，中间因为隔了一个h1,所以还是不能直接写100%*/
+	/*因为h1没有大小，写个100%就和h1一样大了*/
+	width: 190px;
+	height:170px;
+	/*logo用背景写*/
+	background: url(../images/logo.jpg) no-repeat;
+	
+	/*字不能删，想办法把字给移出去*/
+	/*因为往右首行缩进字会换行，所以还是往左首行缩进比较好*/
+	/*写大一点，字就跑出去了，你都看不见了*/
+	text-indent: -99999px;
+	/*再来一个overflow:hidden确保万无一失*/
+	overflow: hidden;
+}
+
+.logo h1{
+	/*h1因为带有外边距，所以logo会往下走一点，要把这个外边距清除掉才行*/
+	margin: 0;
+}
+
+/*第二模块：中间的搜索部分*/
+.search{
+	/*搜索框为550*135*/
+	width: 550px;
+	height: 35px;
+	/*background-color: blue;*/
+	/*使用定位把搜索框给放在中间，离最左边是320px,离上面25px*/
+	position: absolute;
+	/*设置边偏移*/
+	top: 25px;
+	left: 320px;
+
+}
+
+.search input{
+	/*input的宽度为498px,高度为33px(还有2px为边框)，要减去padding-left的5像素！！*/
+	/*498-5=493*/
+	width: 493px;
+	height: 33px;
+	border: 1px solid #F10215;
+	/*input默认有个内边距，所以边框看上去大一些，我们要把它清除掉*/
+	/*因为字数不要离左边那么近，所以paading要离左边一定距离*/
+	/*上，右，下，左*/
+	padding-left: 5px;
+	/*取消蓝色边框*/
+	outline: none;
+	/*搜索框里的文字颜色*/
+	color: #989898;	
+	/*用浮动让搜索框上来*/
+	float: left;
+}
+
+.search button{
+	width: 50px;
+	height: 35px;
+	background-color: #f10215;
+	/*按钮会掉下来，要去掉它的边框*/
+	/*还是会掉下来，最后用浮动*/
+	float: left;
+	/*变成小手*/
+	cursor:pointer;
+	outline: none;
+}
+
+.search i{
+	font-family: "icomoon";
+	color: #fff;
+	font-style: normal;
+	font-size: 16px;
+}
+
+.search em{
+	/*精灵图，用定位做*/
+	/*父亲是search,父亲是绝对定位，字绝父绝也是可以的*/
+	position: absolute; 
+	/*top: 0;*/
+	/*让它距离上面10px*/
+	top: 10px;
+	/*right: 0;*/
+	/*让它距离右边65px*/
+	right: 65px;
+	/*加了定位的盒子不用再转换成块级或行内块元素了，它自动转换了*/
+	/*放心大胆的给宽高就好了*/
+	width: 19px;
+	height: 15px;
+	/*background-color: green;*/
+	/*鼠标放上去是小手*/
+	cursor: pointer;
+	/*赶巧了正好在左上角，可以不用写坐标了*/
+	background: url(../images/sprite-search.png) no-repeat;
+}
+
+.search em:hover{
+	/*鼠标放上去更换背景图片*/
+	background-position: -30px 0;
+}
+
+/*第三模块：热点关键词部分*/
+.hotwords{
+	/*反正都是靠定位来做的*/
+	position: absolute;
+	/*设追边偏移*/
+	top: 70px;
+	left: 320px;
+}
+
+.hotwords a{
+	color: #ccc;
+	font-size: 12px;
+}
+
+.hotwords a:hover{
+	color: #f10215;
+}
+
+/*第四模块：我的购物车部分*/
+.myCar{
+	/*设置盒子的宽和高*/
+	width: 188px;
+	height: 33px;
+	border: 1px solid #ccc;
+	/*background-color: orange;*/
+	position: absolute;
+	/*设置边偏移*/
+	top: 25px;
+	right: 100px;
+
+	/*水平，垂直居中给父亲即可*/
+	text-align: center;
+	line-height: 33px;
+}
+
+.myCar a{
+	font-size: 14px;
+	color: #f10215; 
+}
+
+.myCar i{
+	font-family: "icomoon";
+	/*还不如在上面写个通用的i,让它不倾斜呢*/
+	font-style: normal;
+	color: #f10215;
+	/*购物车和右边字有个距离*/
+	margin-right: 3px;
+}
+
+.myCar s{
+	/*小圆圈用定位做最合适了*/
+	/*加了绝对定位的盒子和浮动的盒子自动转换为行内块*/
+	/*不应该给宽，否则数字太多会超过宽度。行内块元素会自动调整行高的*/
+	position: absolute;
+	/*设置边偏移，把小圆角的位置给调一下*/
+	top: 5px;
+	/*不能写右对齐，写左对齐更好*/
+	/*如果写右对齐，那么买1000件东西，小圆角会把我的购物车给覆盖掉，不好看*/ 
+	/*right: 35px;*/
+	left: 140px;
+	/*去掉删除线*/
+	text-decoration: none;
+	background-color: #f10215;
+	/*小圈不给宽度，给个高度是可以的，高度为13px*/
+	height: 16px;
+	/*层叠掉继承的行高33px*/
+	line-height: 16px;
+	font-size: 12px;
+	/*高度还行，左右太紧了，用pading扩充一下*/
+	padding: 0 3px;
+	/*弄个小圆角,弄成像胶囊一样*/
+	border-radius: 6px;
+	/*最后再改个字体颜色就可以了*/
+	color: #fff;
+}
+
+/*第五模块：平板电脑大促部分*/
+.computer{
+	/*bottom不是0！！！距离底部有10像素*/
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+
+/*第六模块：导航栏信息部分*/
+.navitems{
+	/*绝对定位和内容有关系，只要把内容填充满，自然而然就撑开了。可以不给盒子大小了*/
+	position: absolute;
+	/*设置边偏移*/
+	/*和.shortcut .fl li左边距离一样，也是200px*/
+	left: 200px;
+	bottom: 0;
+}
+
+.navitems ul{
+	/*这个用浮动做更好，用定位麻烦*/
+	/*ul浮动，浮动不会继承，里面的li还是竖起来的，所以还要给li浮动才行*/
+	float: left;
+}
+
+.navitems ul li{
+	/*不仅ul要浮动，里面的li也要浮动*/
+	float: left;
+	/*最后再调一下它们之间的距离，给每一个小li一个margin-left，注意给小li,小li是浮动的，不是a*/
+	margin-left: 30px;
+	/*现在就剩下那条小竖线了，还有鼠标放上去变色*/
+
+	/*把line-height和height的高给li更合适一点，给a也行*/
+	/*如果给a的话要加一句话:display:block*/
+	/*height: 40px;*/
+	/*height: 40px;*/
+}
+
+.navitems li a{
+	/*给字体设置大小，颜色，加粗*/
+	font-size: 16px;
+	color: #555A5F;
+	font-weight: 700;
+	/*给个高度，并且垂直居中*/
+	/*如何测量字体的高度呢？先量它的下边距，下边距*2再加上字体本身的高度即可*/
+	height: 40px;
+	
+	/*当初写的是height:40px,找了半天错。。。。*/
+	line-height: 40px;
+	display: block;
+	/*最后再调一下它们之间的距离，给每一个小li一个margin-left，注意给小li,小li是浮动的，不是a*/
+}
+
+/*鼠标放上去是红色*/
+.navitems li a:hover {
+	color: #f10215;
+}
+
+
+.navitems .spacer{
+	/*上面的spacer权重是10，我们提权，让下面的竖线浮动，(上面的竖线可以不用浮动)*/
+	/*竖线左右距离20px,上面15px,下面不用管*/
+	float: left;
+	/*水平margin不会出现叠加的情况，只有垂直的才会出现叠加的情况*/
+	/*原先li有个margin-left:30px; 又来个20px,会叠加成50px*/
+	/*margin: 15px 20px 0;*/
+	margin-top: 15px;
+	margin-left: 20px;
+	/*这个老师解释过，我是真的想不到，不会*/
+	margin-right: -10px;
+}
+/*header部分结束了*/
+
+
+/*页面底部footer部分开始了*/
+.footer{
+	/*页面底部是通栏的，高为560px,背景色为#eaeaea*/
+	height: 560px;
+	background-color: #eaeaea;
+}
+
+/*上盒子：多块好省部分*/
+.footer-service{
+	/*上面一个盒子高度为100px,有个下边框*/
+	/*height: 100px;*/
+	border-bottom: 1px solid #DEDEDE;
+	/*background-color: blue;*/
+
+}
+
+.footer-service-inner{
+	/*给孩子版心一个高度，又因为没有浮动，父亲的高度就可以省略掉了*/
+	/*height: 100px;*/
+	/*老师又说孩子也不用给高了,使用padding,上下30，左右0，大概就可以垂直居中了*/
+	/*一个父亲，就给了它上下内边距，它就靠里面内容撑开了*/
+	/*而里面的li又浮动，浮动就没有高了，所以父亲总共就30+30=60px高了，里面内容的高度为0*/
+	/*所以要清除浮动，给ul(直接父亲)清除浮动就可以了*/
+	/*这个我是真的不会写，理解起来都困难*/
+	padding: 30px 0;
+	/*background-color: pink;*/
+}
+
+.footer-service-inner li{
+	/*多快好省首先要左浮动*/
+	/*li因为浮动了，所以检测不到高度了*/
+	float: left;
+	/*版心宽度为1190px,1190/4=297.5px*/
+	width: 297px;
+	height: 42px;
+	/*background-color: purple;*/
+}
+
+.service-unit{
+	width: 225px;
+	height: 42px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.service-unit h5{
+	/*多快好省图片规格为36*43*/
+	width: 36px;
+	height: 42px;
+	/*background-color: blue;*/
+	/*h1,h5,p也有默认的距离，要把它清掉,在上面写*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*浮动压不住文字，但是定位可以压住文字，因为定位有鲜明的层级关系，有z-index*/
+	/*放精灵图*/
+	background: url(../images/ico_service.png) no-repeat;
+	/*把字给移除屏幕，但不删，便于SEO*/
+	text-indent: -999px;
+	/*再来一个双保险*/
+	overflow: hidden;
+}
+
+.service-unit p{
+	line-height: 42px;
+	/*往左走一走，被压住了*/
+	margin-left: 45px;
+	/*设置文字大小和加粗*/
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.service-unit .kuai{
+	/*这个F12显示被划掉了，是因为层级低了，权重不够，所以.kuai前面要加个类增加权重*/
+	background-position: 0 -43px;
+}
+
+.service-unit .hao{
+	background-position: 0 -86px;
+}
+
+.service-unit .sheng{
+	background-position: 0 -129px;
+}
+
+/*中盒子：帮助指南部分*/
+.help{
+	/*如果不想清除浮动，就给父盒子一个高度200px即可*/
+	/*200-20=180,这样整体盒子高度没变大，文字也下来了*/
+	height: 180px;
+	/*background-color: pink;*/
+	/*上面的字离边框有距离：20px*/
+	padding-top: 20px;
+}
+.help dl{
+	float: left;
+	/*可以使用宽度剩余法来调整宽度*/
+	/*1190/6=198.33,但是最后图片宽度为207px,要给它匀一部分宽度，改为195px*/
+	width: 195px;
+}
+.help dt{
+	font-size: 14px;
+	font-weight: 700;
+	color: #666;
+	/*量一下高度*/
+	height: 30px;
+}
+
+.help dd{
+	/*让子体间有间隔*/
+	height: 22px;
+}
+.help dd a{
+	color: #727272;
+	font-size: 12px;
+}
+
+.help dd a:hover{
+	color: #f10215;
+}
+
+.help .cover{
+	/*图片要右对齐*/
+	float: right;
+	/*背景图片的规格是207*150*/
+	/*宽度207就掉下来了，调整为200px*/
+	/*把dl从198px调整到195px,给它匀一部分宽度，就不用改了*/
+	width: 207px;
+	height: 150px;
+	/*设定死宽度和高度，就只能出现中国地图图案了，下面的不会显示的*/
+	background:url(../images/ico_footer.png) no-repeat;
+}
+
+.cover dt{
+	/*别的dt都是左对齐，最后一个dt要居中对齐，权重覆盖了*/
+	text-align: center;
+}
+
+/*再加个.help,提高一下权重*/
+.help .info{
+	/*最后一个文字单独量一下宽度和高度*/
+	width: 175px;
+	/*这个高度必须要给才行*/
+	height: 50px;
+	font-size: 12px;
+	/*文字离上面一点距离*/
+	margin-top: 5px;
+	margin-left: 10px;
+	/*再来个字体颜色和行高即可*/
+	line-height: 18px;
+	color: #727272;
+}
+
+.more{
+	/*文字右对齐，很少用，终于用了一次了*/
+	text-align: right;
+	/*more没有宽，直接padding-right:10px,离右边一些距离*/
+	padding-right: 10px;
+	/*用margin-right也行*/
+	/*margin-right: 10px;*/
+}
+	
+/*下盒子：版权部分*/
+.copyright{
+	/*给一个上边框*/
+	border-top: 1px solid #ccc;
+	/*京东原版没给高度，我们也不给高度了*/
+	/*反正没有高，padding随便给*/
+	padding-top: 15px;
+}
+/*下盒子第一行：链接*/
+.links a{
+	color: #727272;
+	font-size: 12px;
+}
+
+.links span{
+	/*字符也属于字的范围，也可以加大小的*/
+	font-size: 12px;
+	color: #D4CDCD;
+	/*让竖线左右距离调大一些*/
+	/*行内块与行内块之间本来就有缝隙，所以这个距离可以给小点*/
+	margin: 0 6px;
+}
+/*让大盒子里的文字居中对齐*/
+.links{
+	text-align: center;
+}
+
+/*下盒子第二行：文字*/
+.c-info {
+	font-size: 12px;
+	color: #9E9E9B;
+	text-align: center; 
+	/*来个行高，不要太挤*/
+	line-height: 20px;
+	/*离上边框一些距离*/
+	margin-top: 10px;
+}
+
+/*下盒子第三行：图片*/
+.tupian a{
+	/*图片规格为103*32*/
+	width: 103px;
+	height: 32px;
+	/*它们要放一行，肯定有浮动*/
+	/*block用多了，这次换个口味用incline-block*/
+	display: inline-block;
+	background-color: pink;
+	/*写了个0 -151px之后第一个就可以不用写了*/
+	background: url(../images/ico_footer.png) no-repeat 0 -151px;
+	/*6个a之间有个距离*/
+	margin: 0 10px;
+}
+
+.tupian{
+	/*这样就能让6个a居中对齐了，不要想太复杂了*/
+	/*行内块和行内元素可以当文字来看*/
+	text-align: center;
+	/*图片距离上面一定距离*/
+	margin-top: 10px;
+}
+
+.tupian .kexin{
+	background-position: -104px -151px;
+}
+
+.tupian .wangjing{
+	background-position: 0 -183px;
+}
+
+.tupian .chengxin{
+	background-position: -104px -183px;
+}
+
+.tupian .jubao{
+	background-position: 0 -215px;
+}
+
+.tupian .xiazai{
+	background-position: -104px -215px;
+}
+
+/*页面底部footer部分结束了*/
+/*header和footer都写完后，base.css就已经彻底结束了！！！*/
+/*中间的部分在index.css里面来写，你已经完成了你的使用，休息吧*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	*/
+}
+/*页面底部footer部分结束了

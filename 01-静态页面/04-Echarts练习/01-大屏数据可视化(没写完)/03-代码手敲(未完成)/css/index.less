@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+
+// 声明图标字体
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+body {
+  background: url(../images/bg.jpg) no-repeat top center;
+  line-height: 1.15;
+}
+
+header {
+  position: relative;
+  height: 1.25rem;
+  // background-color: pink;
+  // 头部里面也有单独的背景图
+  background: url(../images/head_bg.png) no-repeat;
+  // 背景图缩放为100%
+  background-size: 100% 100%;
+  // 水平100%，垂直100%
+
+  h1 {
+    font-size: 0.475rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+  }
+
+  .showTime {
+    position: absolute;
+    right: 0.375rem;
+    line-height: 0.9375rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.25rem;
+    top: 0;
+    // 必须要给它加top值，不然它上不来
+  }
+}
+
+// 页面主体盒子
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  // 我们做的是大屏，最小宽度是1024px，在手机端是看不了的
+  max-width: 1920px;
+  // 这2个不用转换为rem，把它写死就好了
+  margin: 0 auto;
+  // height: 100px;
+  // background-color: pink;
+  // 它有一个上，左右的边距值(下面是0)
+  padding: 0.125rem 0.125rem 0;
+
+  .column {
+    // 左右占3份
+    flex: 3;
+  }
+  .column:nth-child(2) {
+    // 中间占5份
+    flex: 5;
+    // 中间盒子左右有间距
+    margin: 0 0.125rem 0.1875rem;
+  }
+
+  .panel {
+    position: relative;
+    height: 3.875rem;
+    // background-color: pink;
+    padding: 0 0.1875rem 0.5rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    margin-bottom: 0.1875rem;
+    background: url(../images/line.png) rgba(255, 255, 255, 0.03);
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      // 因为边框比较小，就不用转为rem了
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid #02a6b5;
+      border-top: 2px solid #02a6b5;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      // 因为边框比较小，就不用转为rem了
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #02a6b5;
+      border-top: 2px solid #02a6b5;
+    }
+
+    .panel-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        // 因为边框比较小，就不用转为rem了
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid #02a6b5;
+        border-bottom: 2px solid #02a6b5;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        // 因为边框比较小，就不用转为rem了
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #02a6b5;
+        border-bottom: 2px solid #02a6b5;
+      }
+    }
+
+    h2 {
+      height: 0.6rem;
+      color: #fff;
+      line-height: 0.6rem;
+      text-align: center;
+      font-size: 0.25rem;
+      font-weight: 400;
+    }
+
+    .chart {
+      height: 3rem;
+      background-color: pink;
+    }
+  }
+}
+
+// no数字模块
+.no {
+  background: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+  // no并没有给高度，想要里面的内容自然的把大盒子给撑开
+  .no-hd {
+    position: relative;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 30px;
+      height: 10px;
+      border-top: 2px solid #02a6b5;
+      border-left: 2px solid #02a6b5;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      content: "";
+      width: 30px;
+      height: 10px;
+      border-right: 2px solid #02a6b5;
+      border-bottom: 2px solid #02a6b5;
+    }
+    ul {
+      display: flex;
+      li {
+        position: relative;
+        flex: 1;
+        line-height: 1rem;
+        font-size: 0.875rem;
+        color: #ffeb7b;
+        text-align: center;
+        font-family: "electronicFont";
+        &::after {
+          // 中间有一条竖线
+          content: "";
+          position: absolute;
+          top: 25%;
+          right: 0;
+          height: 50%;
+          width: 1px;
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  .no-bd {
+    ul {
+      display: flex;
+      li {
+        flex: 1;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.225rem;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        padding-top: 0.125rem;
+      }
+    }
+  }
+}
+
+// 地图模块
+.map {
+  position: relative;
+  height: 10.125rem;
+  // background-color: pink;
+  .map1 {
+    width: 6.475rem;
+    height: 6.475rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../images/map.png);
+    background-size: 100% 100%;
+    opacity: 0.3;
+  }
+
+  .map2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8.0375rem;
+    height: 8.0375rem;
+    background: url(../images/lbx.png);
+    background-size: 100% 100%;
+    animation: rotate1 15s linear infinite;
+    // infinite表示这个动画无限循环
+    opacity: 0.6;
+  }
+
+  .map3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7.075rem;
+    height: 7.075rem;
+    background: url(../images/jt.png);
+    background-size: 100% 100%;
+    animation: rotate2 10s linear infinite;
+    // infinite表示这个动画无限循环
+    opacity: 0.6;
+  }
+
+  .chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background-color: pink;
+    width: 100%;
+    height: 10.125rem;
+  }
+  @keyframes rotate1 {
+    form {
+      transform: translate(-50%, -50%) rotate(0deg);
+      //    这个小球体既需要用到translate,也需要用到rotate
+      //   在旋转的同时也要保留原先的位置
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes rotate2 {
+    form {
+      transform: translate(-50%, -50%) rotate(0deg);
+      //    这个小球体既需要用到translate,也需要用到rotate
+      //   在旋转的同时也要保留原先的位置
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+}

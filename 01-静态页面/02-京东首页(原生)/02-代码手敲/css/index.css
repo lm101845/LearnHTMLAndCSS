@@ -1,0 +1,447 @@
+/*除了头和尾以外的其他样式在index.css里面写*/
+/*京东首页的CSS*/
+ .jd{
+ 	/*先建一个通栏的盒子*/
+ 	/*宽不用写，通栏即可*/
+ 	/*高度为480px*/
+ 	/*这个高度不能写死了，写死了广告背景图片就看不到了*/
+ 	/*但是这个高度480px还是要要的，所以要用定位做*/
+ 	height: 480px;
+ 	/*background-color: pink;*/
+ 	/*儿子广告子绝父相*/
+ 	position: relative;
+}
+
+.jd-inner{
+ 	/*版心宽度是1190px,宽度是480px*/
+ 	height: 480px;
+ 	/*background-color: skyblue;*/
+ 	/*广告用子绝父相后，鼠标在中间也会显示超链接，广告压住了版心，是不可以的*/
+ 	/*所以版心也来个定位，这样它们就有层级了，设置版心的层级比广告大，这样就不让广告压住了*/
+ 	position: relative;
+ 	/*版心层级比广告(默认层级z-index为0)高，这样版心就压住广告了*/
+ 	/*我们的盒子分了3个等级，最低级是标准流，在最底层，第二级是浮动，压着标准流的，在它上面。
+ 	第3级是定位，定位永远飘在任何人(标准流和浮动)的上方。*/
+ 	/*只有定位的盒子才有z-index，所以要把它转成定位(给个相对定位，不要给绝对定位，不好)*/
+ 	z-index: 1;
+}
+
+/*第一部分：广告开始了*/
+.ad{
+ 	/*ad没有给宽，默认和显示器一样宽*/
+ 	/*有个这个ad之后才能装翅膀*/
+ 	/*2个小翅膀广告的高度也是480px*/
+ 	height: 480px;
+ 	/*2个小翅膀广告用的是背景图片*/
+ 	/*背景图片你写了以后看不见，是因为它跑到底侧去了*/
+ 	/*主要原因是给了背景图片高度480px，把它给写死了*/
+ 	/*遇到那种超大的背景图片，很宽很宽的，一定要加上top center*/
+ 	background: url(../images/bg.png) no-repeat top center;
+ 	/*版心要压住广告，版心要在上面，不能广告覆盖住版心，所以用定位*/
+ 	position: absolute;
+ 	/*设置边偏移*/
+ 	top: 0;
+ 	left: 0;
+ 	/*加了定位的盒子自动转换为行内块元素，行内块是根据内容来定位宽度*/
+ 	/*必须要给它加个宽,这个宽的意思是通栏的，和浏览器一样宽！！！！*/
+ 	/*因为它没有宽，所以就不见了，所以一定要给它加个宽！！！！！*/
+ 	/*没有宽就只能是隐形的翅膀*/
+ 	/*强制显示宽度*/
+ 	/*以后使用定位时第一步就要检查它有没有宽，没有宽肯定是不行的*/
+ 	width: 100%;
+}
+
+.ad a{
+ 	/*转换成块级元素，这样才可以把整个盒子都撑满*/
+ 	display: block;
+ 	/*这个a设置成通栏的*/
+ 	/*只要给a转换成块级元素，宽肯定是通栏显示的，可以不用写*/
+ 	/*width: 100%;*/
+ 	height: 100%;
+}
+
+/*第一部分：广告结束了*/
+
+ /*第二部分：左中右3个盒子开始了*/
+.jd-col1{
+ 	/*左边盒子宽度190px,高度肯定不变，默认480px*/
+	width: 190px;
+	/*高度我们写死,480-15=465*/
+	/*或者给ulmargin-top:15px就可以不用减了*/
+	/*height: 480px;*/
+	height: 465px;
+	background-color: #6E6568;
+	float: left;
+	/*左盒子第一行字离上面有距离15px*/
+	padding-top: 15px;
+	/*因为鼠标点上去每个li都显示背景色，所以不能在这里写padding-left:10px*/
+	/*应该在li里面写padding-left:10px*/
+	/*padding-left: 10px;*/
+}
+
+/*第二部分之一：左盒子开始了*/
+.jd-col1 li{
+ 	/*为了让以后鼠标放上去整个(190px)li都能显示背景色，所以距离左边有距离这个属性在li里面写好*/
+ 	padding-left: 10px;
+ 	/*li是有高度的，28px*/
+ 	height: 28px;
+ 	line-height: 28px;
+}
+
+.jd-col1 li:hover{
+ 	background-color: #999395;	
+}
+
+.jd-col1 li a{
+  	color: #fff;
+  	font-size: 14px;
+}
+
+.jd-col1 li span{
+	color: #fff;
+	font-size: 12px;
+}
+
+.jd-col1 li a:hover{
+  	color: #f10215;
+}
+
+/*第二部分之一：左盒子结束了*/
+
+
+/*第二部分之二：中盒子开始了*/
+.jd-col2{
+ 	/*中间盒子宽度790px,高度肯定不变，默认480px*/
+	width: 790px;
+	/*高度我们写死*/
+	height: 480px;
+	/*background-color: purple;*/
+	float: left;
+	/*中间的盒子和左盒子之间有个距离*/
+	margin-left: 10px;
+}
+
+.jd-col2-hd{
+	/*中盒子上面是轮播图，高度为340px*/
+	height: 340px;
+	/*background-color: pink;*/
+	/*上面轮播图和下面图片距离10px*/
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.jd-col2-bd div{
+	/*原始图片是780*260，太大了，要缩放一下*/
+	width: 390px;
+	height: 130px;
+	float: left;
+}
+
+/*这个也要加的，我都完全想不到*/
+.jd-col2-bd div img{
+	/*高千万不要改，等比缩放了*/
+	/*让图片的宽度和父亲一样宽*/
+	width: 100%;
+}
+
+.firstPic{
+	/*下面两个小盒子两个间距10px*/
+	margin-right: 10px;
+}
+
+.arr-l, .arr-r{
+	/*左右箭头的规格是30*60*/
+	/*左右箭头分别往中间移动了5px,所以宽度为30-5=25px*/
+	width: 25px;
+	height: 60px;
+	position: absolute;
+	/*要垂直居中，先走父亲的一半，再走自己的一半*/
+	top: 50%;
+	margin-top: -30px;
+	/*背景黑色半透明*/
+	background: rgba(0,0,0,0.3);
+	/*没有这句话不行的*/
+	font-family: "icomoon";
+	color: #fff;
+	/*水平居中，垂直居中*/
+	text-align: center;
+	line-height: 60px;
+	font-size: 25px;
+}
+
+.arr-l{
+	/*设置边偏移*/
+	left: 0;
+	padding-left: 5px;
+}
+
+.arr-r{
+	/*设置边偏移*/
+	right: 0;
+	padding-right: 5px;
+}
+
+.jd-col2-hd ol{
+	/*毫无疑问要用定位*/
+	position: absolute;
+	/*按道理ol的宽度是可以不用给的，因为用定位，自动变成行内块，
+	按照内容可以自动撑开盒子，但是还是给一下吧*/
+	width: 180px;
+	height: 20px;
+	/*距离底部有个20px的距离*/
+	bottom: 20px;
+	/*水平居中*/
+	left: 50%;
+	margin-left: -90px;
+	/*背景白色半透明*/
+	background:rgba(255,255,255,0.3);
+	/*磨平你的棱角,10px是高度20px的一半*/
+	border-radius: 10px;
+}
+
+.jd-col2-hd ol li{
+	/*里面的8个小圆角宽高为12*12*/
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	/*变成圆*/
+	border-radius: 50%;
+	/*li的爸爸是定位，li自己是浮动*/
+	/*左浮动*/
+	float: left;
+	/*调整小圆角之间的距离*/
+	margin: 4px 5px;
+	cursor: pointer;
+}
+
+.jd-col2-hd .current{
+	/*层级不够，要再增加一个类名*/
+	background-color: #f10215;
+}
+/*第二部分之二：中盒子结束了*/
+
+/*第二部分之三：右盒子开始了*/
+
+.jd-col3{
+ 	/*中间盒子宽度1190-190-790=210,我们用190,差20px*/
+ 	/*这20px刚好左中盒子间距10px,中右盒子间距10px*/
+	width: 190px;
+	/*高度我们写死*/
+	height: 480px;
+	/*background-color: yellow;*/
+	float: right;
+}
+
+/*右盒子之上面的小盒子*/
+.user{
+	/*宽度默认和父亲一样宽*/
+	/*高度改为115-20=95px*/
+	height: 95px;
+	/*background-color: pink;*/
+	/*上面的小盒子上面间隔20px,左右间隔15px,下面是0(不用管下)*/
+	/*大盒子有个padding-left*/
+	padding: 20px 15px 0;
+}
+
+.user-info{
+	/*user的上盒子的高度*/
+	height: 40px;
+	/*左边装图片，右边装字*/
+	/*这种写法是很简单的，所以视频里采用的是这种写法*/
+	/*padding-left值，左边的部分就不允许写内容了*/
+	/*虽然不允许写内容，但是定位跟个幽灵一样，无论在哪定位都行*/
+	/*把图片就放在左边*/
+	/*小盒子也有个padding*/
+	padding-left: 54px;
+	font-size: 12px;
+	color: #747474;
+	/*给个行高，产生点距离*/
+	line-height: 22px;
+	/*小图片的父亲就是它*/
+	position: relative;
+}
+
+.user-info a{
+	font-size: 12px;
+	color: #747474;
+}
+
+.user-info a:hover{
+	color: #f10215;
+}
+
+.info-img{
+	/*左边小图片规格为40*40*/
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*给a加的圆角，没给图片加圆角*/
+	border-radius: 50%;
+	/*把其他地方切去，图片就变成圆形了*/
+	overflow: hidden;
+}
+
+.info-img img{
+	/*原始图片为100*100，要将它缩放*/
+	width: 100%;
+	/*height: 100%;*/
+	/*height:auto表名跟随着宽度一起缩放的意思*/
+	height: auto;
+}
+
+.user-profit a{
+	width: 70px;
+	height: 20px;
+	border: 2px solid #f10215;
+	/*因为要一行放2个，所以转换为行内块比较好*/
+	display: inline-block;
+	font-size: 12px;
+	color: #f10215;
+	text-align: center;
+	line-height: 20px;
+	/*一定要记得给右边*/
+	margin-right: 3px;
+}
+
+.user-profit a:hover{
+	background-color: #f10215;
+	color: #fff;
+}
+
+.user-profit{
+	margin-top: 14px;
+}
+
+/*右盒子之中间的小盒子*/
+.news{
+	/*高度为154-5=149px*/
+	height: 149px;
+	/*background-color: purple;*/
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 5px 15px 0;
+}
+
+.tab-hd{
+	/*横线给上盒子加个底边框即可*/
+	border-bottom: 1px solid #ccc;
+	/*让字和横线之间有个小缝隙*/
+	padding: 3px 0;
+	position: relative;
+}
+
+.tab-hd a{
+	font-size: 12px;
+	color: #747474;
+	/*2个a之间来个距离更好看*/
+	margin: 0 4px;
+}
+
+.cuxiao{
+	border-right: 1px solid #ccc;
+	/*这个竖线一定给padding值，不要给margin值*/
+	padding-right: 10px;
+}
+
+/*前面也有一个类叫more,所以不要搞重了*/
+.news .more1{
+	position: absolute;
+	top: 6px;
+	right: 0;
+}
+
+/*文字下面的红线，必须要定位(因为一会要左右滑动，动要用left值)*/
+.line{
+	width: 28px;
+	height: 2px;
+	background-color: #f10215;
+	position: absolute;
+	/*top: 0;*/
+	left: 0;
+	bottom: -1px;
+}
+
+.tab-bd a{
+	/*视频里老师说这2个样式都有，就全部写在.jd-col3 a里面了*/
+	/*我为了看着方便，还是写的详细一点了*/
+	font-size: 12px;
+	color: #747474;
+}
+
+.tab-bd li{
+	height: 27px;
+	line-height: 27px;
+}
+
+.tab-bd{
+	margin-top: 10px;
+}
+
+/*右盒子之下面的小盒子*/
+.jd-service{
+	/*jd-service没有给宽度，默认和它的父亲一样宽190px*/
+	/*隐含了宽度是190*/
+	width: 190px;
+	/*3个小盒子的高度加起来为115+154+209=478，总高度为480，差额为2px,正好1个上边框和1个下边框*/
+	height: 209px;
+	/*background-color: skyblue;*/
+
+	/*不是用爸爸切，用爷爷切*/
+	/*切一下，没有右边框了*/
+	/*这个我也不太熟，没听懂。。。*/
+	overflow: hidden;
+}
+
+.jd-service ul{
+	/*此时保证jd-service的宽度超过190(儿子比父亲宽) (47+1)*4=192*/
+	/*不要小气，就给个195px*/
+	width: 195px;
+	/*这样就可以一行放4个了*/
+	/*这个没听懂。。。。。*/
+}
+.jd-service li{
+	/*这个说多大就多大，不能改的*/
+	width: 47px;
+	height: 69px;
+	/*background-color: purple;*/
+	/*所有的li都需要浮动*/
+	float: left;
+	/*选择右边框和下边框*/
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	/*我必须要1行放4个，但是4个又放不开*/
+	/*li的爸爸是ul,孩子可以超过父亲的宽度*/
+}
+
+.jd-service li a{
+	/*a要和li一样大，这样才能盒子上上下下左左右右都有超链接*/
+	width: 100%;
+	height: 100%;
+	/*height: auto; auto是针对自己的高度和宽度*/
+	/*宽，高100%完全是参考父亲来的，而auto是根据自己的宽度自己来调整的*/
+	/*图片用auto*/
+	display: block;
+}
+
+.jd-service i{
+	/*i属于行内元素没有大小，要转换*/
+	display: block;
+	width: 24px;	
+	height: 24px;	
+	/*块级元素可以用margin: 0 auto，居中*/
+	/*margin: 0 auto;*/
+	/*升级一下*/
+	margin: 15px auto 8px;
+	/*background-color: pink;*/
+	background: url(../images/sprite_fs@1x.png) no-repeat;
+}
+
+.jd-service p{
+	text-align: center;
+	font-size: 12px;
+	color: #747474;
+}
+ /*第二部分之三：右盒子结束了*/
+ /*第二部分：左中右3个盒子结束了*/

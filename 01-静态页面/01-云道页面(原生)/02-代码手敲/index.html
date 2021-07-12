@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>云道页面-边看视频边敲</title>
+	<!-- 引入外部的CSS文件 -->
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 顶部导航栏开始了 -->
+	<!-- header表示通栏，通栏里面的inner表示版心，
+		版心里面的logo表示图片标识，在左边，要左浮动 
+		版心里面的nav表示导航栏，在右边，要右浮动
+		而且logo和nav是平级关系，它们是兄弟-->
+	<div class="header">
+		<div class="inner">
+			<div class="logo"><!-- 放logo,要左浮动 -->
+				<!-- 切出来的图片高度是100px,宽度是223px -->
+				<!-- 因为所有的Logo都是可以点的，所以在img前面再加上个超链接更好 -->
+				<a href="#"><img src="images/logo.png"></a>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">云道商城</a></li>
+					<li><a href="#">智慧门店</a></li>
+					<li><a href="#">营销平台</a></li>
+					<li><a href="#">媒体联盟</a></li>
+					<li><a href="#">关于云道</a></li>
+				</ul>
+
+			</div><!-- 放导航栏，要右浮动 -->
+		</div>
+	</div>
+	<!-- 顶部导航栏结束了 -->
+
+	<!-- banner开始了 -->
+	<div class="banner">
+		<!-- 如果直接这样写的话图片是歪着的，而且还有左右滚动条 -->
+		<!-- <img src="images/banner.jpg" alt=""> -->
+	</div>
+	<!-- banner结束了 -->
+
+
+	<!-- 我们的服务模块开始了 -->
+	<div class="service">
+		<!-- service-hd表示head,上面的头，一个盒子，装我们的服务图片和下面的文字-->
+		 <div class="service-hd">
+		 	<!-- 上面的一看就是标题 -->
+		 	<h3><img src="images/ser.png"></h3>
+		 	<!-- 下面的一看就是文字 -->
+		 	<p>shopcmd云道，国内领先的独立电商解决方案及全渠道营销平台。完整的产品体系，简约的系统，个性化前端，全覆盖多渠道营销体系...
+我们致力于打造一个服务于品牌商城/独立电商的完整生态，让企业的独立电商之路变得更简单，也更有价值！</p>
+		 </div>
+
+		 <!-- service-bd表示body,下面的身子，一个盒子，里面还要包含3个小盒子，
+		 	装图片，文字和我要推广的超链接-->
+		 <div class="service-bd">
+		 	<ul>
+		 		<li>
+		 			<img src="images/icon01.png">
+		 			<p>shopcmd云电商解决方案，我们不仅仅是领先的独立商城建站系统。我们从互联网时代品牌建设和品牌营销的全新视角，赋予了品牌商城及独立电商更大的生存空间和存在价值！</p>
+					<a href="#">我要建站</a>
+		 		</li>
+		 		<li class="yingxiao">
+		 			<img src="images/icon02.png">
+		 			<p>云道不断完善的营销系统，联合优质媒体资源，集成常用的网络营销模式及终端，以最简单的产品形态，帮助独立商城实现店铺及商品信息在全网的快速分销。</p>
+					<a href="#">我要推广</a>
+		 		</li>
+		 		<li>
+		 			<img src="images/icon03.png">
+		 			<p>真正的全民营销时代，无需学习，无需维护。通过您的网站、朋友圈、媒体流量、移动展现、媒体解决方案获取收益。我们致力于实现合作媒体流量价值的最大化。</p>
+					<a href="#">我要合作</a>
+		 		</li>
+		 	</ul>
+		 </div>
+	</div>
+	<!-- 我们的服务模块结束了 -->
+
+
+	<!-- 经典案例开始了 -->
+	<div class="case">
+		<!-- 使用的是service-hd的样式 -->
+		<div class="service-hd">
+			<h3><img src="images/case.png"></h3>
+		</div>
+		<div class="case-bd clearfix">
+				<ul>
+					<li>
+						<img src="images/pro1.png">
+						<div class="text">帮助中小企业快速开启阿萨德打撒电子商务</div>
+						<!-- 这个是一个面具，点击时罩在上面的-->
+						<div class="mask"></div>
+					</li>
+
+					<li class="case-bd-middle">
+						<img src="images/pro2.png">
+						<div class="text">帮助中小企业快速开启阿萨德打撒电子商务</div>
+						<div class="mask"></div>
+					</li>
+
+					<li>
+						<img src="images/pro3.png">
+						<div class="text">帮助中小企业快速开启阿萨德打撒电子商务</div>
+						<div class="mask"></div>
+					</li>
+				</ul>
+				<a href="#" class="left"><</a>
+				<a href="#" class="right">></a>
+			</div>
+	</div>
+	<!-- 经典案例结束了 -->
+
+
+	<!-- 合作媒体开始了 -->
+	<div class="case">
+		<!-- 使用的是service-hd的样式 -->
+		<div class="service-hd">
+			<h3><img src="images/media.png"></h3>
+		</div>
+		
+		<!-- 里面的li浮动，父盒子再清除浮动，让它有大小 -->
+		<div class="media-bd clearfix">
+			<ul class="clearfix">
+				<li><a href="#"><img src="images/tb.png"></a></li>
+				<li><a href="#"><img src="images/jd.png"></a></li>
+				<li><a href="#"><img src="images/sp.png"></li>
+				<li><a href="#"><img src="images/ali.png"></li>
+				<li><a href="#"><img src="images/zk.png"></li>
+
+				<li><a href="#"><img src="images/tb.png"></a></li>
+				<li><a href="#"><img src="images/jd.png"></a></li>
+				<li><a href="#"><img src="images/sp.png"></li>
+				<li><a href="#"><img src="images/ali.png"></li>
+				<li><a href="#"><img src="images/zk.png"></li>
+
+				<li><a href="#"><img src="images/tb.png"></a></li>
+				<li><a href="#"><img src="images/jd.png"></a></li>
+				<li><a href="#"><img src="images/sp.png"></li>
+				<li><a href="#"><img src="images/ali.png"></li>
+				<li><a href="#"><img src="images/zk.png"></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 合作媒体结束了 -->
+
+	<!-- 页面底部开始了 -->
+	<div class="footer">
+		<div class="subnav">
+			<a href="#">shopcmd</a> |
+			<a href="#">首页</a> |
+			<a href="#">官网云商城</a> |
+			<a href="#">智慧门店</a> |
+			<a href="#">营销平台</a> |
+			<a href="#">媒体联盟</a> |
+			<a href="#">关于我们</a> 
+		</div>
+		<p>&copy Copyright 2015 苏州海云网络科技有限公司版权所有 | 苏ICP备15038170号-3</p>
+	</div>
+	<!-- 页面底部结束了 -->
+</body>
+</html>
+	

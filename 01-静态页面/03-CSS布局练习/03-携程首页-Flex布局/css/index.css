@@ -1,0 +1,352 @@
+body {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei",
+    STXihei, hei;
+  color: #000;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  /* height: 2000px; */
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* ul是有默认的margin和padding值的，所以要去掉 */
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+div {
+  box-sizing: border-box;
+  /* 使用盒子模型 */
+}
+
+/* 搜索模块 */
+/* 顶部的搜索盒子应该用固定定位 */
+.search-index {
+  display: flex;
+  position: fixed;
+  /* 固定定位fixed(认死理型-不占位置-完全脱标) */
+  /* 固定定位是特殊的绝对定位，完全脱标不占位置。 */
+  /* 固定定位的盒子要记得给它写宽度啊！！！ */
+  /* 因为固定定位的盒子和父亲没有关系(孙悟空无父无母),以浏览器(菩提老祖)为主 */
+  top: 0;
+  /* left: 0; */
+  left: 50%;
+  /* 然后再往左走自己宽度的一半 */
+  /* 但是我这个搜索盒子宽度不是固定死的，会发生缩放 */
+  /* 我们就用transform中的translate来做 */
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  /* 这个用来兼容老版本的谷歌浏览器 */
+  /* background-color: pink; */
+  /* 固定的盒子应该有宽度 */
+  width: 100%;
+  max-width: 540px;
+  min-width: 320px;
+  /* 这个必须要写max,min的宽度了 */
+  height: 44px;
+  /* 因为它已经是定位了，所以写margin:0 auto是无效的 */
+  /* margin: 0 auto; */
+  background-color: #f6f6f6;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  height: 26px;
+  line-height: 24px;
+  /* 因为我们设置了box-sizing:border-box，所以居中的话要减2px */
+  border: 1px solid #ccc;
+  /* 给了box-sizing之后，它里面的边框就算进去了 */
+  margin: 7px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding-left: 25px;
+  color: #666;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search::before {
+  content: "";
+  /* display: block; */
+  position: absolute;
+  /* 绝对定位不占位置，而且绝对定位的盒子直接有大小了，所以block可以省掉 */
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: url(../images/sprite.png) no-repeat -59px -279px;
+  background-size: 104px auto;
+  /* margin: 5px; */
+  /* 使用绝对定位后margin就不起效果了 */
+}
+.user {
+  width: 44px;
+  height: 44px;
+  /* background-color: purple; */
+  font-size: 12px;
+  text-align: center;
+  color: #2eaae0;
+}
+
+.user::before {
+  content: "";
+  /* content必不可少 */
+  display: block;
+  width: 23px;
+  height: 23px;
+  /* background-color: blue; */
+  background: url(../images/sprite.png) no-repeat -59px -194px;
+  background-size: 104px auto;
+  /* 然后再把图片给放大2倍 */
+  margin: 4px auto -2px;
+}
+
+/* 焦点图模块 */
+.focus {
+  padding-top: 44px;
+}
+.focus img {
+  width: 100%;
+  /* 这样可以让图片和父亲一样宽 */
+  /* 但是因为上面是固定定位，所以会把图片给盖住了 */
+}
+
+/* 局部导航栏 */
+.local-nav {
+  display: flex;
+  /* 先不要给宽度，先给高度(64px) */
+  height: 64px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 3px 4px;
+  /* background-color: pink; */
+}
+
+.local-nav li {
+  flex: 1;
+}
+
+.local-nav a {
+  display: flex;
+  /* 首先，父亲有一个display:flex */
+  flex-direction: column;
+  /* 侧轴居中对齐--单行，没有出现换行 */
+  align-items: center;
+  font-size: 12px;
+}
+
+.local-nav li [class^="local-nav-icon"] {
+  /* [class^="local-nav-icon"]表示筛选出以local-nav-icon开头的类 */
+  width: 32px;
+  height: 32px;
+  background-color: pink;
+  /* flex布局里面不会出现外边距合并的问题 */
+  margin-top: 8px;
+  background: url(../images/localnav_bg.png) no-repeat 0 0;
+  /* 图片是2倍图 */
+  background-size: 32px auto;
+  /* 宽度32px 高度auto */
+}
+
+.local-nav li .local-nav-icon-icon2 {
+  background-position: 0 -32px;
+}
+
+.local-nav li .local-nav-icon-icon3 {
+  background-position: 0 -64px;
+}
+
+.local-nav li .local-nav-icon-icon4 {
+  background-position: 0 -96px;
+}
+
+.local-nav li .local-nav-icon-icon5 {
+  background-position: 0 -128px;
+}
+
+/* 主导航栏 */
+nav {
+  border-radius: 8px;
+  margin: 0 4px 3px;
+  /* 因为上面已经给了，所以只给个左右的和下的就可以了。 */
+  /* nav不要给高度，让三个盒子撑开就可以了 */
+  overflow: hidden;
+  /* 只给了nav小圆角，没有给div小圆角，所以给nav一个overflow:hidden，把小圆角切去即可 */
+  /* 子盒子大小超过父亲就被切除 */
+}
+
+.nav-common {
+  height: 88px;
+  background-color: pink;
+  display: flex;
+}
+
+.nav-common:nth-child(2) {
+  margin: 3px 0;
+  /* 让中间的盒子上下有间隔即可 */
+}
+
+.nav-items {
+  flex: 1;
+  /* flex相对于我爸爸来说相当于我是儿子 */
+  display: flex;
+  /* display:flex相对于儿子来说我是爸爸 */
+  /* 所以这个不冲突 */
+  flex-direction: column;
+  /* 给父亲设置主轴方向为y轴 */
+}
+
+.nav-items a {
+  flex: 1;
+  /* 把主轴方向改成y轴它们就垂直分配了 */
+  text-align: center;
+  line-height: 44px;
+  /* a的高度一共88px，一半就是44px了 */
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  /* 文字阴影 */
+  /* 水平1像素，垂直1像素，再来一个颜色 */
+}
+
+.nav-items a:nth-child(1) {
+  border-bottom: 1px solid #fff;
+}
+
+.nav-items:nth-child(1) a {
+  border: 0;
+  background: url(../images/hotel.png) no-repeat bottom center;
+  background-size: 121px auto;
+  /* 这个是三倍图，要缩放为三分之一 */
+  /* 靠底端对齐，并且居中 */
+}
+.nav-items:nth-child(-n + 2) {
+  /* 前2个小盒子有白边框 */
+  /* 不要用margin,会显示出底部的背景色 */
+  /* -n+2表示前2个 */
+  border-right: 1px solid #fff;
+  /* 因为我们用了CSS3的盒子模型，所以它不会掉下来的 */
+}
+
+.nav-common:nth-child(1) {
+  background: -webkit-linear-gradient(left, #ea5a55, #fa994d);
+}
+
+.nav-common:nth-child(2) {
+  background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+}
+
+.nav-common:nth-child(3) {
+  background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+}
+
+.subnav-entry {
+  display: flex;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 0 4px;
+  flex-wrap: wrap;
+  /* 但是它还是没有换行 */
+  /* 因为里面的10个孩子没有宽度 */
+  padding: 5px 0;
+}
+
+.subnav-entry li {
+  flex: 20%;
+  /* 子元素：项目一根筋，它只能在一个轴显示 */
+  /* 我们想让它换行换下来，给父亲加一个强制换行就好了 */
+  /* 父亲是100%，其中每个孩子各占20% */
+  /* 里面的子盒子可以写百分比(相对于父级来说的) */
+}
+
+.subnav-entry a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subnav-entry-icon {
+  width: 28px;
+  height: 28px;
+  background-color: pink;
+  margin-top: 4px;
+  background: url(../images/subnav-bg.png) no-repeat;
+  background-size: 28px auto;
+}
+
+.sales-box {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  margin: 4px;
+}
+
+.sales-hd {
+  position: relative;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+  position: relative;
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+.sales-hd h2::after {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  content: "";
+  width: 79px;
+  height: 15px;
+  background: url(../images/hot.png) 0 -20px;
+  background-size: 79px auto;
+}
+
+.more {
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+  border-radius: 15px;
+  padding: 3px 20px 3px 10px;
+  color: #fff;
+}
+
+.more::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.row {
+  display: flex;
+}
+
+.row a {
+  flex: 1;
+  border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+  border-right: 1px solid #eee;
+}
+.row a img {
+  width: 100%;
+}

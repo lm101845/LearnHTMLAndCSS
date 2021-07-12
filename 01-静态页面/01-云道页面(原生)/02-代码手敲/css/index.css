@@ -1,0 +1,422 @@
+/*初始化：先删除默认的内外边距*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+   background-color: #fafafa;
+   /*防止以后里面加的东西越来越多下面的看不见，先给body一个高，让它有上下滑轮，可以上下拉*/
+   /*写到底部的时候就可以去掉了，不用了*/
+   /* height: 3000px; */
+}
+
+/*取消li的小点点*/
+li{
+   list-style: none;
+}
+
+ .clearfix:after {  content: ""; display: block; height: 0; clear: both; visibility: hidden;  }   
+
+ .clearfix {*zoom: 1;}   /* IE6、7 专有 */
+
+/*顶部导航栏开始了*/
+.header{
+   height: 100px;
+   background-color: #fff;
+}
+
+.inner{
+   width: 1200px;
+   /*高100像素，和父亲一样高。高也要写啊，不写高度这个盒子就显示不了了*/
+   height: 100px;
+   /*background-color: pink;*/
+   /*子盒子在父盒子里面居中对齐，就用margin:0 auto即可*/
+   margin:0 auto;
+   /*字的高就是inner的高(100px)，行高等于高等于100px就可以让字体垂直居中。*/
+
+   /*为什么不直接给a(.nav li a)指定行高，而给它父亲(.inner)指定行高呢？
+   ---因为行高会继承,这样会更加方便。*/
+   /*字居中对齐方案1*/
+   line-height: 100px;
+}  
+
+.logo{
+   float: left;
+}
+
+.nav{
+   float: right;
+}
+
+.nav ul{
+   /*让ul这个父元素清除浮动，这样更好。虽然这个案例没有太多影响，可以不用写*/
+   overflow: hidden;
+}
+
+/*如果li选择右浮动的话那么字就会反了，首页就会跑到最右边去了，就不对了*/
+.nav li{
+   float: left; 
+   /*字居中对齐方案2*/
+   /*line-height: 100px;*/
+
+   /*调整字体间的间距:每个li上下为0，左右20px*/
+   margin:0 20px;
+}
+
+.nav li a{
+   color: #333;
+   /*取消下划线*/
+   text-decoration: none;
+}
+
+.nav li a:hover{
+   color: #2288f6;
+}
+/*顶部导航栏结束了*/
+
+
+/*banner开始了*/
+.banner{
+   /*这个banner不用给宽，给个高620就可以了*/
+   height: 620px;
+   /*这个还是歪着的，但是不会出现水平滚动条了*/
+   /*background :url(../images/banner.jpg) no-repeat;*/
+   /*这样又不会出现水平滚动条，又不会歪了*/
+   background :url(../images/banner.jpg) no-repeat top center;
+}
+/*banner结束了*/
+
+
+/*我们的服务模块开始了*/
+/*我们的服务，经典案例用的是同一个样式*/
+.service{
+   /*我们的服务这个大盒子距离banner高度为75px*/
+   /*margin属性用于设置外边距。  设置外边距会在元素之间创建“空白”，
+   这段空白通常不能放置其他内容。*/
+   /*margin-top: 75px;*/
+   /*经过测量我们的服务版心高为1055px*/
+   width: 1055px;
+
+   /*经过测量我们的服务版心高为660px*/
+   /*做到经典案例时，说这个高度可以不用给，注销掉*/
+   /*height: 660px;*/
+
+   /*background-color: pink;*/
+   /*让这个大盒子居中对齐*/
+   /*margin:0 auto会与上面的margin-top:75px产生重叠，从而让上面的margin-top:75px失效*/
+   /*margin:0 auto;*/
+   /*所以要把margin-top: 75px和margin:0 auto都注释掉，改为下面的这个写法*/
+   margin:75px auto 0;
+}
+
+.service-hd{
+   /*添加上面的那条线-上边框，但是它不用这么宽(1055px)*/
+   /*上面的盒子要比父亲宽度小，下面的盒子要和父亲一样大，所以不能用padding*/
+   /*解决方法：你可以给hd来一个margin左侧多少像素，margin右侧多少像素即可*/
+
+   border-top: 1px solid #cccc;
+   /*解决上面的一个盒子上边框小于父盒子宽度(1055px)的方法：使用margin,左右都离父盒子25px的距离*/
+   margin:0 25px;
+}
+
+.service-hd h3{
+   /*h3是块级元素，要让块级元素里面的图片居中对齐，必须要给宽度*/
+   /*外边距实现盒子居中(重要)
+
+   可以让一个盒子实现水平居中，需要满足一下两个条件：
+   1. 必须是块级元素。     
+   2. 盒子必须指定了宽度（width）（如果没给宽则默认和屏幕一样宽）
+   然后就给左右的外边距都设置为auto，就可使块级元素水平居中。*/
+   /*我们裁剪的图片大小为167*46像素*/
+   width: 167px;
+   height: 46px;
+   /*让图片居中 同时让图片往上走15像素，盖住横线*/
+   margin:-15px auto 0;
+   /*让图片往上走15像素，盖住横线*/
+   /*margin-top: -15px;*/
+}
+
+.service-hd p{
+   font-size: 12px;
+   color: #666;
+   /*文字之间太紧了，写个行高。p里面肯定有行高的*/
+   line-height: 26px;
+   /*让文字居中对齐*/
+   text-align: center;
+   /*给p弄一个宽度*/
+   width: 831px;
+   /*p盒子是块级元素，块级元素居中对齐,还要和上面保持一些间隔，所以连在一起写*/
+   margin:15px auto 0;
+}
+
+.service-bd li{
+   width:320px;
+   height:560px;
+   background-color: #fff;
+   /*让3个小盒子左侧浮动*/
+   float:left;
+   border: 1px solid #e7e8e9;
+}
+
+.service-bd {
+   /*上面的3个小盒子距离上面的文字距离大概40px*/
+   margin-top: 40px;
+      /*bd是父盒子，里面的3个li浮动了，所以脱标不占位置了，
+   要想让我们的服务版心高660px注释掉，就要清除浮动
+   清除完浮动以后660的高度就可以扔掉了*/
+   overflow: hidden;
+
+}
+
+.service-bd img{
+   margin-bottom: 20px;
+}
+.service-bd p{
+   font-size: 12px;
+   color: #666;
+   width: 235px;
+   /*这个必须要给个高，不然下面的a就无法对齐了*/
+   height: 120px;
+   margin: 0 auto;
+   line-height: 26px;
+}
+
+.service-bd a{
+   display: block;
+   width: 148px;
+   height: 38px;
+   border: 1px solid #ff9412;
+   /*让这个超链接水平居中,并且离上面有30px距离*/
+   margin: 30px auto;
+   /*文字水平居中*/
+   text-align: center;
+   /*文字垂直居中*/
+   line-height: 38px;
+   color:#ff9412;
+   font-size: 14px;
+   /*取消下划线*/
+   text-decoration: none;
+   /*给长方形一个圆角*/
+   border-radius: 5px;
+}
+
+.service-bd a:hover{
+   color: #fff;
+   background-color: #ff9412;
+}
+
+.yingxiao{
+   /*直接给中间的盒子来一个左右margin就可以了*/
+   margin:0 44px;
+}
+
+/*我们的服务模块结束了*/
+
+
+/*经典案例开始了*/
+.case{
+   width: 1055px;
+   margin: 105px auto 0;
+}
+
+.case-bd li{
+   /*每个li里面的图片规格是325*210，准确的是322*211，取个整数*/
+   width: 325px;
+   height: 210px;
+   /*background-color: pink;*/
+   /*li是块级元素，要让它横在一起*/
+   float: left;
+   /*用li做text的父亲比较合适*/
+   position: relative;
+}
+
+.case-bd img{
+   /*实际切出来的三张图片宽度不一致，分别为323px,324px,322px,所以来统一一下*/
+   width: 325px;
+   height: 210px;
+}
+
+.case-bd-middle{
+   margin: 0 40px;
+}
+
+.case-bd{
+   margin-top: 80px;
+   /*a是绝对定位，找到它的父亲case-bd来相对定位*/
+   position: relative;
+   /*3个盒子加了浮动所以bd没有高了，但也不能用overflow:hidden，
+   因为左右箭头是要出去的，清除浮动后超出这个盒子就被切掉了，
+   就不见了,所以用afer伪元素来清除浮动比较好*/
+   /*overflow: hidden;不能用*/
+}
+
+.text{
+   /*半透明的文字高度为45px*/
+   height: 45px;
+   /*宽度可以不用给，或者给个100%都行*/
+   width: 100%;
+   /*border: 1px solid #ccc;*/
+   /*字要压着图片，所以肯定用定位做比较好-子绝父相*/
+   position: absolute;
+   /*给定位设置边偏移，靠左下方对齐*/
+   left: 0;
+   bottom: 0;
+   /*设置阴影*/
+   background:rgba(0,0,0,0.3);
+   /*设置文字水平居中*/
+   line-height: 45px;
+   text-align: center;
+   /*设置文字颜色*/
+   color: #fff;
+   /*设置文字大小*/
+   font-size: 12px;
+}
+
+.mask{
+   /*"面具"的宽度和高度都是100%,和li一样*/
+   width: 100%;
+   height: 100%;
+
+   /*给面具设置阴影,背景(注意这个是CSS,路径要加../)*/
+   background: rgba(0,0,0,0.5) url(../images/fdj.png) center no-repeat;
+
+   /*这个肯定是要用定位的*/
+   position: absolute;
+   /*设置边偏移：左上角对齐*/
+   top: 0;
+   left: 0;
+
+   /*刚开始不要看见，等鼠标经过li的时候才显示*/
+   display: none;
+}
+
+/*表示鼠标经过li的时候，它里面的mask会显示出来*/
+.case-bd li:hover .mask{
+   display: block;
+}
+
+.left,.right{
+   width: 60px;
+   height: 60px;
+   background: rgba(0,0,0,0.3);
+   /*a是行内元素本来应该要转换的，但是恰巧我用定位，可以自动转换成行内块元素*/
+   position: absolute;
+   /*接下来垂直居中:先走父亲的一半，再走自己盒子的一半*/
+   top: 50%;
+   margin-top: -30px;
+
+   /*垂直居中*/
+   line-height: 60px;
+   text-align: center;
+   /*修改颜色*/
+   color:#fff;
+   /*取消下划线*/
+   text-decoration: none;
+   /*给箭头一个大小*/
+   font-size: 25px;
+   /*把箭头形状改为圆形*/
+   border-radius: 50%;
+
+}
+
+.left{
+   /*left: 0;*/
+   left: -90px;
+}
+
+.right{
+   /*right:0;*/
+   right: -90px;
+}
+
+/*left和right就是case里面的a*/
+.case-bd a:hover{
+   background: rgba(0,0,0,0.4);
+}
+/*经典案例结束了*/
+
+/*合作媒体开始了*/
+.media-bd li{
+   /*每个小方框宽度为210px，高度为80px,一共要有15个*/
+   /*宽度要量好，不然方框会掉下去*/
+   width: 210px;
+   /*height: 80px;*/
+   height: 60px;
+   /*background-color: pink;*/
+   /*li要浮动*/
+   float: left;
+   /*加边框*/
+   border-right: 1px dashed #ccc;
+   border-bottom: 1px dashed #ccc;
+   /*如何去掉最右边和最下边的虚线呢?用overflow:hidden
+   孩子比父亲大，切一部分就可以了
+   先手动给父亲一个宽*/
+
+   /*让li水平居中*/
+   text-align: center;
+   line-height: 80px;
+   /*让li垂直居中,这个写了20px,height原来是80，也减去20，变成60*/
+   padding-top: 20px;
+
+}
+
+.media-bd ul{
+   /*只要li的宽度210*5=1050<1060,那么浮动就不会掉下来*/
+   width: 1060px;
+}
+.media-bd{
+   /*给li的爷爷宽1048px,高240px,用这个来overflow:hidden来切*/
+   width: 1048px;
+   height: 240px;
+   /*border: 1px solid red;*/
+   /*这个目前我是怎么也想不到的，不会*/
+   /*不会用这个方法也就可以一个一个写*/
+   overflow: hidden;
+
+   /*距离上面一个小距离*/
+   margin-top: 40px;
+}
+/*合作媒体结束了*/
+
+
+/*页面底部开始了*/
+.footer{
+   /*width: 1055px;*/
+   height: 165px;
+   background-color: #212425;
+   margin-top: 100px;
+   /*用于解决外边距塌陷*/
+   overflow: hidden;
+}
+
+.subnav{
+   text-align: center;
+   /*外边距塌陷的问题，它会带着父亲一块走*/
+   /*解决方法：为父盒子加一个overflow:hidden,或者加个边框也行*/
+   margin-top: 50px;
+   /*竖线|不归a管，但是归subnav管，在这里修改竖线的颜色*/
+   color: #f0f1f1;
+   /*把竖线也改成14号*/
+    font-size: 14px;
+}
+
+.subnav a{
+   color: #f0f1f1;
+   text-decoration: none;
+   /*修改边距*/
+   padding:0 5px;
+   font-size: 14px;
+}
+
+.subnav a:hover{
+   color: #2288f6;
+   text-decoration: underline;
+}
+
+.footer p{
+   text-align: center;
+   color: #888;
+   margin-top: 30px;
+}
+/*页面底部结束了*/
