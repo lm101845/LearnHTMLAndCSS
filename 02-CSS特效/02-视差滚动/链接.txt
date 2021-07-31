@@ -1,0 +1,6 @@
+web CSS视差效果 油管搬运 堪比AE
+https://www.bilibili.com/video/BV1u7411S7hu/?spm_id_from=333.788.recommend_more_video.1
+这种视差比较考验设计，也可以直接用parallax.js
+
+一行JS代码实现视差滚动效果 | parallax | css + js
+https://www.bilibili.com/video/BV1Wy4y137zj?from=search&seid=13516746684820569553
