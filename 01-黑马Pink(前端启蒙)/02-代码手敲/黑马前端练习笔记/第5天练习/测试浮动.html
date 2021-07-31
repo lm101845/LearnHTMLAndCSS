@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.xiongda {
+			width: 300px;
+			height: 300px;
+			background-color: pink;
+			/*float:left;*/
+		}
+
+		.xionger {
+			width: 300px;
+			height: 300px;
+			background-color: blue;
+			float: left;   /*熊大不浮动，熊二浮动，没有用。浮了也白浮*/
+		}
+
+		.xiongsan {
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+			float: left;   
+			/*熊大浮动，熊二不浮动，熊三浮动，则熊三会盖住熊二*/
+			/*熊大浮动，熊二不浮动，熊三不浮动，则熊二熊三会移上去*/
+
+		}
+	</style>
+
+</head>
+<body>
+	<div class="xiongda"></div>
+	<div class="xionger"></div>
+	<div class="xiongsan"></div>
+</body>
+</html>

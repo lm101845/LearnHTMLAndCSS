@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div.current {   /*同一个  div 就是 current  */
+		color: red;
+	}
+
+
+	p.current {
+		color: blue;
+	}
+	/*div .current {  div 里面是 current  }  */
+	div,
+	span,
+	p {
+		color: red;
+	}
+	div, span, p, .current{
+	   color: blue;
+	}
+	.one, .two {
+		color: green;
+	}
+	</style>
+</head>
+<body>
+	<div class="current">123</div>
+	<p class="current">abc</p>
+	<div class="one">123123123</div>
+	<div class="two">123123123</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			/*float: left;*/
+		}
+		.one {
+			background-color: pink;
+		}
+
+		.two {
+			background-color: purple;
+			float: left;   /*浮动只对下面的元素有影响，上面的.one  是标准流，无论你怎么浮动，都不会挤掉它的位置*/
+		}
+
+		.three {
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="one"></div>
+	<div class="two"></div>
+	<div class="three"></div>
+</body>
+</html>

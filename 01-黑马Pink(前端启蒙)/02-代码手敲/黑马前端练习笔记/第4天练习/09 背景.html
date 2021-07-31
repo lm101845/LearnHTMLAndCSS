@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*body {
+			background-color: pink;
+			background-image: url(images/3.jpg);
+			background-repeat: no-repeat;*/
+			/*参数： 
+
+		repeat : 　背景图像在纵向和横向上平铺（默认的）
+
+		no-repeat : 　背景图像不平铺
+
+		repeat-x : 　背景图像在横向上平铺
+
+		repeat-y : 　背景图像在纵向平铺 
+
+		设置背景图片时，默认把图片在水平和垂直方向平铺以铺满整个元素。*/
+	/*	}*/
+
+		div {
+			width: 700px;
+			height: 700px;
+			background-color: purple;
+			background-image: url(images/1.jpg);
+			background-repeat: no-repeat;   /*不平铺*/
+		/*	background-position: x y;*/
+			background-position: center top; /* top 上 bottom 下 left 左  right 右*/
+			/*1.potition后面可以跟方位名词，他们之间没有上下顺序*/
+			/*2.如果只写一个值，另外一个值默认是居中的*/
+			/*3.position后面也可以跟值，即px 但是必须有顺序，x在前面，y在后面*/
+			background-position: right;
+			background-position: bottom;
+
+			background-position: 500px 500px;
+			background-position: center center;   /*center可以省略*/
+		}
+	</style>
+</head>
+<body>
+	<!-- 我是上面的文字 -->
+	<div>
+		<!-- <img src="images/1.jpg" width="200px"> -->
+	</div>
+</body>
+</html>

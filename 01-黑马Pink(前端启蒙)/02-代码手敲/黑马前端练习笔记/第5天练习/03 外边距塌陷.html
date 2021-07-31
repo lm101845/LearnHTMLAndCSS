@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.father {
+			width: 500px;
+			height: 500px;
+			background-color: pink;
+			/*解决方法1 用border 缺点：增大了盒子：*/
+			/*border-top: 1px solid pink;*/  
+
+			/*解决方法2 用padding  缺点：撑大了盒子*/
+			/*padding-top: 50px;*/
+
+			/*解决方法3 ：溢出隐藏*/
+			overflow: hidden;
+		}
+
+		.son {
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+
+			margin-top: 50px;  
+			/*会将父亲往下带*/
+
+			/*margin-left: 50px;  */
+			/*水平方向没有问题*/
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  * {
+	margin: 0;
+	padding: 0;
+	}
+	
+	.top {
+		height: 44px;
+		background:url(images/top.png) no-repeat top center;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.box {
+		margin:44px auto 0;
+		width: 1002px;   /*必须要给宽才能居中对齐*/
+	}
+
+	.ad-l,.ad-r {
+		position: fixed;
+		top: 100px;
+	}
+
+	.ad-r {
+		right: 0;
+	}
+	
+	</style>
+</head>
+<body>
+	<img src="images/ad-l.png" class="ad-l">
+	<img src="images/ad-r.png" class="ad-r">
+	<div class="top"></div>
+	<div class="box">
+		<img src="images/box.png">
+	</div>
+</body>
+</html>

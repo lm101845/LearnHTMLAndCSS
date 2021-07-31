@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.father {
+			border: 1px solid #f00;  
+			width: 300px;
+			overflow: hidden;  /*给父级加，别加错位置了*/
+			/*很多情况下father不方便给宽度和高度，比如father里面全是新闻文字*/
+			/*不是所有的浮动我们都需要清除，只有影响布局的我们才清除*/
+		}
+
+		.big {
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+			float: left;
+		}
+
+		.small {
+			width: 80px;
+			height: 180px;
+			background-color: blue;
+			float: left;
+		}
+		.footer {
+			width: 400px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="big"></div>
+		<div class="small"></div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

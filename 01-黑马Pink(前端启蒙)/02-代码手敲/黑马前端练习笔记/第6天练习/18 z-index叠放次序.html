@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			position: absolute; 
+			/*加了绝对定位以后就全部叠到一起了*/
+			/*z-index: 0;*/  
+			/* 隐含着的，不会被写出来  而且只有定位的盒子才有*/
+		}
+
+		.red {
+			z-index: 1;
+		}		
+		.blue {
+			background-color: blue;
+			left: 50px;
+			top:50px;
+			z-index: 2;
+		}
+
+		.green {
+			background-color: green;
+			left: 100px;
+			top: 100px;
+			z-index: 3;
+		}
+	</style>
+</head>
+<body>
+	<div class="red"></div>
+	<div class="green"></div>
+	<div class="blue"></div>  
+	<!-- 如果盒子都有定位，则后来者居上。最后显示是蓝色 -->
+</body>
+</html>

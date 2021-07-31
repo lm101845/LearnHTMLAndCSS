@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;   不写这个评论文字和上面会有距离
+		}
+		.message {
+			width: 908px;
+			height: 310px;
+			border: 1px solid #ccc;
+			margin: 100px auto;
+			padding-left:30px;
+		}
+
+		.message h4 {
+			margin-top: 40px;
+			height: 45px;  /*字默认是左上角对齐  高度剩余法  给的高度比字高，剩下的是空隙*/
+		}
+
+		.message h4 a {
+			font-weight: 400;
+			color: #f00;
+		}
+
+		.message textarea {
+			width: 862px;
+			height: 128px;
+			color: #ccc;
+			font-size: 20px;
+			padding-left: 10px;
+		}
+
+		.message input {
+			margin-top: 20px;
+		}
+
+		.message p {
+			color: #f00;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="message">
+		<h4>评论<img src="star.png" height="19" width="89"><a href="#">我要评论</a></h4>
+		<textarea>请输入您的意见或建议</textarea>
+		<input type="image" src="btn.png">
+		<p>暂时没有评论</p>
+	</div>
+</body>
+</html>

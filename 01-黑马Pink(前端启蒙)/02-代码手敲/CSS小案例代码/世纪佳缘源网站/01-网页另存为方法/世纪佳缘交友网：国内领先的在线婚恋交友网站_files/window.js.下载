@@ -1,0 +1,200 @@
+/**
+  * window for jiayuan.com profile page by Yaosine
+  */
+
+//简化document.getElementById
+var getById = function(id){
+	  if (typeof(id) != "string" || id == "") return false;
+	  if (document.getElementById) return document.getElementById(id);
+	  if (document.all) return document.all(id);
+};
+
+//弹出层 title:标题，url:地址，msg:消息
+function openWindow(title,msg,url,width,height){ 
+	
+	if(!width) width = 400;//默认宽度
+	if(!height) height = 200;//默认高度
+	if(!title) getById('open_window_head').style.display = 'none';
+	
+	var iframe_width = width;
+	//if(url.indexOf('hello.php')!=-1) iframe_width -=2;//兼容新版打招呼层 
+
+	if(msg != ''){
+		getById('open_window_content').innerHTML = msg;
+	}
+	else if(url != ''){
+		getById('open_window_content').innerHTML = '<iframe id="open_window_iframe" scrolling="no" width="'+iframe_width+'" height="'+height+'" allowTransparency="true" frameborder="0"></iframe>';
+		getById('iframe_loading').style.left = String(width/2 - 104)+'px';
+		getById('iframe_loading').style.top = String(height/2 -10)+'px';
+		iframeLoad(getById('open_window_iframe'));
+		getById('open_window_iframe').src = url; 
+	}
+	else{
+		alert('参数错误');
+		return false;
+	}
+	
+	var scrolltop = document.documentElement.scrollTop || window.pageYOffset || 0; //for webkit
+	var scroll_height = String(scrolltop + (document.documentElement.clientHeight - height)/2) + "px";
+	var _scrollWidth = Math.max(document.body.scrollWidth,document.documentElement.scrollWidth);
+	var _scrollHeight = Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
+
+	getById('bg').style.display = 'block';	
+	getById('bg').style.width = _scrollWidth + "px";	
+	getById('bg').style.height = _scrollHeight + "px";	
+
+	getById('open_window').style.top = scroll_height; 
+	getById('open_window').style.left = String(document.body.clientWidth/2-(width)/2) + "px";
+	getById('open_window').style.width = String(width) + "px";
+	getById('open_window').style.display = '';
+	getById('open_window_title').innerHTML = title;
+
+
+	//跟随滚动： gd_type 为 1时，不滚动--xujiao
+	var e = document.getElementById('open_window')
+	if(arguments.length>5){
+		var gd_type = arguments[5];
+	}else{
+		var gd_type = 0;
+	}
+	if(gd_type != 1){
+		var Outtimer
+		window.onscroll = function(){
+			clearTimeout(Outtimer)
+			Outtimer = setTimeout(scroll,50)
+		}
+	}
+	function scroll() {
+		scrolltop = document.documentElement.scrollTop || window.pageYOffset || 0; //for webkit
+		scroll_height = parseInt(scrolltop + (document.documentElement.clientHeight - e.offsetHeight)/2);
+		startMove(e,{top:scroll_height});
+	}
+	function getStyle(obj, name)
+	{
+	  if(obj.currentStyle)
+	  {
+	    return obj.currentStyle[name];
+	  }
+	  else
+	  {
+	    return getComputedStyle(obj, false)[name];
+	  }
+	}
+	function startMove(obj, json, fnEnd)
+	{
+	  clearInterval(obj.timer);
+	  obj.timer=setInterval(function (){
+	    var bStop=true;   
+	    
+	    for(var attr in json)
+	    {
+	      var cur=0;
+	      
+	      if(attr=='opacity')
+	      {
+	        cur=Math.round(parseFloat(getStyle(obj, attr))*100);
+	      }
+	      else
+	      {
+	        cur=parseInt(getStyle(obj, attr));
+	      }
+	      
+	      var speed=(json[attr]-cur)/6;
+	      speed=speed>0?Math.ceil(speed):Math.floor(speed);
+	      
+	      if(cur!=json[attr])
+	        bStop=false;
+	      
+	      if(attr=='opacity')
+	      {
+	        obj.style.filter='alpha(opacity:'+(cur+speed)+')';
+	        obj.style.opacity=(cur+speed)/100;
+	      }
+	      else
+	      {
+	        obj.style[attr]=cur+speed+'px';
+	      }
+	    }
+	    
+	    if(bStop)
+	    {
+	      clearInterval(obj.timer);
+	            
+	      if(fnEnd)fnEnd();
+	    }
+	  }, 30);
+	}
+}
+
+function openWindowById(obj,width,height){ 
+	
+	if(!width) width = 400;//默认宽度
+	if(!height) height = 200;//默认高度
+
+	var scrolltop = document.documentElement.scrollTop || window.pageYOffset || 0; //for webkit
+	var scroll_height = String(scrolltop + (document.documentElement.clientHeight - height)/2) + "px";
+	var _scrollWidth = Math.max(document.body.scrollWidth,document.documentElement.scrollWidth);
+	var _scrollHeight = Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
+	getById('bg').style.display = 'block';	
+	getById('bg').style.width = _scrollWidth + "px";	
+	getById('bg').style.height = _scrollHeight + "px";	
+
+	getById(obj).style.width = String(width) + "px";
+	getById(obj).style.left = String(document.body.clientWidth/2-(width)/2) + "px";
+	getById(obj).style.top	= scroll_height; 
+	getById(obj).style.display = '';
+
+	//跟随滚动
+	/*window.onscroll = function(){
+		scroll_height = String(document.documentElement.scrollTop + (document.documentElement.clientHeight - height)/2) + "px";
+		getById(obj).style.top	= scroll_height;
+	}*/
+}
+
+//关闭弹出窗
+function closeWindow(){
+	getById('bg').style.display = 'none';	
+	getById('open_window').style.display = 'none';
+}
+
+//兼容旧方法
+function close_popup(flag){
+	closeWindow();
+}
+
+function popup_bgdiv(url, msg, flag, _width, _height, type)
+{ 
+	if(!_height) _height = 600;//默认高度 
+	if(_width == 651) _width = 612;
+	openWindow('', msg, url, _width, _height);
+}
+
+//兼容礼物页
+function close_window(){
+	closeWindow();
+}
+
+//关闭指定ID弹出窗
+function closeWindowById(obj){
+	getById('bg').style.display = 'none';	
+	getById(obj).style.display = 'none';
+}
+
+//iframe预加载
+function iframeLoad(iframe){
+	var iframe_loading = getById('iframe_loading');
+	iframe.style.display = 'none';
+	iframe_loading.style.display = 'block';
+	if (iframe.attachEvent){    
+		iframe.attachEvent("onload", function(){        
+			iframe_loading.style.display = 'none';
+			iframe.style.display = 'block';
+		});
+	} else {    
+		iframe.onload = function(){        
+			iframe_loading.style.display = 'none';
+			iframe.style.display = 'block';
+		};
+	}
+	iframe.style.display = 'block';
+}

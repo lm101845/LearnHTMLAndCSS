@@ -1,0 +1,14 @@
+var head_logo_config = {};
+head_logo_config['index_logo']='//images2.jyimg.com/msn/index_pic/jy_common_1579168162.jpeg';
+head_logo_config['index_logo_url']='https://www.jiayuan.com/';
+head_logo_config['main_logo']='//images2.jyimg.com/msn/index_pic/jy_common_1579168162.jpeg';
+head_logo_config['main_logo_url']='https://www.jiayuan.com/';
+head_logo_config['gray_logo']='//images2.jyimg.com/msn/index_pic/jy_common_1579168180.jpeg';
+head_logo_config['gray_logo_url']='https://www.jiayuan.com/';
+head_logo_config['lp_logo']='//images2.jyimg.com/msn/index_pic/jy_common_1579168180.jpeg';
+head_logo_config['lp_logo_url']='https://www.jiayuan.com/';
+head_logo_config['head_main_sale']='//images2.jyimg.com/msn/index_pic/jy_common_1565663364.gif';
+head_logo_config['head_main_sale_url']='https://www.jiayuan.com/usercp/service/bmsg_tg2.php?src_key=logo';
+head_logo_config['layer_right1']='//images1.jyimg.com/w4/date/i/subject/date_cfl.png';
+head_logo_config['layer_right1_url']='http://date.jiayuan.com/parties/?t=white_day&from=qixifuceng';
+/* Created in 2020-01-16 17:50:07 */

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		position: absolute;
+		/*z-index: 0;  只有定位的盒子才有*/
+	}
+	.red {
+		z-index: 1;
+	}
+	.blue {
+		background-color: blue;
+		left: 50px;
+		top: 50px;
+		z-index: 2;
+	}
+	.green {
+		background-color: green;
+		left: 100px;
+		top: 100px;
+		z-index: 999;
+	}
+	</style>
+</head>
+<body>
+	<div class="red"></div>
+	<div class="blue"></div>
+	<div class="green"></div>
+</body>
+</html>

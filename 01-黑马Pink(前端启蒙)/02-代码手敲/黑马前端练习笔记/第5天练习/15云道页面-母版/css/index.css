@@ -1,0 +1,146 @@
+/*先删除默认的内外边距*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fafafa;
+}
+
+li {
+	list-style: none;  /*取消li的小点*/
+}
+
+.nav li {
+	float: left;  
+	/* 比display:inline-block要好，inline-block有缝隙;
+	如果写float:right ,则写反了，首页会在最右边;*/
+	margin: 0 20px;   /*不是.nav li a {margin: 0 20px;}*/
+}
+
+/*顶部导航栏开始了*/
+.header {
+	height: 100px;
+	background-color: #fff;
+}
+
+.inner {
+	width: 1200px;
+	height: 100px;  /*和父亲一样高*/
+	/*background-color: pink;*/
+	margin: 0 auto;
+	line-height: 100px;  /*行高会继承，放在父亲里面比较好*/
+}
+
+.logo {
+	float: left;
+}
+
+.nav {
+	float: right;
+}
+
+.nav li a {
+	font-size: 20px;
+	color: #333;
+	text-decoration: none;
+}
+
+.nav li a:hover {
+	color: #2288f6;
+}
+
+/*banner开始了*/
+.banner {
+	height: 620px;  /*不用给宽*/
+	background: url(../images/banner.jpg);
+}
+/*banner结束了*/
+
+
+/*我们的服务模块开始了*/
+.service {
+	/*margin-top: 75px;*/
+	width: 1055px;
+	height: 660px;
+	/*background-color: pink;*/
+	margin: 75px auto 0;
+}
+
+.service-head {
+	border-top: 1px solid #ccc;
+	margin: 0 25px;   /*不能给padding,不然下面的不好摆*/
+}
+
+.service-head h3 {
+	width: 165px;
+	height: 58px;
+	margin: -20px auto 0;
+	/*margin-top: -20px;*/
+}
+
+.service-head p {
+	font-size: 18px;
+	color: #666;
+	line-height: 26px;
+	text-align: center;
+	width: 830px;
+	margin: 15 auto 0;
+}
+
+.service-bd {
+	margin-top: 40px;
+}
+.service-bd li {
+	width: 319px;
+	height: 510px;
+	background-color: #fff;
+	float: left;
+	border: 1px solid #e7e8e9;
+}
+
+.service-bd img {
+	margin:40px 35px;
+	width: 248px;
+	height: 132px;  /* 这样所有的图片都是一样大的*/
+}
+
+.service-bd h3 {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+	height: 40px;
+}
+
+.service-bd p {
+	font-size: 14px;
+	color: #666;
+	width: 235px;
+	margin: 0 auto;
+	line-height: 30px;
+}
+
+.service-bd a {
+	display: block;
+	width: 148px;
+	height: 38px;
+	border: 1px solid #ff9414;
+	margin: 30px auto;
+	text-decoration: none;
+	text-align: center;
+	line-height: 38px;
+	color: #ff9414;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+.service-bd a:hover {
+	background-color: #ff9414;
+	color: #fff;
+	
+}
+.yingxiao {
+	margin: 0 45px;
+}
+/*我们的服务模块结束了*/

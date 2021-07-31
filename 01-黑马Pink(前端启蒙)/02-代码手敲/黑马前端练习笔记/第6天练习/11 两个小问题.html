@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+
+		.top {
+			/*float: left;*/
+			position: absolute; /* 绝对定位是完整意义上的脱标，浮动不能让文字脱标*/
+			top: 0;
+			left: 0;
+		}
+
+		.bottom {
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">123123123</div>
+	<div class="bottom">abcabcabc</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        list-style: none;
+    }
+    body {
+        background: url(images/wx.jpg) repeat-x;
+    }
+    .nav {
+        height: 75px;
+    }
+    .nav li {
+        float: left;
+        margin: 0 10px;
+        padding-top: 21px;
+    }
+    .nav li a {
+        display: block;
+        background: url(images/to.png) no-repeat;
+        color: #fff;
+        font-size: 14px;
+        line-height: 33px;
+        padding-left: 15px;
+        text-decoration: none;
+    }
+    .nav li a:hover {
+        background-image: url(images/ao.png);
+    }
+
+    .nav li a:hover span {  /* 鼠标经过a a里面的span 也要变换背景 */
+        background-image: url(images/ao.png);
+    }
+    .nav li a span {
+        display: block;
+        line-height: 33px;
+        background: url(images/to.png) no-repeat right center;
+        padding-right: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>帮助与反馈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>公众平台</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>帮助与反馈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>帮助与反馈</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

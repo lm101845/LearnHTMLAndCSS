@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
+	.tb {
+		width: 520px;
+		height: 280px;
+		background-color: pink;
+		margin: 100px auto;
+		position: relative;
+	}
+	.tb a {
+		width: 24px;
+		height: 36px;
+		
+		display: block;
+		position: absolute;
+		top: 50%;
+		margin-top: -18px;
+	}
+	.left {
+		left: 0;
+		background: url(images/left.png) no-repeat;
+	}
+	.right {
+		right: 0;
+		background: url(images/right.png) no-repeat;
+	}
+	.tb ul {
+		width: 70px;
+		height: 13px;
+		background: rgba(255, 255, 255, .3);
+		position: absolute; /* 加定位*/
+		bottom: 18px;
+		left: 50%; /*水平走父容器的一半*/
+		margin-left: -35px; /*左走自己的一半*/
+		border-radius: 8px;
+ 	}
+ 	.tb ul li {
+ 		width: 8px;
+ 		height: 8px;
+ 		background-color: #fff;
+ 		float: left;
+ 		margin: 3px;
+ 		border-radius: 50%;
+ 	}
+ 	.tb .current {
+ 		background-color: #f40;
+ 	}
+	</style>
+</head>
+<body>
+	<div class="tb">
+		<img src="images/tb.jpg" >
+		<a href="#" class="left"></a>
+		<a href="#" class="right"></a>
+		<ul>
+			<li class="current"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+	</div>
+</body>
+</html>

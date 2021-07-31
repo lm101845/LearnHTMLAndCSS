@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.grandfather {
+			width: 700px;
+			height: 700px;
+			background-color: skyblue;
+			/*position: absolute;*/
+		}
+		.father {
+			width: 500px;
+			height: 500px;
+			background-color: pink;
+			margin: 100px;
+			position: absolute;
+		}
+
+		.son {
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			/*父级有定位
+			绝对定位是将元素依据最近的已经定位（绝对、固定或相对定位）的父元素（祖先）进行定位。*/
+		}
+	</style>
+</head>
+<body>
+	<div class="grandfather">
+		<div class="father">
+			<div class="son"></div>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.top,
+		.banner,
+		.main,
+		.footer {
+			width: 900px;
+			background-color: #eee;
+			border: 1px dashed #ccc;
+			margin: 0 auto;
+		}
+		.top {
+			/*width: 900px;*/
+			height: 80px;
+			/*background-color: #eee;
+			border: 1px dashed #ccc;*/
+			margin: 0 auto;
+		}
+
+		.banner {
+			/*width: 900px;*/
+			height: 120px;
+			/*background-color: #eee;
+			border: 1px dashed #ccc;*/
+			/*margin: 0 auto;*/
+			margin: 5px auto;
+		}
+
+		.main {
+			/*width: 900px;*/
+			height: 500px;
+			/*background-color: #eee;
+			border: 1px dashed #ccc;*/
+			/*margin: 0 auto;*/
+		}
+
+		.footer {
+			/*width: 900px;*/
+			height: 100px;
+			/*background-color: #eee;
+			border: 1px dashed #ccc;*/
+			/*margin: 0 auto;
+			margin-top: 5px; */ /*将上层叠掉了，但是对于左右没有影响*/
+			margin: 5px auto 0;  /*上5 左右居中 下0*/
+		}
+	</style>
+</head>
+<body>
+	<div class="top">top</div>
+	<div class="banner">banner</div>
+	<div class="main">main</div>
+	<div class="footer">footer</div>
+</body>
+</html>

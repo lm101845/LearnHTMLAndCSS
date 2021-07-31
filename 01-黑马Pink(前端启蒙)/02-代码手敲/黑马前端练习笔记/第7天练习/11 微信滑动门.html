@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			background: url(images/wx.jpg) repeat-x;
+		}
+
+		.nav a {
+			/*1.a左边放左圆角，但是文字需要往右走15像素*/
+			height: 33px;
+			line-height: 33px;
+			color: #fff;
+			text-decoration: none;
+			background: url(images/to.png) no-repeat;
+			display: inline-block;
+			padding-left: 15px;
+		}
+
+		.nav a span {
+			/*1.span右边放右圆角，但是文字需要往左走15像素*/
+			background: url(images/to.png) no-repeat right;
+			padding-right: 15px;
+			display: inline-block;
+		}
+
+		.nav li {
+			float: left;
+			margin: 0 30px;
+			list-style: none;
+		}
+
+		.nav a:hover {
+			background-image: url(images/ao.png);
+		}
+
+		.nav span:hover {
+			background-image: url(images/ao.png);  /*背景图片不会继承
+		}
+
+		/*.nav a:hover，.nav span:hover {
+			background-image: url(images/ao.png);
+		}*/
+
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li>
+			<a href="">
+				<span>首页</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="">
+				<span>帮助与反馈</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="">
+				<span>公众平台</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="">
+				<span>开放平台</span>
+			</a>
+		</li>
+	</ul>
+</body>
+</html>

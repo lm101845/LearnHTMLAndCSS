@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img {
+			/*vertical-align: middle;*/
+			/*vertical-align: top;*/
+			vertical-align: bottom;   /*这样就不会有空白缝隙了*/
+			display: block;   /*图片属于行内块元素 转换成块级元素就不存在对齐的问题了*/
+		}
+
+		div {
+			border: 2px solid red;  /*因为这个div没有高，所以盒子会将它撑开*/
+									/*因为图片和文字基线对齐，所以会有白缝隙*/
+									/*解决方法：不要让图片和文字基线对齐（默认对齐）就好了*/
+		} 
+	</style>
+</head>
+<body>
+	<div>
+		<img src="images/tudou.jpg">
+		My name is 强哥   <!-- 图片默认是跟基线对齐 -->
+	</div>
+</body>
+</html>

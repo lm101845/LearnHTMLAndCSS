@@ -1,0 +1,63 @@
+$(function(){
+	//设置输入框焦点
+	$('.phone-input').click(function(){
+		$(this).find('input').focus();
+	})
+	//修改btn
+	$('.change-btn').click(function(){
+		var defaultDom = $('.default-num'),
+			changeDom = $('.change-num'),
+			changeInput = changeDom.children('input');
+		if(defaultDom.is(":visible")){
+			defaultDom.hide();
+			changeDom.show()
+			changeInput.attr('placeholder',defaultDom.text()).focus();
+			$(this).text('确认');
+		}else{
+			if(changeInput.val().length > 11){
+				wrongNotice($(this));
+				changeInput.addClass('change-wrong').val(defaultDom.text()).focus();
+				return false;
+			}
+			if(changeInput.val().length == 0){
+				defaultDom.text(changeInput.attr('placeholder'));
+			}else{
+				defaultDom.text(changeInput.val());
+				changeInput.val('');
+			}
+			defaultDom.show()
+			changeDom.hide()
+			changeInput.removeClass('change-wrong');
+			$(this).text('修改').parents('dl').find('.note').removeClass('notice');
+		}
+	})
+	//验证码btn
+	$('.code-btn').click(function(){
+		var $this = $(this),
+			codeBtn = $('.code-btn'),
+			changeBtn = $('.change-btn');
+		if($this.hasClass("code-btned") || changeBtn.text() == '确认'){
+			return;
+		}else{
+			changeBtn.hide();
+			time = 60;
+			$this.text('重新发送(' + time + ')').addClass('code-btned');
+			var timer = setInterval(function(){
+				time--
+				codeBtn.text('重新发送(' + time + ')');
+				if(time <= 0){
+					codeBtn.text('获取验证码').removeClass('code-btned');
+                                        $this.removeAttr("disabled");
+					changeBtn.show();
+					clearInterval(timer);
+				}
+			},1000)
+		}
+	})
+})
+
+function wrongNotice($this){
+	notice = $this.parents('dl').find('.note');
+	notice.addClass('notice');
+	notice.text(notice.attr('notedata'));
+}

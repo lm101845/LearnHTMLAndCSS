@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			height: 100px;
+			background-color: pink; 
+			/* 不给宽，这个div是通览显示的，和浏览器一样宽*/
+			/*float: left;  */
+			/*没有宽，一浮动就转换成了行内块-incline-block，而行内块跟内容有关系，
+			你又没有内容，所以这个盒子就没了，不见了*/
+			/*width: 100px;*/
+			/*position: relative;  *//*相对定位不存在转换的问题*/
+			/*position: absolute;*/
+			position: fixed;   
+			/*绝对定位和固定定位都会有模式转换*/
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

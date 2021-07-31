@@ -13,3 +13,6 @@ yarn-error.log*
 *.sln
 *.vscode
 *.history
+*.mp3
+*.ogg
+*.psd

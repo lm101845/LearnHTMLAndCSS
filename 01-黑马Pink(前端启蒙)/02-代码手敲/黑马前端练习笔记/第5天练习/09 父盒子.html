@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.father {
+			width: 600px;
+			height: 600px;
+			background-color: pink;
+			padding: 50px;
+			/*浮动的盒子不能越过padding值，浮动也算里面的内容，跨越不了内边距*/
+		}
+
+		.son {
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+			float: right;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="father">123
+		<div class="son">456</div>
+	</div>
+</body>
+
+</html>

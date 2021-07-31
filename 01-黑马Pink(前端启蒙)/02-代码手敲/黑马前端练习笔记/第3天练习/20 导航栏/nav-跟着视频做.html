@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.nav{
+			text-align: center;  /*让盒子居中对齐*/
+		}
+		.nav a{
+			width: 120px;
+			height: 50px;
+			/*background-color: pink;*/
+			/*1.因为a是行内元素，没有大小 我们需要转换 inline-block*/
+			display: inline-block; 
+			background-image: url(images/bg.png);
+			text-align: center;  /*让盒子内的文字居中对齐 */
+			/*行内元素 行内块元素 一般我们可以看作文本*/
+			color: #fff;
+			text-decoration: none;
+			/*2.行高等于盒子的高度 ，可以让单行文本垂直居中*/
+			line-height: 50px;
+
+		}
+		.nav a:hover{ /*当我们鼠标经过了nav里面的链接的时候*/
+			background-image: url(images/bgc.png);			
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">  <!-- 导航栏开始了 -->
+		<a href="#">网站导航</a>
+		<a href="#">网站导航</a>
+		<a href="#">网站导航</a>
+		<a href="#">网站导航</a>
+		<a href="#">网站导航</a>
+		<a href="#">网站导航</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table width="400" height="100" border="1">
+		<tr>
+			<td>123</td>
+			<td>abc</td>
+			<td>abc</td>
+		</tr>
+		<tr>
+			<td colspan="2">123</td>
+			
+			<td>测试</td>
+		</tr>
+		<tr>
+			<td>123</td>
+			<td>abc</td>
+			<td>abc</td>
+		</tr>
+
+	</table>
+	1. 先确认跨列合并 colspan
+	2. 先上后下  先左右后
+	3. 删除的个数
+
+	<table width="400" height="100" border="1">
+		<tr>
+			<td>123</td>
+			<td>abc</td>
+			<td rowspan="3">abc</td>
+		</tr>
+		<tr>
+			<td>123</td>
+			<td>123</td>
+			
+		</tr>
+		<tr>
+			<td>123</td>
+			<td>abc</td>
+		
+		</tr>
+
+	</table>
+
+	1. 先确认跨行合并 rowspan
+	2. 先上后下  先左右后
+	3. 删除的个数
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+	var pop_arr = new Array;
+	var content = '';
+	var loc_url	=	location.href;
+	var loc_domain = 'www.jiayuan.com';		contetn = "<a href=\"http:\/\/party.jiayuan.com\/party_info.php?pid=9369\" target=\"_blank\" style=\"color:#636363;\">\u3010\u516c\u76ca\u514d\u8d39\u3011\u7b2c\u4e00\u65f6\u95f4\u4e86\u89e3\u7ebf\u4e0b\u4ea4\u53cb\u6d3b\u52a8\u53ca\u7535\u89c6\u680f\u76ee\u9762\u8bd5\u4fe1\u606f\u3010\u8be6\u60c5\u8bf7\u70b9\u51fb\u672c\u6bb5\u6587\u5b57\u5230\u9875\u9762\u4e86\u89e3\u3011<\/a><br\/>".replace(/{pop_domain}/g,loc_domain);
+		pop_arr[0] = new Array('once','20','','1,2,5,6,10,','42','4200',contetn,'pop_1503315451', '0');
+				contetn = "<a href=\"http:\/\/party.jiayuan.com\/party_info.php?pid=9370\" target=\"_blank\" style=\"color:#636363;\">\u3010\u516c\u76ca\u514d\u8d39\u3011\u5982\u60a8\u7b2c\u4e00\u65f6\u95f4\u4e86\u89e3\u7ebf\u4e0b\u9762\u5bf9\u9762\u4ea4\u53cb\u6d3b\u52a8\u53ca\u7535\u89c6\u76f8\u4eb2\u680f\u76ee\u9762\u8bd5\u4fe1\u606f\u3010\u8be6\u60c5\u8bf7\u70b9\u51fb\u672c\u6bb5\u6587\u5b57\u5230\u9875\u9762\u4e86\u89e3\u3011<\/a><br\/>".replace(/{pop_domain}/g,loc_domain);
+		pop_arr[1] = new Array('once','20','','1,2,5,6,10,','43','4300',contetn,'pop_1509508611', '0');
+				contetn = "<a href=\"http:\/\/party.jiayuan.com\/party_info.php?pid=9461\" target=\"_blank\" style=\"color:#636363;\">\u3010\u516c\u76ca\u514d\u8d39\u3011\u7b2c\u4e00\u65f6\u95f4\u4e86\u89e3\u7ebf\u4e0b\u4ea4\u53cb\u6d3b\u52a8\u53ca\u7535\u89c6\u680f\u76ee\u9762\u8bd5\u4fe1\u606f\u3010\u8be6\u60c5\u8bf7\u70b9\u51fb\u672c\u6bb5\u6587\u5b57\u5230\u9875\u9762\u4e86\u89e3\u3011<\/a><br\/>".replace(/{pop_domain}/g,loc_domain);
+		pop_arr[2] = new Array('once','20','','1,2,5,6,10,','51','5100',contetn,'pop_1551429571', '0');
+				contetn = "<a href=\"http:\/\/party.jiayuan.com\/party_info.php?pid=9462\" target=\"_blank\" style=\"color:#636363;\">\u3010\u516c\u76ca\u514d\u8d39\u3011\u7b2c\u4e00\u65f6\u95f4\u4e86\u89e3\u7ebf\u4e0b\u4ea4\u53cb\u6d3b\u52a8\u53ca\u7535\u89c6\u680f\u76ee\u9762\u8bd5\u4fe1\u606f\u3010\u8be6\u60c5\u8bf7\u70b9\u51fb\u672c\u6bb5\u6587\u5b57\u5230\u9875\u9762\u4e86\u89e3\u3011<\/a><br\/>".replace(/{pop_domain}/g,loc_domain);
+		pop_arr[3] = new Array('once','20','','1,2,5,6,10,','53','5300',contetn,'pop_1554173088', '0');
+				contetn = "<a href=\"http:\/\/party.jiayuan.com\/party_info.php?pid=9501\" target=\"_blank\" style=\"color:#636363;\">\u3010\u516c\u76ca\u514d\u8d39\u3011\u7b2c\u4e00\u65f6\u95f4\u4e86\u89e3\u7ebf\u4e0b\u4ea4\u53cb\u6d3b\u52a8\u53ca\u7535\u89c6\u680f\u76ee\u9762\u8bd5\u4fe1\u606f\u3010\u8be6\u60c5\u8bf7\u70b9\u51fb\u672c\u6bb5\u6587\u5b57\u5230\u9875\u9762\u4e86\u89e3\u3011<\/a><br\/>".replace(/{pop_domain}/g,loc_domain);
+		pop_arr[4] = new Array('once','20','','1,2,5,6,10,','50','5000',contetn,'pop_1557218166', '0');
+			insert_con();
+	

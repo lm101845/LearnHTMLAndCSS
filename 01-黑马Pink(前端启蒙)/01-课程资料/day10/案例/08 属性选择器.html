@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	/*div[class] {  选出所有 带有 class 属性的
+		background-color: pink;
+	  }*/
+	  /*div[class=demo] {  选出 class = demo 的
+		background-color: pink;
+	  }*/
+
+	 /* div[class^=test] {  选出test 开头的 标签
+	  	background-color: purple;
+	  }*/
+	  div[class$=test] {  /*选出test 开头的 标签  ^    $  */
+	  	background-color: purple;
+	  }
+	</style>
+</head>
+<body>
+	<div class="demo">王者荣耀</div>
+	<div>王者荣耀</div>
+	<div>王者荣耀</div>
+	<div>王者荣耀</div>
+	<div>王者荣耀</div>
+	<div>王者荣耀</div>
+	<div class="firsttest">王者荣耀</div>
+	<div class="test">王者荣耀</div>
+	<div class="test1">王者荣耀</div>
+	<div class="test2">王者荣耀</div>
+	<div class="test3">王者荣耀</div>
+</body>
+</html>

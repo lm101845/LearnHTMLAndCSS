@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.red{
+			color: red;	
+		}
+		.font20{
+			font-size: 50px; 
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="font20 red " >多类名</div>   <!-- 这个class里面既有red类，又有font20类，既改变了颜色，又改变了大小 
+	样式显示效果跟HTML元素中的类名先后顺序没有关系,受CSS样式书写的上下顺序有关。即使red在后面，但是CSS中因为font20在后面，所以依然会显示蓝色，而不是红色-->
+	<div>多类名</div>
+	<div>多类名</div>
+	<p class="red">多类名</p>
+	<p>多类名</p>
+	<p class="red">多类名</p>
+	<div>多类名</div>
+</body>
+</html>

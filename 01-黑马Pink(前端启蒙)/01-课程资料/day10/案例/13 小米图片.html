@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div {
+		width: 632px;
+		height: 340px;
+		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	div:hover::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border: 20px solid rgba(255, 255, 255, 0.5);
+		box-sizing: border-box;
+	}
+
+	</style>
+</head>
+<body>
+	<div>
+		<img src="mi.jpg" alt="">
+	</div>
+	<div>
+		<img src="mi.jpg" alt="">
+	</div>
+	<div>
+		<img src="mi.jpg" alt="">
+	</div>
+	<div>
+		<img src="mi.jpg" alt="">
+	</div>
+</body>
+</html>

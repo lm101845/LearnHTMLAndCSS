@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		p {  /*0001*/
+			color: red !important;   /*即使你有个再厉害的爹，最后还是要靠自己*/
+		}
+		.father {  /*0010*/
+			color: yellow;
+		}
+		div{
+			color:pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="father"> 123
+		<p>继承的问题</p>   <!-- 只要p里面给了颜色，就优先执行自己的，不执行父亲的 -->
+	</div>
+</body>
+</html>

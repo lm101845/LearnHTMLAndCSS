@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.father {
+			height: 200px;
+			background-color: pink;
+			width: 300px;
+			padding-left: 30px;   
+			/*这个时候padding会撑开盒子大小*/
+			/* 因为父盒子有宽度，给定值了，则padding会撑开盒子*/
+		}
+
+		.son {
+			padding-left: 30px;  
+			/*这个时候padding没有撑开盒子大小*/
+			/*儿子盒子没有给定宽度，用的是默认的，所以padding不会撑开盒子*/
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son">123</div>
+	</div>
+</body>
+</html>

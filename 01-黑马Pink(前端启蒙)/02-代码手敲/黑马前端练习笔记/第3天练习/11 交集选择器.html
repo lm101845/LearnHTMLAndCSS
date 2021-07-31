@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div.red{    /* 交集选择器，既...又...的关系。既是div,又是red 用的较少*/
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div>交集选择器</div>
+	<div>交集选择器</div>
+	<div class="red">交集选择器</div>  <!-- 只让这个变成红色 -->
+	<p>交集选择器</p>
+	<p>交集选择器</p>
+	<p>交集选择器</p>
+	<p class="red">交集选择器</p>  <!--   特殊情况下这个也需要写class="red"  即使写了class="red",也不会变成红色-->
+</body>
+</html>

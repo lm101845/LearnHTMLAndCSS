@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.yeye {
+		width: 800px;
+		height: 800px;
+		background-color: skyblue;
+		position: absolute;
+	}
+	.father {
+		width: 500px;
+		height: 500px;
+		background-color: pink;
+		margin: 100px;
+		/*position: absolute;*/
+	}
+	.son {
+		width: 200px;
+		height: 200px;
+		background-color: purple;
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		/*若所有父元素都没有定位，以浏览器当前屏幕为准对齐(document文档)。*/
+	}
+	</style>
+</head>
+<body>
+<div class="yeye">
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</div>
+	
+</body>
+</html>

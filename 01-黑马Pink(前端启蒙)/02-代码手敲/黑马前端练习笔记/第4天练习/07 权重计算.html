@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*div {  0001
+			color: red;
+		}
+		
+		div { 0001
+			color: green;
+		}*/
+		p {
+			color: red;
+		}
+		div p {  /* 0001+0001=0002*/
+			color: blue;
+		}
+		.feng {  /*0010*/
+			color: pink;
+		}
+	
+		/*1.权重相同则就近原则
+		2.权重会叠加  0001+0001=0002*/
+		
+	</style>
+</head>
+<body>
+	<div>
+		<p class="feng">凤姐</p>
+	</div>
+</body>
+</html>

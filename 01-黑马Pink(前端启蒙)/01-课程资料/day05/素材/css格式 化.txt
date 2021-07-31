@@ -1,0 +1,134 @@
+/*======== 全局 ========*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td { margin:0; padding:0; }
+body { font-size:12px; color:#666; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff; line-height:24px; }
+fieldset, img { border:0; }
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+em { font-style:normal; }
+input, button, select, textarea { outline:none; } 
+textarea { resize:none; } //禁用了文本的拖拉，尤其在谷歌下
+p{ text-align:justify; text-justify:distribute;} //为了使文本段落左右两边对齐
+/*======== Link ========*/
+a { color: #666; text-decoration:none; }
+a:hover { color: #f60; text-decoration:none; }
+腾讯QQ官网(http://www.qq.com)样式初始化
+
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{color:#2d374b;text-decoration:none}
+a:hover{color:#cd0200;text-decoration:underline}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+新浪官网(http://www.sina.com.cn/)样式初始化
+
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+body{background:#fff;color:#333;font-size:12px; margin-top:5px;font-family:"SimSun","宋体","Arial Narrow";}
+ 
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle;}
+ 
+a{text-decoration:none;}
+a:link{color:#009;}
+a:visited{color:#800080;}
+a:hover,a:active,a:focus{color:#c00;text-decoration:underline;}
+淘宝官网(http://www.taobao.com/)样式初始化（淘宝的样式是经过压缩的，我自己拷下来格式化过的）
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+网易官网(http://www.163.com/)样式初始化
+
+html {overflow-y:scroll;}
+body {margin:0; padding:29px00; font:12px"\5B8B\4F53",sans-serif;background:#ffffff;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+ol,ul {list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:12px; font-weight:normal;}
+address,cite,code,em,th {font-weight:normal; font-style:normal;}
+
+
+另外一种格式 化
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,legend,button
+form,fieldset,input,textarea,p,blockquote,th,td {   
+　　padding: 0;   
+　　margin: 0;   
+}
+/* 酌情修改 */
+body {
+    background:#fff;color:#333;font-size:12px; margin-top:5px;font-family:"SimSun","宋体","Arial Narrow";
+}
+
+/* 短引用的内容可取值：''或"" */
+q:before,q:after {content:”;}  
+
+/* 缩写，图片等无边框 */
+fieldset,img,abbr,acronym {border: 0 none;}
+abbr,acronym {font-variant: normal;}
+legend {color:#000;}
+
+/* 清除特殊标记的字体和字号 */
+address,caption,cite,code,dfn,em,strong,th,var {   
+　　font-weight: normal;   
+　　font-style: normal;   
+}
+
+/* 上下标 */
+sup {vertical-align: text-top;}
+sub {vertical-align: text-bottom;}
+
+/* 设置表格的边框被合并为一个单一的边框, 指定分隔边框模型中单元格边界之间的距离为0*/
+table {   
+　　border-collapse: collapse;   
+　　border-spacing: 0;   
+}   
+
+/* 表格标题及内容居左显示 */
+caption,th {text-align: left;}
+input,img,select {vertical-align:middle;}
+
+/* 清除列表样式 */
+ol,ul {list-style: none;}  
+
+/* 输入控件字体 */
+input,button,textarea,select,optgroup,option {
+    font-family:inherit;
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
+}
+
+/* 标题元素样式清除 */ 
+h1,h2,h3,h4,h5,h6 {   
+　　font-weight: normal;   
+　　font-size: 100%;   
+}   
+
+/* 链接样式，颜色可酌情修改 */
+del,ins,a {text-decoration:none;}
+a:link {color:#009;}
+a:visited {color:#800080;}
+a:hover,a:active,a:focus {color:#c00; text-decoration:underline;} 
+
+/* 鼠标样式 */
+input[type="submit"] {cursor: pointer;}
+button {cursor: pointer;}
+input::-moz-focus-inner { border: 0; padding: 0;}
+
+.clear {clear:both;}

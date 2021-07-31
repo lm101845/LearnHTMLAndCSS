@@ -1,0 +1,136 @@
+/*
+* @Author: andy
+* @Date:   2017-12-09 15:05:46
+* @Last Modified by:   andy
+* @Last Modified time: 2017-12-09 15:05:46
+*/
+/* 先删除默认的内外边距 */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fafafa;
+	height: 3000px;
+}
+li {
+	list-style: none; /*  取消li 的小点 */
+}
+
+
+/* 顶部导航栏开始啦 */
+.header {
+	height: 100px;
+	background-color: #fff;
+}
+.inner {
+	width: 1200px;
+	height: 100px;
+	/* background-color: pink; */
+	margin: 0 auto;
+	line-height: 100px;
+}
+.logo {
+	float: left;
+}
+.nav {
+	float: right;
+}
+.nav ul {
+	overflow: hidden;
+}
+.nav li  {
+	float: left;
+	margin: 0 20px;
+}
+.nav li a {
+	color: #333;
+	text-decoration: none;
+}
+.nav li a:hover {
+	color: #2288f6;
+}
+
+/* banner STAR */
+.banner {
+	height: 620px;
+	background: url(../images/banner.jpg) no-repeat top center;
+}
+/* banner end */
+
+.service {
+	/* margin-top: 75px; */
+	width: 1055px;
+	height: 660px;
+	/* background-color: pink; */
+	margin: 75px auto 0;
+}
+.service-hd {
+	border-top: 1px solid #ccc;
+	margin: 0 25px;
+}
+.service-hd h3 {
+	width: 167px;
+	height: 46px;
+	margin: -15px auto 0;
+	
+}
+.service-hd p {
+	font-size: 12px;
+	color: #666;
+	line-height: 26px;
+	text-align: center;
+	width: 830px;
+	margin: 15px  auto 0;
+
+
+}
+.service-bd {
+	margin-top: 40px;
+}
+.service-bd li {
+	width: 320px;
+	height: 510px;
+	background-color: #fff;
+	float: left;
+	border: 1px solid #e7e8e9;
+}
+.service-bd img {
+	margin: 40px 35px;
+	width: 248px;
+	height: 132px;
+}
+.service-bd h3 {
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+	height: 40px;
+}
+.service-bd p {
+	font-size: 12px;
+	color: #666;
+	width: 235px;
+	margin: 0 auto;
+	line-height: 26px;
+}
+.service-bd a {
+	display: block;
+	width: 148px;
+	height: 38px;
+	border: 1px solid #ff9412;
+	margin: 30px auto 0;
+	text-align: center;
+	line-height: 38px;
+	color: #ff9412;
+	font-size: 12px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.service-bd a:hover {
+	color: #fff;
+	background-color: #ff9412;	
+}
+.yingxiao {
+	margin: 0 45px;
+}

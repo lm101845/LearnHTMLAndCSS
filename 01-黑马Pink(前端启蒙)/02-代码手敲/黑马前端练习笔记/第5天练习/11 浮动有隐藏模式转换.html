@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			height: 100px;
+			background-color: pink;
+			float: left;  /* 浮动可以让元素默认转换为行内块*/
+		}
+
+		span {
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+			/*display: block;*/
+			float: left;  
+			 /*妙用，如果已经给行内元素添加了浮动，此时不需要转换了，这个元素也可以有高*/
+		}
+	</style>
+</head>
+<body>
+	<div>哒哒哒</div>    
+	 <!-- 这个div现在已经不算块级了（算行内块了），竟然允许他人在它右边显示了，不独占一行了 -->
+	<span>123456789</span>  
+</body>
+</html>

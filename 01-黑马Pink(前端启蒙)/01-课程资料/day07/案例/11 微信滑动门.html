@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body {
+		background: url(images/wx.jpg)  repeat-x; 
+	}
+	.nav li {
+		float: left;
+	}
+	.nav a {
+		/*1. a 左边放 左圆角   但是文字需要往右走 15px*/
+		height: 33px;
+		line-height: 33px;
+		color: #fff;
+		text-decoration: none;
+		background: url(images/to.png) no-repeat;
+		display: inline-block;
+		padding-left: 15px;
+	}
+	.nav  span {
+		/*2. span 右边放右圆角   但是文字需要往左走 15px*/
+		background: url(images/to.png) no-repeat right;
+		display: inline-block;
+		height: 33px;
+		padding-right: 15px;
+
+	}
+	/*.nav a:hover {
+		background-image: url(images/ao.png);
+	}
+
+	.nav a:hover span { /*鼠标经过之后 ，span 凹下去
+		background-image: url(images/ao.png);
+	}*/
+
+	.nav a:hover, .nav a:hover span {
+		background-image: url(images/ao.png);
+	}
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li>
+		      <a href="#">
+		      		<span>首页</span>
+		      </a>
+		</li>
+		<li>
+		      <a href="#">
+		      		<span>三个字</span>
+		      </a>
+		</li>
+		<li>
+		      <a href="#">
+		      		<span>新闻客户端</span>
+		      </a>
+		</li>
+	
+	</ul>
+</body>
+</html>

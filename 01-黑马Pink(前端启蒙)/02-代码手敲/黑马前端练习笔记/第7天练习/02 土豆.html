@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		a {
+			display: block;  /*一定要先转换成块级元素 a是行内元素，给宽高不起效果*/
+			width: 448px;
+			height: 252px;
+			position: relative;
+			margin: 100px;
+		}
+		.mask {
+			width: 100%;   /*和父亲一样宽*/
+			height: 100%;
+			background: rgba(0, 0, 0, 0.4) url(images/arr.png) no-repeat 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;   /*首先正常情况下是隐藏的*/
+			/*什么时候出来？ 鼠标放在a身上（不是mask身上，都看不见）a里面的 mask出来*/
+
+		}
+
+		a:hover .mask{   /*后代选择器*/ 
+		 /*:hover 鼠标经过a	 然后a里面的mask就显示出来 所以这里用后代选择器;*/
+			display: block;  /*显示出来*/
+
+		}
+	</style>
+</head>
+<body>
+	<a href="#">
+		<img src="images/tudou.jpg">
+		<div class="mask"></div>
+	</a>
+</body>
+</html>

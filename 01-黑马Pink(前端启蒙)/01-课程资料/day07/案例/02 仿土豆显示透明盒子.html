@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	a {
+		display: block;
+		width: 448px;
+		height: 252px;
+		margin: 100px;
+		position: relative;
+	}
+	.mask {
+		width: 100%;
+		height: 100%;
+		background:rgba(0, 0, 0, .4) url(images/arr.png) no-repeat center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none; /* 首先正常情况下 是隐藏的*/
+	}
+
+    /*什么时候出来？  鼠标放到 a 身上    是a 里面的 mask 出来*/
+    a:hover .mask { /*：hover  鼠标经过a 然后 a 里面的 mask 就显示出来 所以这里用 后代选择器*/ 
+    	display: block; /*显示出来*/
+    }
+
+
+	</style>
+</head>
+<body>
+	<a href="#">
+		<img src="images/tudou.jpg" height="252" width="448" alt="">
+		<div class="mask"></div>
+	</a>
+	<a href="#">
+		<img src="images/tudou.jpg" height="252" width="448" alt="">
+		<div class="mask"></div>
+	</a>
+	<a href="#">
+		<img src="images/tudou.jpg" height="252" width="448" alt="">
+		<div class="mask"></div>
+	</a>
+</body>
+</html>

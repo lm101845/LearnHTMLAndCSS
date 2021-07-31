@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+		* {  /* 清空默认的内外边距 几乎是我们写css 必须要写的 */
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			list-style: none; /* 取消列表自带的小点  默认的列表样式 */
+ 		}
+		.searchPic {
+			width: 238px;
+			height: 294px;
+			border: 1px solid #D9E0EE;
+			border-top: 3px solid #FF8400;  /* 这句话要放到 border 的下面 */
+			margin: 100px;
+		}
+		.searchPic h3 {
+			height: 35px;
+			line-height: 35px;  /* 让行高等于高度 ，可以让文字垂直居中 */
+			border-bottom: 1px solid #D9E0EE; 
+			font-size: 16px;
+			font-weight:  normal;  /*  让粗体不变粗 */
+			padding-left: 12px;  /* 因为这个h3我么没有给宽度 继承的父亲的宽度 padding就不会撑开盒子了 */
+		}
+		.searchPic img {
+			margin: 7px 0 0 8px; /*  上 右 下 左 */
+		}
+		.searchPic ul li a {
+			font-size: 12px;
+			color: #666;
+			text-decoration: none; /* 取消下划线 */
+		}
+		.searchPic ul {
+			margin-left: 8px;
+		}
+		.searchPic ul li{
+			padding-left: 10px;
+			height: 26px;
+			line-height: 26px;
+			background: url(images/square.png) no-repeat left center; /* 背景设置 */
+		}
+		.searchPic ul li a:hover {
+			text-decoration: underline;  /* 添加下划线 */
+			color: #ff8400;
+		}
+        </style>
+    </head>
+    <body>
+     <div class="searchPic">
+     	<h3>搜索趣图</h3>
+     	<img src="images/happy.gif" height="160" width="218" alt="">
+     	<ul>
+     		<li><a href="#">GIF：小胖墩游泳被卡 被救后一脸无辜</a></li>
+     		<li><a href="#">GIF：小胖墩游泳被卡 被救后一脸无辜</a></li>
+     		<li><a href="#">GIF：小胖墩游泳被卡 被救后一脸无辜</a></li>
+     	</ul>
+     </div>
+    </body>
+</html>

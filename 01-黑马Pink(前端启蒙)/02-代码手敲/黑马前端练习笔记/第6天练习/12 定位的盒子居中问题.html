@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			/*margin: 100px auto;*/
+			/*float: left; */  /*这个盒子加了浮动，margin:auto立马失效了*/
+			position: absolute;  /*这个盒子加了定位，margin:auto也立马失效了*/
+			left: 50%;
+			margin-left: -100px;  /*再往左走100px*/
+			top: 50%;
+			margin-top: -100px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

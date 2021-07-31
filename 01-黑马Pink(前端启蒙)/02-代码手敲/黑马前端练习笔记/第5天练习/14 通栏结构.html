@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.top {
+			height: 80px;
+			background-color: pink;
+		}
+		
+		.top-inner {
+			width: 900px;
+			height: 80px;
+			/*background-color: #ccc;*/
+			margin:0 auto;
+		}
+		.banner {
+			width: 900px;
+			height: 150px;
+			/*background-color: purple;*/
+			margin:0 auto;
+		}
+		.banner li {
+			list-style: none;
+			float: left;
+			width: 217px;
+			height: 150px;
+			margin-right: 10px;
+		}
+
+		.one {
+			background-color: purple;
+		}
+
+		.two {
+			background-color: blue;
+		}
+		
+		.three {
+			background-color: pink;
+		}
+
+		.banner .four{  /*有优先级的问题*/
+			background-color: green;			
+			margin-right: 0;
+			float: right;  /*有一些误差，用这个可以直接靠在右边*/
+		}
+		.main {
+			width: 900px;
+			height: 500px;
+			background-color: skyblue;
+			margin:0 auto;
+		}
+		
+		.left {
+			width: 298px;
+			height: 500px;  /*盒子高度不继承，所以必须要给高度*/
+			background-color: yellow;
+			border: 1px solid red;
+			float: left;
+		} 
+
+		.right {
+			width: 590px;
+			height: 500px;
+			background-color: deeppink;
+			float: right;
+			/*margin-left: 10px;*/
+		}
+		.footer {
+			width: 900px;
+			height: 80px;
+			background-color: black;
+			margin:0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="top-inner">123</div>  
+		<!--  盒子继承父亲的宽，不继承父亲的高。默认和父亲一样宽 -->
+	</div>
+
+	<div class="banner">
+		<ul>
+			<li class="one">1</li>
+			<li class="two">2</li>
+			<li class="three">3</li>
+			<li class="four">4</li>
+		</ul>
+	</div>
+
+	<div class="main">
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+
+	<div class="footer"></div>
+</body>
+</html>

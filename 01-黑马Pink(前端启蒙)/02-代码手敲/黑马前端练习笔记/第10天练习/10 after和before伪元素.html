@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div::before {  /*必须带一个属性 content 伪元素 其实这个before是个盒子(行内的盒子)*/
+			content: "我";
+			/*width: 200px;
+			height: 200px;
+			background-color: pink;
+			display: block;*/
+		}
+
+		div::after {
+			content:"18岁";
+		}
+	</style>
+</head>
+<body>
+	<div>今年</div>
+</body>
+</html>

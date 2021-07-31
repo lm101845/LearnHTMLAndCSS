@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>世纪佳缘</title>
+	<style>
+		/*table {
+			width: 1000px;
+			 表格宽1000，不用设置高
+			border: 0;
+			 表格无边框 
+			cellspacing: 0;
+			 单元格与单元格边框距离为0（默认为2px） 
+			cellpadding: 0;
+			 单元格内容与单元格边框距离为0（默认为1px） 
+			align: center;
+			 表格在网页中居中对齐(内部样式失败，不居中，之能写行内式)
+		}*/
+		h3{ 
+			color:pink;
+			font-size: 25px;
+		}
+		tr{	
+			height: 60px;
+			/*tr没有给宽，td宽和高都没给*/
+		}
+	</style>
+</head>
+
+<body>
+	<table width="1000" border="1px solid grey" cellspacing="0" cellpadding="0" align="center">
+		<!-- 首先来个table，定个总基调 -->
+		<caption><h3>青春不常在，抓紧谈恋爱</h3></caption>
+		<tr>
+			<td>所在地区</td>
+			<td><input type="text" value="北京" style="color:#ccc"></td>
+		</tr>
+		<tr>
+			<td>用户名</td>
+			<td><input type="text" value="andy"></td>
+		</tr>
+
+		<tr>
+			<td>
+				<!-- label 标签为 input 元素定义标注（标签）。 -->
+				<label for="mima">密码</label>
+			</td>
+			<td>
+				<input type="password" value="123456" maxlength="6" id="mima">
+			</td>
+		</tr>
+
+		<!-- 以下是年龄 -->
+		<tr>
+			<td>年龄</td>
+			<td>
+				<select name="" id="">
+					<option value="">选择年份</option>
+					<option value="">1990</option>
+					<option value="">1991</option>
+					<option value="">1992</option>
+					<option value="">1993</option>
+					<option value="">1994</option>
+					<option value="">1995</option>
+					<option value="">1996</option>
+					<option value="">1997</option>
+					<option value="">1998</option>
+					<option value="">1999</option>
+				</select>
+
+				<select name="" id="">
+					<option value="">选择月份</option>
+					<option value="">1月</option>
+					<option value="">2月</option>
+					<option value="">3月</option>
+					<option value="">4月</option>
+					<option value="">5月</option>
+					<option value="">6月</option>
+					<option value="">7月</option>
+					<option value="">8月</option>
+					<option value="">9月</option>
+					<option value="">10月</option>
+					<option value="">11月</option>
+					<option value="">12月</option>
+				</select>
+			</td>
+		</tr>
+
+		<!-- 以下是籍贯 -->
+		<tr>
+			<td>籍贯</td>
+			<td>
+				<select name="" id="">
+					<option value="">安徽</option>
+					<option value="">湖南</option>
+					<option value="">河北</option>
+					<option value="">陕西</option>
+					<option value="">山东</option>
+				</select>
+			</td>
+		</tr>
+
+		<!-- 以下是性别 -->
+		<tr>
+			<td>性别</td>
+			<td style="color:blue;">
+				男<input type="radio">
+				女<input type="radio">
+			</td>
+		</tr>
+
+		<!-- 以下是登陆、注册按钮 -->
+		<tr>
+			<td></td>
+			<td>
+				<input type="button" value="注册">
+				<input type="submit" value="提交">
+				<input type="reset" value="重置">
+				<input type="image" src="images/btn.png">
+			</td>
+		</tr>
+
+		<!-- 以下是上传图像 -->
+		<tr>
+			<td>上传图像</td>
+			<td><input type="file"></td>
+		</tr>
+
+		<!-- 以下是给我留言 -->
+		<tr>
+			<td>给我留言</td>
+			<td>
+				<textarea name="" id="" cols="50" rows="10" style="color:#ccc">
+					不支持富文本
+				</textarea>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

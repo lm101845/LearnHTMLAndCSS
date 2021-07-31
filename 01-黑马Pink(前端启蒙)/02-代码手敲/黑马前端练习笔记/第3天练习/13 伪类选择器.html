@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		a{
+			font-size: 30px;
+			font-style: none;  /*没有倾斜*/
+			text-decoration: none;  /*没有下划线*/
+			font-weight: 700;
+		}
+		a:link{   /*未访问过的链接状态*/
+			color: #3c3c3c;
+		}
+
+		a:visited{ /*已访问过的链接状态*/
+			color: orange;
+		}
+
+		a:hover{  /*鼠标经过链接时的样子 hover是徘徊的意思*/
+			color: #f10215;
+		}
+
+		a:active{	/*鼠标按下还没松开链接时的样子*/
+			color: green;
+		}
+
+		注意，这四个不能调换顺序，lo 包包非常hao
+
+	</style>
+</head>
+<body>
+	<a href="http://www.asdf.com">秒杀</a>
+</body>
+</html>

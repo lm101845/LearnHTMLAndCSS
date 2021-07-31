@@ -1,0 +1,118 @@
+//选择器
+function getEle(ele, oParent) {
+    switch (ele.charAt(0)) {
+        case "#":
+            var objStr = ele.substring(1, ele.length);
+            return document.getElementById(objStr);
+            break;
+        case ".":
+            var sArg = ele;
+            var reg = new RegExp("(^|\\s)" + sArg.substring(1) + "(\\s|$)"),
+                arr = [],
+                aEl = (oParent || document).getElementsByTagName('*'),
+                i;
+            for (i = 0; i < aEl.length; i++) {
+                reg.test(aEl[i].className) && arr.push(aEl[i]);
+            }
+            return arr;
+            break;
+        default :
+            return (oParent || document).getElementsByTagName(ele);
+            break;
+    };
+};
+
+//添加事件
+function addEvent(ele, sEvent, fn) {
+    ele.attachEvent ? ele.attachEvent('on'+sEvent, fn) : ele.addEventListener(sEvent, fn, false);
+}
+
+//广告
+function jy_ad(id){
+    this.oAd = getEle(id);
+    this.oUl = getEle('ul', this.oAd)[0];
+    this.aLi = getEle('li', this.oUl);
+    this.iNow = 0;
+    this.iNow2 = this.iNow;
+    this.iLen = this.aLi.length;
+    this.iInterval = 36000000*24;
+    this.timer;
+
+    var _this = this;
+    this.showAd();
+    this.timer = setInterval(function (){
+        _this.showAd();
+    }, this.iInterval)
+}
+
+jy_ad.prototype.showAd = function (){
+	/*
+    this.iNow2 = this.iNow;
+    this.iNow = Math.floor(Math.random() * this.iLen);
+    if(this.iNow == this.iNow2){
+        this.iNow++;
+        if(this.iNow >= this.iLen){
+            this.iNow = this.iNow - 2;
+        };
+    };
+    */
+
+    for(var i=0; i<this.iLen; i++){
+        this.aLi[i].style.display = 'none';
+    };
+	this.iNow = Math.floor(Math.random() * this.iLen);
+    this.aLi[this.iNow].style.display = 'block';
+};
+
+function GetQueryString(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r!=null) return (r[2]); return ''; 
+}
+
+if (typeof(jQuery) === 'function' || typeof(jQuery) === 'object') { 
+	jQuery(document).ready(function($){
+		function handle_ad (data) {
+			if(data.retcode == 1 && data.adlist[0]){
+				var pos = this.url.replace(/^.*pos=(.*?)\&+.*$/i,"$1");
+				var adhtml = data.adlist[0].adHtml;
+				var re = new RegExp("<script>([\\s\\S]*?)<\/script>","igm");
+				if($('#ad_pos_pcweb_'+pos) != null){
+					$('#ad_pos_pcweb_'+pos).html(adhtml);
+				}
+				var r = re.exec(adhtml);
+				if (typeof(r) === 'object' && r != null && r[1] != 'undefined') {
+					eval(r[1]);
+				}
+			}
+		}
+
+		// 获取页面的参数
+		var src_key = GetQueryString("src_key"); 
+
+		// 页面都加载完成时，请求广告
+		var ads_num = $('[id^=ad_pos_pcweb_]').length;
+		var pos;
+		if (ads_num > 0) {
+			$('[id^=ad_pos_pcweb_]').each(function(){
+				var pos = $(this).attr('id').substr(13);
+				var width = $(this).attr('w');
+				var height = $(this).attr('h');
+				var pid = $(this).attr('pid');
+				var url = "//mai.jiayuan.com/ajax.php";
+				var param = {'pos':pos,'w':width,'h':height,'pro':pid,'output':'json','src_key':src_key};
+				jQuery.ajax({
+					'type':'GET',
+					'url':url,
+					'data':param,
+					'dataType':'jsonp',
+					'jsonp':'callback',
+					'success':handle_ad
+				});
+			});
+		}
+
+	});
+}else{
+
+}
