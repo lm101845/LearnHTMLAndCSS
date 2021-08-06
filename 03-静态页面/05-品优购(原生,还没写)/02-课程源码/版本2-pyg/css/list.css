@@ -1,0 +1,107 @@
+.ms {
+    position: absolute;
+    left: 185px;
+    top: 40px;
+    padding: 3px 0 0 14px;
+    border-left: 2px solid #c14949;
+}
+.ms_list {
+    float: left;
+}
+.ms_list ul li {
+    float: left;
+}
+.ms_list ul li a {
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 28px;
+}
+.ms_con {
+    float: left;
+}
+.ms_con ul li {
+    float: left;
+}
+.ms_con ul li a {
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    margin: 0 24px;
+}
+.ms_con ul li:last-child a::after{
+    font-family: 'icomoon';
+    content: '\e91e';
+    margin-left: 5px;
+}
+.c_bd {
+    margin-top: 25px;
+}
+.c_bd ul li {
+    float: left;
+    width: 290px;
+    height: 462px;
+    margin-right: 13px;
+    border: 1px solid transparent;
+}
+/* 让每行第四个盒子右边距为0 */
+.c_bd ul li:nth-child(4n) {
+    margin-right: 0px;
+}
+.c_bd ul li:hover {
+    border: 1px solid #c14949;
+}
+.c_bd p {
+    margin: 0px 10px;
+}
+.c_qian {
+    margin: 13px 10px;
+}
+.c_qian h3 {
+    float: left;
+    font-size: 22px;
+    color: #e60012;
+}
+.c_qian h4 {
+    float: left;
+    font-size: 14px;
+    color: #a4a4a4;
+    font-weight: 400;
+    padding: 9px 0 0 9px;
+    text-decoration: line-through;
+}
+.c_yishou {
+    margin: 0px 10px;
+}
+.c_yishou h4 {
+    float: left;
+}
+.c_yishou .jindu {
+    width: 134px;
+    height: 12px;
+    border: 1px solid #ed282e;
+    border-radius: 6px;
+    margin: 4px 10px;
+}
+.c_yishou .jindu div {
+    width: 100px;
+    height: 10px;
+    background-color: #ed282e;
+    border-radius: 5px 0 0 5px;
+}
+.c_yishou h4:nth-child(4) {
+    color: #e54d51;
+}
+.qianggou {
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    background-color: #b1191a;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.qianggou a {
+    color: #ffffff;
+}

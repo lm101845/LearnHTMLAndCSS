@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(160, 172, 238),rgb(123, 72, 190));
+}
+
+body .login-container {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 15px;
+    box-shadow: 0 0 0 0 rgb(59,45,159);
+    background-color: rgb(95,76,194);
+
+}
+
+body .login-container .left-container{
+    display: inline-block;
+    width: 330px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 60px;
+    background-image: linear-gradient(to bottom right, rgb(118,76,163),rgb(92,103,211));
+}
+
+body .login-container .left-container .title{
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 3px solid rgb(237,221,22);
+}
+
+body .login-container .left-container .input-container{
+    padding: 10px 0;
+}
+
+body .login-container .left-container .input-container input{
+    border: 0;
+    background: none;
+    outline: 0;
+    color: #fff;
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgb(199,191,219);
+    transition: .2s;
+}
+
+body .login-container .left-container .input-container input:hover{
+    border-bottom-color: #fff;
+}
+
+::-webkit-input-placeholder{
+    color: rgb(199,191,219);
+}
+
+body .login-container .left-container .message-container{
+    font-size: 14px;
+    transition: .2s;
+    color: rgb(199,191,219);
+    cursor: pointer;
+}
+
+body .login-container .left-container .message-container:hover{
+    color: #fff;
+}
+
+body .login-container .right-container{
+    width: 145px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    padding: 60px 0;
+}
+
+body .login-container .right-container .regist-container{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 200;
+    height: 50%;
+    margin-bottom: 75%;
+}
+
+body .login-container .right-container .regist-container span{
+    border-bottom: 3px solid rgb(237,221,22);
+}
+
+body .login-container .right-container .action-container{
+    font-size: 10px;
+    color: #fff;
+    height: 100%;
+    position: relative;
+}
+
+body .login-container .right-container .action-container span{
+    border: 1px solid rgb(237,221,22);
+    padding: 10px;
+    display: inline;
+    line-height: 25px;
+    border-radius: 25px;
+    position: absolute;
+    left: calc(72px - 25px);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+body .login-container .right-container .action-container span:hover{
+    background-color: rgb(237,221,22);
+    color: rgb(95,76,104)
+}

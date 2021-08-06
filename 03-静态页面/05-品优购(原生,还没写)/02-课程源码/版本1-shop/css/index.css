@@ -1,0 +1,248 @@
+.main {
+    width: 981px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 11px;
+    
+}
+.focus {
+    float: left;
+    width: 722px;
+    height: 455px;
+}
+.newflash {  
+    float: left;
+    width: 250px;
+    height: 455px;
+    margin-left: 9px;
+    
+}
+.news {
+    width: 250px;
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+.news-hd {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+   border-bottom: 1px dotted #e4e4e4;
+    
+}
+.news-hd h5 {
+    float: left;
+    font-size: 14px;   
+    font-weight: 400;  
+}
+.news-hd .more {
+    float: right;
+}
+.news-hd .more::after {
+    content: '\e920';
+    font-family: 'icomoon';
+    padding-left: 8px;
+}
+.news-bd {
+    padding: 5px 17px 0;
+}
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* padding-left: 15px;
+    padding-top: 6px; */
+}
+.news-bd ul li a {
+    font-size: 12px;
+}
+.main .newflash .lifeservice {
+    width: 250px;
+    height: 209px;
+    border-left: 1px solid #e4e4e4;
+ }
+.lifeservice ul li {
+    position: relative;
+    float: left;
+    width: 62px;
+    height: 70px;
+    text-align: center;
+    padding-top: 13px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+   }
+.lifeservice ul li:nth-child(1) i {
+    background: url(../images/icons.png) no-repeat -17px -16px;
+}
+   .lifeservice ul li:nth-child(2) i {
+    background: url(../images/icons.png) no-repeat -79px -18px;
+}
+.lifeservice ul li:nth-child(3) i {
+    background: url(../images/icons.png) no-repeat -141px -16px;
+}
+.lifeservice ul li:nth-child(4) i {
+    background: url(../images/icons.png) no-repeat -206px -16px;
+}
+.lifeservice ul li:nth-child(5) i {
+    background: url(../images/icons.png) no-repeat -16px -87px;
+}
+.lifeservice ul li:nth-child(6) i {
+    background: url(../images/icons.png) no-repeat -77px -87px;
+}
+.lifeservice ul li:nth-child(7) i {
+    background: url(../images/icons.png) no-repeat -140px -87px;
+}
+.lifeservice ul li:nth-child(8) i {
+    background: url(../images/icons.png) no-repeat -206px -87px;
+}
+.lifeservice ul li:nth-child(9) i {
+    background: url(../images/icons.png) no-repeat -16px -158px;
+}
+.lifeservice ul li:nth-child(10) i {
+    background: url(../images/icons.png) no-repeat -78px -158px;
+}
+.lifeservice ul li:nth-child(11) i {
+    background: url(../images/icons.png) no-repeat -142px -158px;
+}
+.lifeservice ul li:nth-child(12) i {
+    background: url(../images/icons.png) no-repeat -205px -158px;
+}
+   .lifeservice ul li i {
+       display: inline-block;
+       width: 24px;
+       height: 24px;
+       background-color: teal;
+   }
+   .lifeservice ul li:nth-child(2) img {
+       position: absolute;
+       top: 0;
+       right: 0;
+   }
+.main .newflash .bargain {
+    width: 250px;
+    height: 75px;
+    margin-top: 6px;
+}
+
+.recom {
+    width: 100%;
+    height: 163px;
+    margin-top: 10px;
+}
+
+.recom .recom-hd {
+    float: left;
+    width: 206px;
+    height: 163px;
+    text-align: center;
+    padding-top: 30px;
+    background-color: #5c5251;
+}
+.recom .recom-hd p {
+    padding-top: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.recom .recom-bd {
+    width: 994px;
+    height: 163px;
+    float: left;
+    background-color: #ebebeb;
+}
+.recom .recom-bd ul li {
+    width: 248px;
+    height: 100%;
+    float: left;
+} 
+.recom .recom-bd ul {
+    position: relative;
+}
+.recom .recom-bd ul li:nth-child(-n+3)::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #dddddd;
+}
+.box-hd {
+    height: 30px;
+   border-bottom: 2px solid #c81623;
+}
+.box-hd h3{
+    float: left;
+    width: 75px;
+    height: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #c81623;
+}
+.box-hd ul {
+    float: right;
+}
+.box-hd ul li {
+    float: left;
+} 
+.box-hd ul li a {
+    margin:0 15px;
+    line-height: 28px;
+}
+/* .jiadiain .box-hd ul:nth-last-child(li){
+    border-right: none;
+} */
+
+.floor .w {
+    margin-top: 30px;
+    }
+.box-bd {
+    height: 360px;
+  
+}
+.tab-list-item>div {
+    float: left;
+}
+.col-1 {
+    width: 210px;
+    height: 360px;
+    text-align: center;
+        background-color: #f9f9f9;
+}
+.col-2 {
+    width: 329px;
+    height: 360px;
+    
+}
+.col-3 {
+    width: 221px;
+    height: 360px;
+    border-right: 1px solid #ededed;
+    
+} 
+.col-4 {
+    width: 221px;
+    height: 360px;
+    margin-right: 1px;
+    border-right: 1px solid #ededed;
+    
+}
+.col-5 {
+    width: 218px;
+    height: 360px;
+    border-right: 1px solid #ededed;
+}
+.col-1 ul li {
+    float: left;
+    margin-left:14px;
+    line-height: 34px;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #ededed;
+}
+.b {
+    display: block;
+}
+.b img {
+    border-bottom: 1px solid #ededed;
+}
