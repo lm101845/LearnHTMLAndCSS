@@ -1,0 +1,41 @@
+/**
+可以让一个**盒子实现水平居中**，需要满足一下两个条件：
+
+- **必须是块级元素。**     
+- **盒子必须指定了宽度(width)**(如果没给宽则默认和屏幕一样宽，就没法居中了。)
+
+然后就给**左右的外边距都设置为auto**，就可使**块级元素水平居中。**
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap{
+    width: 300px;
+    height: 400px;
+    border:1px solid pink;
+    margin: 0 auto;
+    position: relative;
+    /* .inner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;} */
+}
+
+#wrap .inner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+}
