@@ -1,0 +1,45 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 08:11:51
+ * @LastEditTime: 2021-08-17 08:12:27
+ * @FilePath: \01-CSS动画API\02-animation\03-animation-delay.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--这里animation-delay的值为2s，意思是动画将在延迟两秒秒后延迟执行。 -->
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        background: #f40;
+        border-radius: 50%;
+        animation-name: mymove;
+        animation-duration: 2s;
+        animation-delay: 2s;
+      }
+
+      @keyframes mymove {
+        0% {
+          width: 50px;
+          height: 50px;
+        }
+        50% {
+          width: 100px;
+          height: 100px;
+        }
+        100% {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 07:51:41
+ * @LastEditTime: 2021-08-17 07:55:53
+ * @FilePath: \01-CSS动画API\02-animation\01-@keyframes.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- @keyframes：定义一个动画，定义的动画名称用来被animation-name所使用。 -->
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        background: #f40;
+        border-radius: 50%;
+        animation: mymove 2s;
+        /* animation和 @keyframes是一体的，二者不能离开彼此,animation给@keyframes起了名字和持续时间等 */
+        /* 	检索或设置对象所应用的动画名称 ,必须与规则@keyframes配合使用，因为动画名称由@keyframes定义 */
+        /* 仅仅有帧动画和需要执行的动画名称是不足以形成动画的，我们还需要设置一个动画执行所需要的时间，
+        这里就用到了animation-duration属性，所以上一案例所展示的时间为两秒钟执行一次。 */
+      }
+
+      @keyframes mymove {
+          /* @keyframes主要是做关键帧动画的，每个@keyframes后面都要跟一个名字，
+          事例中使用了mymove作为帧动画的名字，然后可以在样式内对关键帧添加样式，
+          然后根据关键帧 @keyframes就能自动形成流畅的动画了。 */
+        0% {
+          width: 50px;
+          height: 50px;
+        }
+        50% {
+          width: 100px;
+          height: 100px;
+        }
+        100% {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <div></div>
+  </body>
+</html>

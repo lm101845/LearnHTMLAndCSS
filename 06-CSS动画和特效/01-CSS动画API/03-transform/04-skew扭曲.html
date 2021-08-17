@@ -1,0 +1,62 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 09:21:43
+ * @LastEditTime: 2021-08-17 09:22:40
+ * @FilePath: \01-CSS动画API\03-transform\04-skew扭曲.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        margin-left: 50px;
+        width: 50px;
+        height: 50px;
+        /* border-radius:50%; */
+      }
+      @keyframes skew {
+        0% {
+          transform: skew(0deg, 0deg);
+        }
+        100% {
+          transform: skew(25deg, 25deg);
+        }
+      }
+      @keyframes skewX {
+        0% {
+          transform: skewX(0deg);
+        }
+        100% {
+          transform: skewX(25deg);
+        }
+      }
+      @keyframes skewY {
+        0% {
+          transform: skewY(0deg);
+        }
+        100% {
+          transform: skewY(25deg);
+        }
+      }
+
+      .skew {
+        animation: skew 2s infinite linear;
+      }
+      .skewX {
+        animation: skewX 2s infinite linear;
+      }
+      .skewY {
+        animation: skewY 2s infinite linear;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./logo.png" alt="" class="skew" />
+    <img src="./logo.png" alt="" class="skewX" />
+    <img src="./logo.png" alt="" class="skewY" />
+  </body>
+</html>

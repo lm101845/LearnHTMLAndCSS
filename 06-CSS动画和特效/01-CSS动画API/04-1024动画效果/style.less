@@ -1,0 +1,43 @@
+.outBox {
+  ul {
+    display: flex;
+  }
+  li {
+    list-style: none;
+    margin: 20px;
+    font-size: 120px;
+    position: relative;
+    top: 0px;
+    color: #fff; 
+    &:nth-child(1) {
+      animation: myMove 1.5s ease alternate infinite;
+    }
+    &:nth-child(2) {
+      animation: myMove 1.5s ease 0.5s alternate infinite;
+    }
+    &:nth-child(3) {
+      animation: myMove 1.5s ease 1s alternate infinite;
+    }
+    &:nth-child(4) {
+      animation: myMove 1.5s ease 1.5s alternate infinite;
+    }
+  }
+}
+
+@keyframes myMove {
+  0% {
+    color: rgb(229, 255, 80);
+    top: 160px;
+    transform: rotateY(0deg) scale(1.0);
+  }
+  50% {
+    color: rgb(2, 150, 200);
+    top: 0px;
+    transform: rotateY(180deg) scale(1.5);
+  }
+  100% {
+    color: rgb(255, 106, 198);
+    top: 160px;
+     transform: rotateY(0deg) scale(1.0);
+  }
+}

@@ -1,0 +1,59 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 08:19:48
+ * @LastEditTime: 2021-08-17 08:22:14
+ * @FilePath: \01-CSS动画API\02-animation\06-animation-play-state.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- animation-play-state：检索或设置对象动画的状态 -->
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        background: #f40;
+        border-radius: 50%;
+        animation-name: mymove;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes mymove {
+        0% {
+          width: 50px;
+          height: 50px;
+        }
+        50% {
+          width: 100px;
+          height: 100px;
+        }
+        100% {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="pause()">暂停</button>
+    <button onclick="run()">恢复</button>
+    <div></div>
+    <script>
+      function pause() {
+        document.querySelector("div").style.animationPlayState = "paused";
+      }
+      function run() {
+        document.querySelector("div").style.animationPlayState = "running";
+      }
+    //   animation-play-state的默认值为running，就是动画执行的意思，在实际应用中我们经常使用js来操作这个属性，从而控制动画的播放和暂停。
+
+    // ，这里给出属性值在animation中的简写方式。
+
+// animation: name duration timing-function delay iteration-count direction play-state;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 08:15:10
+ * @LastEditTime: 2021-08-17 08:18:34
+ * @FilePath: \01-CSS动画API\02-animation\05-animation-direction.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- animation-direction：检索或设置对象动画在循环中是否反向运动 -->
+    <style>
+      div {
+        width: 100px;
+        height: 50px;
+        background: #f40;
+        position: relative;
+        animation-name: mymove;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        /* animation-direction: alternate; */
+        /* animation-direction: reverse; */
+        /* animation-direction: inherit; */
+        animation-direction: normal;
+      }
+
+      @keyframes mymove {
+        0% {
+          left: 0px;
+        }
+        100% {
+          left: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <div></div>
+  </body>
+</html>

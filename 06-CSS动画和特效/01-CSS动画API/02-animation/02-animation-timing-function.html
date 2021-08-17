@@ -1,0 +1,38 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 08:02:47
+ * @LastEditTime: 2021-08-17 08:11:36
+ * @FilePath: \01-CSS动画API\02-animation\02-animation-timing-function.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- animation-timing-function：检索或设置对象动画的过渡类型 -->
+    <style>
+      div {
+        width: 100px;
+        height: 50px;
+        background: #f40;
+        position: relative;
+        animation-name: mymove;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes mymove {
+        0% {
+          left: 0px;
+        }
+        100% {
+          left: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

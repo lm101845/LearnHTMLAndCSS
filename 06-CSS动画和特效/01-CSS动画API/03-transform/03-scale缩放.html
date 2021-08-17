@@ -1,0 +1,67 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 09:19:17
+ * @LastEditTime: 2021-08-17 09:21:25
+ * @FilePath: \01-CSS动画API\03-transform\03-scale缩放.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 这里一共有三个属性的展示scale(x,y)，scaleX(x)，scaleY(Y)。
+        分别代表水平方向和垂直方向同时缩放、仅水平方向缩放、仅垂直方向缩放。
+        但它们具有相同的缩放中心点和基数，其中心点就是元素的中心位置，
+        缩放基数为1，如果其值大于1元素就放大，反之其值小于1，元素缩小。
+ -->
+    <style>
+      img {
+        margin-left: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      @keyframes scale {
+        0% {
+          transform: scale(0.1, 0.1);
+        }
+        100% {
+          transform: scale(1, 1);
+        }
+      }
+      @keyframes scaleX {
+        0% {
+          transform: scaleX(0.1);
+        }
+        100% {
+          transform: scaleX(1);
+        }
+      }
+      @keyframes scaleY {
+        0% {
+          transform: scaleY(0.1);
+        }
+        100% {
+          transform: scaleY(1);
+        }
+      }
+
+      .scale {
+        animation: scale 2s infinite linear;
+      }
+      .scaleX {
+        animation: scaleX 2s infinite linear;
+      }
+      .scaleY {
+        animation: scaleY 2s infinite linear;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./logo.png" alt="" class="scale" />
+    <img src="./logo.png" alt="" class="scaleX" />
+    <img src="./logo.png" alt="" class="scaleY" />
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 08:33:05
+ * @LastEditTime: 2021-08-17 09:18:25
+ * @FilePath: \01-CSS动画API\03-transform\02-translate 移动.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 这里一共有三个属性的展示translate(x,y)，translateX(x)，translateY(Y)。
+        分别代表水平方向和垂直方向同时移动、仅水平方向移动、仅垂直方向移动。 -->
+    <style>
+      img {
+        margin-left: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+      }
+
+      .translate {
+        animation: translate 2s infinite linear;
+      }
+      .translateX {
+        animation: translateX 2s infinite linear;
+      }
+      .translateY {
+        animation: translateY 2s infinite linear;
+      }
+
+      @keyframes translate {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        100% {
+          transform: translate(100px, 100px);
+        }
+      }
+      @keyframes translateX {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(100px);
+        }
+      }
+      @keyframes translateY {
+        0% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./logo.png" alt="" class="translate" />
+    <img src="./logo.png" alt="" class="translateX" />
+    <img src="./logo.png" alt="" class="translateY" />
+  </body>
+</html>

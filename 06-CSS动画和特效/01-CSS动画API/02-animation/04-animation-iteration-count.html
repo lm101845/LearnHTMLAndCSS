@@ -1,0 +1,48 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 08:13:23
+ * @LastEditTime: 2021-08-17 08:14:40
+ * @FilePath: \01-CSS动画API\02-animation\04-animation-iteration-count.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- animation-iteration-count：检索或设置对象动画的循环次数 -->
+    <!-- 这里animation-iteration-count的值为infinite，意思是动画将会无限次的执行，
+        这也就达到了循环的效果，当然你还可以给它具体的数值，当执行你设置的次数后它会自动停止。 -->
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        background: #f40;
+        border-radius: 50%;
+        animation-name: mymove;
+        animation-duration: 2s;
+        /* animation-iteration-count: infinite; */
+        animation-iteration-count: 3;
+      }
+
+      @keyframes mymove {
+        0% {
+          width: 50px;
+          height: 50px;
+        }
+        50% {
+          width: 100px;
+          height: 100px;
+        }
+        100% {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

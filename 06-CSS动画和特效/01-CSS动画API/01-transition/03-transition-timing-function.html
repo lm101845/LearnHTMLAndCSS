@@ -1,0 +1,35 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-08-17 07:40:28
+ * @LastEditTime: 2021-08-17 07:45:53
+ * @FilePath: \01-CSS动画API\01-transition\03-transition-timing-function.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- transition-timing-function：指定transition效果的转速曲线 -->
+    <style>
+      div {
+        width: 100px;
+        height: 50px;
+        background: #f40;
+        transition-duration: 2s;
+        /* transition-timing-function: ease-in-out; */
+        /* transition-timing-function的作用就是改变动画在每一帧的快慢。
+        这里transition-timing-function仅展示值为ease-in-out的动画效果，可以理解为慢-快-慢。 */
+        transition-timing-function: ease;
+        /* 快-慢-慢 */
+      }
+      div:hover {
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
