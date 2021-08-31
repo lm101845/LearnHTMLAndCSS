@@ -1,0 +1,47 @@
+.style_red{
+color:#c81623;
+}
+/*快捷导航模块*/
+.shortcut {
+  //它的宽度不要给，就是100%，高度要给
+  height: 31px;
+  line-height: 31px;
+  // 行高可以继承,子盒子就不用写了
+  background-color: #f1f1f1;
+  /*版心*/
+  .w {
+    width: 1200px;
+    // 水平 居中
+    margin: 0 auto;
+    background-color: pink;
+    height: 100%;
+    // 儿子高度和父亲高度一致
+    /*版心里面一个左浮动，一个右浮动*/
+    .fl {
+      float: left;
+    //   算了，还是不这么写了,不能为了练less而练less，这样写反而复杂了
+    //   ul{
+    //      li:nth-child(2){
+    //         a:nth-child(2){
+    //             color:@textColor
+    //         }
+    //      }
+    //   }
+    }
+    .fr {
+      float: right;
+      //选择所有的偶数小li
+      ul li:nth-child(even){
+           width: 1px;
+           height: 12px;
+           background-color: #666;
+           //上9px，左右15px，下0px    
+           margin: 9px 15px 0;
+      }
+    }
+  }
+  li {
+    float: left;
+    // 让所有的li浮动起来并且垂直居中
+  }
+}

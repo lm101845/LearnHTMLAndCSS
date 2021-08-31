@@ -1,0 +1,32 @@
+.style_red {
+  color: #c81623;
+}
+/*快捷导航模块*/
+.shortcut {
+  height: 31px;
+  line-height: 31px;
+  background-color: #f1f1f1;
+  /*版心*/
+}
+.shortcut .w {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: pink;
+  height: 100%;
+  /*版心里面一个左浮动，一个右浮动*/
+}
+.shortcut .w .fl {
+  float: left;
+}
+.shortcut .w .fr {
+  float: right;
+}
+.shortcut .w .fr ul li:nth-child(even) {
+  width: 1px;
+  height: 12px;
+  background-color: #666;
+  margin: 9px 15px 0;
+}
+.shortcut li {
+  float: left;
+}
