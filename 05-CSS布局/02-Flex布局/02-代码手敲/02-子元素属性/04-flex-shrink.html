@@ -1,0 +1,50 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-09-08 20:38:23
+ * @LastEditTime: 2021-09-08 21:07:06
+ * @FilePath: \02-Flex布局\02-代码手敲\02-子元素属性\04-flex-shrink.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .item{
+            width: 500px !important;
+        }
+    </style>
+    <style>
+      .item {
+        flex-basis: auto;
+        /* flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。不能设置负值 */
+      }
+
+      .item:nth-child(1) {
+        flex-shrink: 0;
+      }
+
+      .item:nth-child(2) {
+        flex-shrink: 1;
+      }
+
+      .item:nth-child(3) {
+        flex-shrink: 1;
+      }
+      .item:nth-child(4) {
+        flex-shrink: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+  </body>
+</html>

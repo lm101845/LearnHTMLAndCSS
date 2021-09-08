@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  /* 设置主轴上子元素排列方式 */
+  align-items: center;
+  /* 设置侧轴上子元素排列方式(单行) */
+  width: 800px;
+  height: 250px;
+  background-color: orange;
+  margin: 100px auto;
+}
+.container .item {
+  text-align: center;
+  border: 1px solid red;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 50px;
+  background-color: skyblue;
+  margin-right: 20px;
+}

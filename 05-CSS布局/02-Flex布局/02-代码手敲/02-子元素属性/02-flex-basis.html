@@ -1,0 +1,33 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-09-08 20:38:23
+ * @LastEditTime: 2021-09-08 20:58:16
+ * @FilePath: \02-Flex布局\02-代码手敲\02-子元素属性\02-flex-basis.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .item {
+          /**
+          * flex-basis 需要跟 flex-grow 和 flex-shrink 配合使用才能生效。有两种特殊的值：
+            当 flex-basis 值为 0 % 时，项目尺寸会被认为是0，因此无论项目尺寸设置多少都用；
+            当 flex-basis 值为 auto 时，则跟根据尺寸的设定值来设置大小。
+          */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+  </body>
+</html>
