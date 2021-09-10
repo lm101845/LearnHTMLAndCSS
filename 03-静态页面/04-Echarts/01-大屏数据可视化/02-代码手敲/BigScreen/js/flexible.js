@@ -1,3 +1,9 @@
+/*
+ * @Author: liming
+ * @Date: 2021-07-13 01:19:11
+ * @LastEditTime: 2021-09-10 21:36:00
+ * @FilePath: \03-静态页面\04-Echarts\01-大屏数据可视化\02-代码手敲\js\flexible.js
+ */
 (function flexible(window, document) {
   var docEl = document.documentElement;
   var dpr = window.devicePixelRatio || 1;
