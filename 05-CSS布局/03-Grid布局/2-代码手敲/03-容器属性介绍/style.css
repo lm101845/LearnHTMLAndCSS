@@ -1,0 +1,70 @@
+/**
+grid-template-columns 属性设置列宽，grid-template-rows 属性设置行高，
+这两个属性在 Grid 布局中尤为重要，它们的值是有多种多样的，而且它们的设置是比较相似的
+*
+*/
+/**
+
+*
+*/
+/**
+
+*
+*/
+/**
+
+*
+*/
+/**
+
+*
+*/
+/**
+
+*
+*/
+.title {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 700;
+}
+.wrapper,
+.wrapper-1 {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 5px;
+}
+.wrapper .one,
+.wrapper-1 .one {
+  background: #19caad;
+}
+.wrapper .two,
+.wrapper-1 .two {
+  background: #8cc7b5;
+}
+.wrapper .three,
+.wrapper-1 .three {
+  background: #d1ba74;
+}
+.wrapper .four,
+.wrapper-1 .four {
+  background: #bee7e9;
+}
+.wrapper .five,
+.wrapper-1 .five {
+  background: #e6ceac;
+}
+.wrapper .six,
+.wrapper-1 .six {
+  background: #ecad9e;
+}
+.wrapper .item,
+.wrapper-1 .item {
+  text-align: center;
+  font-size: 200%;
+  color: #fff;
+}
+.wrapper-1 {
+  display: inline-grid !important;
+}

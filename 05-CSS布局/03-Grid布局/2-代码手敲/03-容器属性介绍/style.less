@@ -1,0 +1,72 @@
+/**
+grid-template-columns 属性设置列宽，grid-template-rows 属性设置行高，
+这两个属性在 Grid 布局中尤为重要，它们的值是有多种多样的，而且它们的设置是比较相似的
+*
+*/
+
+/**
+
+*
+*/
+
+/**
+
+*
+*/
+
+/**
+
+*
+*/
+
+/**
+
+*
+*/
+
+/**
+
+*
+*/
+
+.title {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.wrapper,
+.wrapper-1 {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap:5px;
+    // 推荐使用gap属性作为缩写，grid-gap已经很老了。Multi-column布局，以及Flex布局的间隙现在也都统一使用gap属性了。 
+    .one {
+    background: #19caad;
+  }
+  .two {
+    background: #8cc7b5;
+  }
+  .three {
+    background: #d1ba74;
+  }
+  .four {
+    background: #bee7e9;
+  }
+  .five {
+    background: #e6ceac;
+  }
+  .six {
+    background: #ecad9e;
+  }
+  .item {
+    text-align: center;
+    font-size: 200%;
+    color: #fff;
+  }
+}
+
+.wrapper-1{
+    display: inline-grid !important;
+}

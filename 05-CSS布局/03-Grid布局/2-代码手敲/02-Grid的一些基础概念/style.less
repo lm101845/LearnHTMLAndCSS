@@ -1,0 +1,52 @@
+/**
+容器和项目：我们通过在元素上声明 display：grid 或 display：inline-grid 来创建一个网格容器。
+一旦我们这样做，这个元素的所有直系子元素将成为网格项目。比如上面 .wrapper 所在的元素为一个网格容器，其直系子元素将成为网格项目。
+*/
+
+/**
+*网格轨道：grid-template-columns 和 grid-template-rows 属性来定义网格中的行和列。
+容器内部的水平区域称为行，垂直区域称为列。上图中 One、Two、Three 组成了一行，One、Four 则是一列
+*/
+
+/**
+网格单元：一个网格单元是在一个网格元素中最小的单位， 从概念上来讲其实它和表格的一个单元格很像。
+上图中 One、Two、Three、Four...都是一个个的网格单元
+*
+*/
+
+.wrapper {
+  margin: 60px;
+  /* 声明一个容器 */
+  display: grid;
+  /*  声明列的宽度  */
+  grid-template-columns: repeat(3, 200px);
+  /*  声明行的高度  */
+  grid-template-rows: 100px 200px;
+  /*  声明行间距和列间距  */
+  gap: 20px;
+  /*背景色*/
+  background-color: skyblue;
+  .item{
+      font-size: 200%;
+      color: #fff;
+      text-align: center;
+  }
+  .one {
+    background: #19caad;
+  }
+  .two {
+    background: #8cc7b5;
+  }
+  .three {
+    background: #d1ba74;
+  }
+  .four {
+    background: #bee7e9;
+  }
+  .five {
+    background: #e6ceac;
+  }
+  .six {
+    background: #ecad9e;
+  }
+}
