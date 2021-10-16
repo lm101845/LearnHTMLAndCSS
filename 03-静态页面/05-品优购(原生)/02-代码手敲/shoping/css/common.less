@@ -1,6 +1,49 @@
-.style_red{
-color:#c81623;
+// 声明字体图标
+/* 字体图标声明 这里要注意路径的变化../fonts*/
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?tomleg");
+  src: url("../fonts/icomoon.eot?tomleg#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?tomleg") format("truetype"),
+    url("../fonts/icomoon.woff?tomleg") format("woff"),
+    url("../fonts/icomoon.svg?tomleg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
+
+.style_red {
+  color: #c81623;
+}
+
+/*版心*/
+.w {
+  width: 1200px;
+  // 水平 居中
+  margin: 0 auto;
+  // background-color: pink;
+  height: 100%;
+  // 儿子高度和父亲高度一致
+  /*版心里面一个左浮动，一个右浮动*/
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+    //选择所有的偶数小li
+    ul li:nth-child(even) {
+      width: 1px;
+      height: 12px;
+      background-color: #666;
+      //上9px，左右15px，下0px
+      margin: 9px 15px 0;
+    }
+    .arrow-icon::after {
+      content: "\e91e";
+    }
+  }
+}
+
 /*快捷导航模块*/
 .shortcut {
   //它的宽度不要给，就是100%，高度要给
@@ -8,40 +51,269 @@ color:#c81623;
   line-height: 31px;
   // 行高可以继承,子盒子就不用写了
   background-color: #f1f1f1;
-  /*版心*/
-  .w {
-    width: 1200px;
-    // 水平 居中
-    margin: 0 auto;
-    background-color: pink;
-    height: 100%;
-    // 儿子高度和父亲高度一致
-    /*版心里面一个左浮动，一个右浮动*/
-    .fl {
-      float: left;
-    //   算了，还是不这么写了,不能为了练less而练less，这样写反而复杂了
-    //   ul{
-    //      li:nth-child(2){
-    //         a:nth-child(2){
-    //             color:@textColor
-    //         }
-    //      }
-    //   }
-    }
-    .fr {
-      float: right;
-      //选择所有的偶数小li
-      ul li:nth-child(even){
-           width: 1px;
-           height: 12px;
-           background-color: #666;
-           //上9px，左右15px，下0px    
-           margin: 9px 15px 0;
-      }
-    }
-  }
+
   li {
     float: left;
     // 让所有的li浮动起来并且垂直居中
+    // 伪元素是特殊的小li，所以它们是在一行上显示的
+    font-family: "icomoon";
+    margin-left: 6px;
+  }
+}
+
+/*header头部制作*/
+.header {
+  position: relative;
+  height: 105px;
+  // background-color: pink;
+  .logo {
+    position: absolute;
+    top: 25px;
+    width: 171px;
+    height: 61px;
+    // background-color:skyblue
+    a {
+      //a是没有大小的，所以先转换为块级元素
+      display: block;
+      width: 171px;
+      height: 61px;
+      background: url(../images/logo.png) no-repeat;
+      // font-size: 0;
+      // 将字号设置为0，就看不到文字了——京东的做法
+      text-indent: -9999px; //给负值，往左走
+      overflow: hidden; //加上overflow: hidden; 溢出隐藏更加保险
+    }
+  }
+
+  .search {
+    position: absolute;
+    left: 346px;
+    top: 25px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #b1191a;
+    input {
+      float: left;
+      width: 454px;
+      height: 32px;
+      // background-color: blue;
+      padding-left: 10px;
+      // 我们使用了CSS3的盒子模型，所以写了padding值后也不需要我们手动去减了
+    }
+    button {
+      float: left;
+      width: 80px;
+      height: 32px;
+      background-color: #b1191a;
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  .hotwords {
+    position: absolute;
+    left: 346px;
+    top: 66px;
+    a {
+      margin: 0 10px;
+      //行内元素设置左右的margin值是没有问题的
+    }
+  }
+
+  .shopcar {
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+    &::before {
+      content: "\e93a";
+      font-family: "icomoon";
+      margin-right: 5px;
+      color: #b1191a;
+    }
+    &::after {
+      content: "\e920";
+      font-family: "icomoon";
+      margin-left: 10px;
+    }
+    .count {
+      position: absolute;
+      // .shopcar行高为35px，行高会继承，会继承给i这个子盒子，所以数字8就掉下来了
+      line-height: 14px;
+      // 我们将继承下来的行高层叠掉就行了
+      top: -5px;
+      // 不要给宽度，也许人家是土豪，买了9999件商品
+      // right: 20px;
+      // 不好用右对齐，写左对齐，这样写9999的时候，数字会在右边
+      left: 105px;
+      height: 14px;
+      color: #fff;
+      background-color: #e60012;
+      padding: 0 5px;
+      border-radius: 7px 7px 7px 0;
+      // 左下角为0px
+    }
+  }
+}
+
+/*nav模块制作*/
+.nav {
+  height: 47px;
+  border-bottom: 2px solid #b1191a;
+  .dropdown {
+    float: left;
+    width: 210px;
+    height: 45px;
+    background-color: #b1191a;
+    .dt {
+      width: 100%;
+      height: 100%;
+      // 宽高都是100%,和父亲一模一样
+      text-align: center;
+      color: #fff;
+      line-height: 45px;
+      font-size: 16px;
+    }
+    .dd {
+      width: 100%;
+      // width: 210px;
+      // 写100%或者210px都行
+      height: 465px;
+      background-color: #c81623;
+      margin-top: 2px;
+      display: none;
+      li {
+        position: relative;
+        height: 31px;
+        line-height: 31px;
+        // 注意：这个小li一定要距离左侧有2px的空白缝隙才行
+        margin-left: 2px;
+        padding-left: 10px;
+        a {
+          font-size: 14px;
+          color: #fff;
+        }
+        &:hover {
+          background-color: #fff;
+          a {
+            color: #c81623;
+            // 鼠标经过的是li，但是a要变颜色
+          }
+        }
+        &::after {
+          position: absolute;
+          top: 1px;
+          right: 10px;
+          color: #fff;
+          // 它属于行内元素，会贴到文字的后面进行显示
+          content: "\e920";
+          font-family: "icomoon";
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .navitems {
+    float: left;
+    ul li {
+      float: left;
+      a {
+        display: block;
+        // 文字垂直居中，给a更合适一些，不要给li
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+        padding: 0 25px;
+        // 给a一个padding值，到时候点击a左右空白的部分，也会显示文字被点击
+      }
+    }
+  }
+}
+
+/*底部模块制作*/
+.footer {
+  // 不要给宽度，只要给个高就行了
+  height: 415px;
+  background-color: #f5f5f5;
+  padding-top: 30px;
+  .mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    li {
+      float: left;
+      // width: 300px;
+      width: 240px;
+      height: 50px;
+      // background-color: pink;
+      padding-left: 35px;
+      h5 {
+        float: left;
+        width: 50px;
+        height: 50px;
+        // 让li里面的h5文字左侧浮动，这个时候图标右边的文字自动围绕这个图标了
+        // background-color: purple;
+        margin-right: 5px;
+      }
+      .h51 {
+        background: url(../images/icons.png) no-repeat -252px -2px;
+      }
+      .h52 {
+        background: url(../images/icons.png) no-repeat -255px -53px;
+      }
+      .h53 {
+        background: url(../images/icons.png) no-repeat -256px -105px;
+      }
+      .h54 {
+        background: url(../images/icons.png) no-repeat -256px -157px;
+      }
+      .h55 {
+        background: url(../images/icons.png) no-repeat -256px -208px;
+      }
+      .service_txt h4 {
+        font-size: 14px;
+      }
+
+      .service_txt p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .mod_help {
+    height: 185px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-left: 50px;
+    dl {
+      float: left;
+      width: 200px;
+      &:last-child{
+        width: 90px;
+        text-align: center;
+      }
+      dt {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .mod_copyright{
+    text-align: center;
+    padding-top: 20px;
+    .links{
+      margin-bottom: 15px;
+      a{
+        margin: 0 3px;
+      }
+    }
+    .copyright{
+      line-height: 20px;
+    }
   }
 }

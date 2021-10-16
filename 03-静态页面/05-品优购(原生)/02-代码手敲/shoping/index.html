@@ -1,69 +1,260 @@
 <!--
  * @Author: liming
  * @Date: 2021-08-31 10:47:44
- * @LastEditTime: 2021-08-31 14:14:31
+ * @LastEditTime: 2021-10-16 19:00:23
  * @FilePath: \05-品优购(原生)\02-代码手敲\shoping\index.html
 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TDK(title,description,Keywords)三大标签：SEO优化，很重要！！！ -->
-    <title>
-      品优购商城-综合网购首选-正品低价、品质保障、配送及时、轻松购物！
-    </title>
-    <!-- 网站说明 -->
-    <meta
-      name="description"
-      content="品优购商城-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。"
-    />
-    <meta
-      name="Keywords"
-      content="网上购物,网上商城,家电,手机,电脑,服装,居家,母婴,美妆,个护,食品,生鲜,品优购"
-    />
-    <!-- 引入图标:网站【比特虫】可以将png转换为ico图标 -->
-    <link rel="shortcut icon" href="favicon.ico" />
-    <!-- 引入初始化样式 -->
-    <link rel="stylesheet" href="css/base.css" />
-    <!-- 引入公共的样式文件 -->
-    <link rel="stylesheet" href="css/common.css" />
-  </head>
-  <body>
-   <!-- =========================快捷导航模版============================= -->
-   <section class='shortcut'>
-       <!-- 在shortcut里面先放一个版心，版心里面分成部分，一个左，一个右 -->
-       <div class="w">
-           <div class="fl">
-               <ul>
-                   <li>品优购欢迎您！&nbsp;</li>
-                   <li>
-                       <a href="#">请登陆&nbsp; </a>
-                       <a href="#" class='style_red'>免费注册</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TDK(title,description,Keywords)三大标签：SEO优化，很重要！！！ -->
+  <title>
+    品优购商城-综合网购首选-正品低价、品质保障、配送及时、轻松购物！
+  </title>
+  <!-- 网站说明 -->
+  <meta name="description" content="品优购商城-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。" />
+  <meta name="Keywords" content="网上购物,网上商城,家电,手机,电脑,服装,居家,母婴,美妆,个护,食品,生鲜,品优购" />
+  <!-- 引入图标:网站【比特虫】可以将png转换为ico图标 -->
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!-- 引入初始化样式 -->
+  <link rel="stylesheet" href="css/base.css" />
+  <!-- 引入公共的样式文件 -->
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+
+<body>
+  <!-- =========================快捷导航模版start============================= -->
+  <section class="shortcut">
+    <!-- 在shortcut里面先放一个版心，版心里面分成部分，一个左，一个右 -->
+    <div class="w">
+      <div class="fl">
+        <ul>
+          <li>品优购欢迎您！&nbsp;</li>
+          <li>
+            <a href="#">请登陆&nbsp; </a>
+            <a href="#" class="style_red">免费注册</a>
+          </li>
+        </ul>
+      </div>
+      <div class="fr">
+        <ul>
+          <!-- 把中间的小竖线也当成一个小li，也是一个盒子，只不过宽度是1像素 -->
+          <!-- 中间的小竖线有规律：全是【偶数！！！】 -->
+          <li>我的订单</li>
+          <li></li>
+          <li class="arrow-icon">我的品优购</li>
+          <li></li>
+          <li>品优购会员</li>
+          <li></li>
+          <li>企业采购</li>
+          <li></li>
+          <li class="arrow-icon">关注品优购</li>
+          <li></li>
+          <li class="arrow-icon">客户服务</li>
+          <li></li>
+          <li class="arrow-icon">网站导航</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- =========================快捷导航模版end============================= -->
+
+
+  <!-- =========================头部模版start============================= -->
+  <header class="header w">
+    <!-- Logo模块 -->
+    <div class="logo">
+      <h1>
+        <a href="index.html" title="品优购商城">品优购商城</a>
+      </h1>
+    </div>
+    <!-- search搜索模块 -->
+    <div class="search">
+      <!-- input和button都属于行内块元素，中间会有缝隙，如果给它们加上浮动，就没有缝隙了 -->
+      <input type="search" name="" id="" placeholder="语言开发" />
+      <button>搜索</button>
+    </div>
+    <!-- hotwords模块制作 -->
+    <div class="hotwords">
+      <a href="#" class="style_red">优惠购首发</a>
+      <a href="#">亿元优惠</a>
+      <a href="#">9.9元团购</a>
+      <a href="#">美满99减30</a>
+      <a href="#">办公用品</a>
+      <a href="#">电脑</a>
+      <a href="#">通信</a>
+    </div>
+    <!--购物车模块制作  -->
+    <div class="shopcar">
+      我的购物车
+      <i class="count">8</i>
+    </div>
+  </header>
+  <!-- =========================头部模版end============================= -->
+
+
+  <!-- =========================nav模块制作start============================= -->
+  <nav class="nav">
+    <!-- 这是一个通栏的盒子，不需要给宽度，给一个高度和一个下边框即可 -->
+    <div class="w">
+      <div class="dropdown">
+        <div class="dt">全部商品分类</div>
+        <div class="dd">
+          <ul>
+            <li><a href="list.html">家用电器</a></li>
+            <li><a href="list.html">手机</a>、<a href="list.html">数码</a>、<a href="list.html">通信</a></li>
+            <li><a href="list.html">电脑</a>、<a href="list.html">办公</a></li>
+            <li><a href="list.html">家居</a>、<a href="list.html">家具</a>、<a href="list.html">家装</a>、<a href="list.html">厨具</a></li>
+            <li><a href="list.html">男装</a>、<a href="list.html">女装</a>、<a href="list.html">童装</a>、<a href="list.html">内衣</a></li>
+            <li><a href="list.html">个户化妆</a>、<a href="list.html">清洁用品</a>、<a href="list.html">宠物</a></li>
+            <li><a href="list.html">鞋靴</a>、<a href="list.html">箱包</a>、<a href="list.html">珠宝</a>、<a href="list.html">奢侈品</a></li>
+            <li><a href="list.html">运动户外</a>、<a href="list.html">钟表</a></li>
+            <li><a href="list.html">汽车</a>、<a href="list.html">汽车用品</a></li>
+            <li><a href="list.html">母婴</a>、<a href="list.html">玩具乐器</a></li>
+            <li><a href="list.html">食品</a>、<a href="list.html">酒类</a>、<a href="list.html">生鲜</a>、<a href="list.html">特产</a></li>
+            <li><a href="list.html">医药保健</a></li>
+            <li><a href="list.html">图书</a>、<a href="list.html">音像</a>、<a href="list.html">电子书</a></li>
+            <li><a href="list.html">彩票</a>、<a href="list.html">旅行</a>、<a href="list.html">充值</a>、<a href="list.html">票务</a></li>
+            <li><a href="list.html">理财</a>、<a href="list.html">众筹</a>、<a href="list.html">白条</a>、<a href="list.html">保险</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 下面的dd宽度和父亲一样宽，高度它有自己的高度 -->
+      <div class="navitems">
+        <ul>
+          <li><a href="#">服装城 </a></li>
+          <li><a href="#">美妆馆</a></li>
+          <li><a href="#">传智超市</a></li>
+          <li><a href="#">全球购</a></li>
+          <li><a href="#">闪购</a></li>
+          <li><a href="#">团购</a></li>
+          <li><a href="#">拍卖</a></li>
+          <li><a href="#">有趣</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <!-- =========================nav模块制作end============================= -->
+
+
+
+
+  <!-- =========================底部模块制作start============================= -->
+  <footer class="footer">
+    <div class="w">
+         <div class="mod_service">
+                <ul>
+                    <li>
+                        <h5 class="h51"></h5>
+                        <div class="service_txt">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
                     </li>
-               </ul>
-           </div>
-           <div class="fr">
-               <ul>
-                   <!-- 把中间的小竖线也当成一个小li，也是一个盒子，只不过宽度是1像素 -->
-                   <!-- 中间的小竖线有规律：全是【偶数！！！】 -->
-                   <li>我的订单</li>
-                    <li></li>
-                    <li class="arrow-icon">我的品优购</li>
-                    <li></li>
-                    <li>品优购会员</li>
-                    <li></li>
-                    <li>企业采购</li>
-                    <li></li>
-                    <li class="arrow-icon">关注品优购</li>
-                    <li></li>
-                    <li class="arrow-icon">客户服务</li>
-                    <li></li>
-                    <li class="arrow-icon">网站导航</li>
-               </ul>
-           </div>
-       </div>
-   </section>  
-  </body>
+                    <li>
+                        <h5 class="h52"></h5>
+                        <div>
+                            <h4>急速物流</h4>
+                            <p>急速物流，急速送达</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="h53"></h5>
+                        <div>
+                            <h4>无忧售后</h4>
+                            <p>7天无理由退换</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="h54"></h5>
+                        <div>
+                            <h4>特色服务</h4>
+                            <p>私人定制家电套餐</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="h55"></h5>
+                        <div>
+                            <h4>帮助中心</h4>
+                            <p>您的购物指南</p>
+                        </div>
+                    </li>
+                </ul>
+          </div>
+
+          <div class="mod_help">
+              <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">上门自提</a></dd>
+                    <dd><a href="#">211限时达</a></dd>
+                    <dd><a href="#">配送服务查询</a></dd>
+                    <dd><a href="#">配送费收取标准</a></dd>
+                    <dd><a href="#">海外配送</a></dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">货到付款</a></dd>
+                    <dd><a href="#">在线支付</a></dd>
+                    <dd><a href="#">分期付款</a></dd>
+                    <dd><a href="#">邮局汇款</a></dd>
+                    <dd><a href="#">公司转账</a></dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">售后政策</a></dd>
+                    <dd><a href="#">价格保护</a></dd>
+                    <dd><a href="#">退款说明</a></dd>
+                    <dd><a href="#">返修/退换货</a></dd>
+                    <dd><a href="#">取消订单</a></dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="#">夺宝岛</a></dd>
+                    <dd><a href="#">DIY装机</a></dd>
+                    <dd><a href="#">延保服务</a></dd>
+                    <dd><a href="#">品优购E卡</a></dd>
+                    <dd><a href="#">品优购通信</a></dd>
+                </dl>
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd>
+                        <img src="images/twoma.png" alt="">
+                        品优购客户端
+                    </dd>
+                </dl>
+          </div>
+
+             <div class="mod_copyright">
+                <div class="links">
+                    <a href="#">关于我们</a> | <a href="#">联系我们</a> | <a href="#">联系客服</a> | <a href="#">商家入驻</a> | <a
+                        href="#">营销中心</a> | <a href="#">手机品优购</a> | <a href="#">友情链接</a> | <a href="#">销售联盟</a> | <a
+                        href="#">品优购社区</a> |
+                    <a href="#">品优购公益</a> | <a href="#">English Site</a> | <a href="#">Contact U</a>
+                </div>
+                <div class="copyright">
+                    地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cnbr<br>
+                    京ICP备08001421号京公网安备110108007702
+                </div>
+            </div>
+    </div>
+  </footer>
+
+  <!-- =========================底部模块制作end============================= -->
+
+</body>
+
 </html>

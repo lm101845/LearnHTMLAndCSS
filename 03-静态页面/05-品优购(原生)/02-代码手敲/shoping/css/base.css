@@ -42,6 +42,7 @@ input {
     font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
     /* 默认有灰色边框我们需要手动去掉 */
     border: 0; 
+    /* 去掉蓝色边框 */
     outline: none;
 }
 
