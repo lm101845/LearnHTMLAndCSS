@@ -1,0 +1,76 @@
+.main {
+  width: 980px;
+  height: 455px;
+  margin-left: 220px;
+  margin-top: 10px;
+}
+.main .focus {
+  float: left;
+  width: 721px;
+  height: 455px;
+}
+.main .newsflash {
+  float: right;
+  width: 250px;
+  height: 455px;
+}
+.main .newsflash .news {
+  height: 165px;
+  border: 1px solid #e4e4e4;
+}
+.main .newsflash .news .news-hd {
+  height: 33px;
+  line-height: 33px;
+  border-bottom: 1px dotted #e4e4e4;
+  padding: 0 15px;
+}
+.main .newsflash .news .news-hd h5 {
+  float: left;
+  font-size: 14px;
+}
+.main .newsflash .news .news-hd .more {
+  float: right;
+}
+.main .newsflash .news .news-hd .more::after {
+  font-family: "icomoon";
+  content: '\e920';
+  margin-top: 5px;
+}
+.main .newsflash .news .news-bd {
+  padding: 5px 15px 0;
+}
+.main .newsflash .news .news-bd ul li {
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.main .newsflash .lifeservice {
+  height: 209px;
+  border: 1px solid #e4e4e4;
+  border-top: 0;
+  overflow: hidden;
+}
+.main .newsflash .lifeservice ul {
+  width: 252px;
+}
+.main .newsflash .lifeservice ul li {
+  float: left;
+  width: 63px;
+  height: 71px;
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  text-align: center;
+}
+.main .newsflash .lifeservice ul li i {
+  display: inline-block;
+  width: 24px;
+  height: 28px;
+  background-color: pink;
+  margin-top: 12px;
+  background: url(../images/icons.png) no-repeat -19px -15px;
+}
+.main .newsflash .bargin {
+  margin-top: 5px;
+}

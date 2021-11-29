@@ -1,0 +1,87 @@
+.main{
+  width: 980px;
+  height: 455px;
+  // background-color: pink;
+  margin-left:220px;
+  margin-top: 10px;
+  .focus{
+    float: left;
+    width: 721px;
+    height: 455px;
+    // background-color: purple;
+  }
+  .newsflash{
+    float:right;
+    width: 250px;
+    height:455px;
+    // background-color: skyblue;
+    .news{
+      // 宽度不用给
+      height: 165px;
+      // background-color: pink;
+      border: 1px solid #e4e4e4;
+      .news-hd{
+        height: 33px;
+        line-height: 33px;
+        border-bottom: 1px dotted #e4e4e4;
+        padding: 0 15px;
+        h5{
+          float: left;
+          font-size: 14px;
+        }
+        .more{
+          float: right;
+          &::after{
+            font-family: "icomoon";
+            content: '\e920';
+            margin-top: 5px;
+          }
+        }
+      }
+      .news-bd{
+        padding: 5px 15px 0;
+        ul{
+          li{
+            height: 24px;
+            line-height: 24px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+    .lifeservice{
+      // 广告模块不用给高度了，直接切图就好了
+      height: 209px;
+      // background-color: purple;
+      border: 1px solid #e4e4e4;
+      border-top: 0;
+      // 不需要上边框
+      overflow: hidden;
+      ul{
+        // 只要我们把ul设置的足够宽，小li就不会掉下去
+        width: 252px;
+        li{
+          float: left;
+          width: 63px;
+          height: 71px;
+          border-right: 1px solid #e4e4e4;
+          border-bottom: 1px solid #e4e4e4;
+          text-align: center;
+          i{
+            display:inline-block;
+            width: 24px;
+            height: 28px;
+            background-color: pink;
+            margin-top: 12px;
+            background:url(../images/icons.png) no-repeat -19px -15px;
+          }
+        }
+      }
+    }
+    .bargin{
+      margin-top: 5px;
+    }
+  }
+}
