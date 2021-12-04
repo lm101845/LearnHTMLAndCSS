@@ -33,7 +33,7 @@
 }
 .main .newsflash .news .news-hd .more::after {
   font-family: "icomoon";
-  content: '\e920';
+  content: "\e920";
   margin-top: 5px;
 }
 .main .newsflash .news .news-bd {
@@ -56,6 +56,7 @@
   width: 252px;
 }
 .main .newsflash .lifeservice ul li {
+  position: relative;
   float: left;
   width: 63px;
   height: 71px;
@@ -69,8 +70,218 @@
   height: 28px;
   background-color: pink;
   margin-top: 12px;
-  background: url(../images/icons.png) no-repeat -19px -15px;
+}
+.main .newsflash .lifeservice ul li:nth-child(1) i {
+  background: url(../images/icons.png) no-repeat -17px -16px;
+}
+.main .newsflash .lifeservice ul li:nth-child(2) i {
+  background: url(../images/icons.png) no-repeat -79px -18px;
+}
+.main .newsflash .lifeservice ul li:nth-child(2) img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main .newsflash .lifeservice ul li:nth-child(3) i {
+  background: url(../images/icons.png) no-repeat -141px -16px;
+}
+.main .newsflash .lifeservice ul li:nth-child(4) i {
+  background: url(../images/icons.png) no-repeat -206px -16px;
+}
+.main .newsflash .lifeservice ul li:nth-child(5) i {
+  background: url(../images/icons.png) no-repeat -16px -87px;
+}
+.main .newsflash .lifeservice ul li:nth-child(6) i {
+  background: url(../images/icons.png) no-repeat -77px -87px;
+}
+.main .newsflash .lifeservice ul li:nth-child(7) i {
+  background: url(../images/icons.png) no-repeat -140px -87px;
+}
+.main .newsflash .lifeservice ul li:nth-child(8) i {
+  background: url(../images/icons.png) no-repeat -206px -87px;
+}
+.main .newsflash .lifeservice ul li:nth-child(9) i {
+  background: url(../images/icons.png) no-repeat -16px -158px;
+}
+.main .newsflash .lifeservice ul li:nth-child(10) i {
+  background: url(../images/icons.png) no-repeat -78px -158px;
+}
+.main .newsflash .lifeservice ul li:nth-child(11) i {
+  background: url(../images/icons.png) no-repeat -142px -158px;
+}
+.main .newsflash .lifeservice ul li:nth-child(12) i {
+  background: url(../images/icons.png) no-repeat -205px -158px;
 }
 .main .newsflash .bargin {
   margin-top: 5px;
+}
+.recom {
+  height: 163px;
+  background-color: #ebebeb;
+  margin-top: 12px;
+}
+.recom .recom-hd {
+  float: left;
+  height: 163px;
+  width: 205px;
+  background-color: #5c5251;
+  text-align: center;
+  padding-top: 30px;
+}
+.recom .recom-hd p {
+  padding-top: 10px;
+  font-size: 18px;
+}
+.recom .recom-hd p a {
+  color: white;
+}
+.recom .recom-bd {
+  float: left;
+}
+.recom .recom-bd li {
+  position: relative;
+  float: left;
+}
+.recom .recom-bd li img {
+  width: 248px;
+  height: 163px;
+}
+.like {
+  margin-top: 30px;
+  height: 265px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.like .like-hd {
+  height: 35px;
+  position: relative;
+}
+.like .like-hd h3 {
+  float: left;
+  font-size: 18px;
+}
+.like .like-hd a {
+  float: right;
+  font-size: 12px;
+  margin-right: 20px;
+}
+.like .like-hd a::after {
+  position: absolute;
+  right: 0;
+  font-family: "icomoon";
+  content: "\ea2e";
+}
+.like ul li {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 260px;
+  text-align: center;
+}
+.like ul li:nth-child(4) img {
+  margin-top: 50px;
+}
+.like ul li img {
+  margin-top: 15px;
+}
+.like ul li p {
+  position: absolute;
+  top: 160px;
+  left: 35px;
+}
+.like ul li h3 {
+  position: absolute;
+  top: 200px;
+  left: 35px;
+  color: #df383b;
+  font-size: 16px;
+}
+.floor .w {
+  margin-top: 30px;
+}
+.floor .jiadian .box-hd,
+.floor .shouji .box-hd,
+.floor .diannao .box-hd {
+  height: 30px;
+  border-bottom: 2px solid #c81623;
+}
+.floor .jiadian .box-hd h3,
+.floor .shouji .box-hd h3,
+.floor .diannao .box-hd h3 {
+  float: left;
+  font-size: 18px;
+  color: #c81623;
+  font-weight: 400;
+}
+.floor .jiadian .box-hd .tab-list,
+.floor .shouji .box-hd .tab-list,
+.floor .diannao .box-hd .tab-list {
+  float: right;
+}
+.floor .jiadian .box-hd .tab-list ul li,
+.floor .shouji .box-hd .tab-list ul li,
+.floor .diannao .box-hd .tab-list ul li {
+  float: left;
+  line-height: 30px;
+}
+.floor .jiadian .box-hd .tab-list ul li a,
+.floor .shouji .box-hd .tab-list ul li a,
+.floor .diannao .box-hd .tab-list ul li a {
+  margin: 0 15px;
+}
+.floor .jiadian .box-bd,
+.floor .shouji .box-bd,
+.floor .diannao .box-bd {
+  height: 361px;
+}
+.floor .jiadian .box-bd .tab-content .tab-list-item > div,
+.floor .shouji .box-bd .tab-content .tab-list-item > div,
+.floor .diannao .box-bd .tab-content .tab-list-item > div {
+  float: left;
+  height: 361px;
+}
+.floor .jiadian .box-bd .tab-content .tab-list-item .col-210,
+.floor .shouji .box-bd .tab-content .tab-list-item .col-210,
+.floor .diannao .box-bd .tab-content .tab-list-item .col-210 {
+  width: 210px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.floor .jiadian .box-bd .tab-content .tab-list-item .col-210 ul,
+.floor .shouji .box-bd .tab-content .tab-list-item .col-210 ul,
+.floor .diannao .box-bd .tab-content .tab-list-item .col-210 ul {
+  padding-left: 12px;
+}
+.floor .jiadian .box-bd .tab-content .tab-list-item .col-210 ul li,
+.floor .shouji .box-bd .tab-content .tab-list-item .col-210 ul li,
+.floor .diannao .box-bd .tab-content .tab-list-item .col-210 ul li {
+  float: left;
+  width: 85px;
+  height: 34px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  line-height: 33px;
+  margin-right: 10px;
+}
+.floor .jiadian .box-bd .tab-content .tab-list-item .col-329,
+.floor .shouji .box-bd .tab-content .tab-list-item .col-329,
+.floor .diannao .box-bd .tab-content .tab-list-item .col-329 {
+  width: 329px;
+}
+.floor .jiadian .box-bd .tab-content .tab-list-item .col-221,
+.floor .shouji .box-bd .tab-content .tab-list-item .col-221,
+.floor .diannao .box-bd .tab-content .tab-list-item .col-221 {
+  width: 221px;
+  border-right: 1px solid #ccc;
+}
+.floor .jiadian .box-bd .tab-content .tab-list-item .col-219,
+.floor .shouji .box-bd .tab-content .tab-list-item .col-219,
+.floor .diannao .box-bd .tab-content .tab-list-item .col-219 {
+  width: 219px;
+}
+.floor .jiadian .box-bd .tab-content .tab-list-item .bb,
+.floor .shouji .box-bd .tab-content .tab-list-item .bb,
+.floor .diannao .box-bd .tab-content .tab-list-item .bb {
+  /* 一般情况下，a如果包含有宽度的盒子，a需要转换为块级元素 */
+  display: block;
+  border-bottom: 1px solid #ededed;
 }

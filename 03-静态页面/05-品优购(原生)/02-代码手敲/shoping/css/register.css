@@ -1,0 +1,114 @@
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.w header {
+  height: 84px;
+  border-bottom: 2px solid #c81523;
+}
+.w header img {
+  padding-top: 18px;
+}
+.w .registerarea {
+  height: 522px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+.w .registerarea h3 {
+  height: 42px;
+  border-bottom: 1px solid #ccc;
+  background-color: #ececec;
+  line-height: 42px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.w .registerarea h3 .login {
+  float: right;
+  font-size: 14px;
+}
+.w .registerarea h3 .login a {
+  color: #c81523;
+}
+.w .registerarea .reg-form {
+  width: 660px;
+  margin: 50px auto 0;
+}
+.w .registerarea .reg-form li {
+  margin-bottom: 20px;
+}
+.w .registerarea .reg-form li label {
+  display: inline-block;
+  width: 88px;
+  text-align: right;
+}
+.w .registerarea .reg-form li .inp {
+  width: 242px;
+  height: 37px;
+  border: 1px solid #ccc;
+}
+.w .registerarea .reg-form li .error {
+  color: #c81523;
+}
+.w .registerarea .reg-form li .error .error-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -2px 5px 0 0;
+  background: url(../images/error.png) no-repeat;
+}
+.w .registerarea .reg-form li .success {
+  color: green !important;
+}
+.w .registerarea .reg-form li .success .success-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -2px 5px 0 0;
+  background: url(../images/success.png) no-repeat;
+}
+.w .safe {
+  padding-left: 160px;
+}
+.w .safe .degree {
+  padding: 0 12px;
+}
+.w .safe .weak {
+  background-color: #de1111;
+}
+.w .safe .middle {
+  background-color: #40b83f;
+}
+.w .safe .strong {
+  background-color: #f79100;
+}
+.w .agree {
+  padding-left: 95px;
+}
+.w .agree input {
+  vertical-align: middle;
+}
+.w .agree a {
+  color: #1ba1e6;
+}
+.w .btn {
+  width: 200px;
+  height: 34px;
+  background-color: #c81623;
+  font-size: 14px;
+  color: #fff;
+  margin: 30px 0 0 70px;
+}
+.w .mod_copyright {
+  text-align: center;
+  padding-top: 20px;
+}
+.w .mod_copyright .links {
+  margin-bottom: 15px;
+}
+.w .mod_copyright .links a {
+  margin: 0 3px;
+}
+.w .mod_copyright .copyright {
+  line-height: 20px;
+}

@@ -1,47 +1,47 @@
-.main{
+.main {
   width: 980px;
   height: 455px;
   // background-color: pink;
-  margin-left:220px;
+  margin-left: 220px;
   margin-top: 10px;
-  .focus{
+  .focus {
     float: left;
     width: 721px;
     height: 455px;
     // background-color: purple;
   }
-  .newsflash{
-    float:right;
+  .newsflash {
+    float: right;
     width: 250px;
-    height:455px;
+    height: 455px;
     // background-color: skyblue;
-    .news{
+    .news {
       // 宽度不用给
       height: 165px;
       // background-color: pink;
       border: 1px solid #e4e4e4;
-      .news-hd{
+      .news-hd {
         height: 33px;
         line-height: 33px;
         border-bottom: 1px dotted #e4e4e4;
         padding: 0 15px;
-        h5{
+        h5 {
           float: left;
           font-size: 14px;
         }
-        .more{
+        .more {
           float: right;
-          &::after{
+          &::after {
             font-family: "icomoon";
-            content: '\e920';
+            content: "\e920";
             margin-top: 5px;
           }
         }
       }
-      .news-bd{
+      .news-bd {
         padding: 5px 15px 0;
-        ul{
-          li{
+        ul {
+          li {
             height: 24px;
             line-height: 24px;
             overflow: hidden;
@@ -51,7 +51,7 @@
         }
       }
     }
-    .lifeservice{
+    .lifeservice {
       // 广告模块不用给高度了，直接切图就好了
       height: 209px;
       // background-color: purple;
@@ -59,29 +59,250 @@
       border-top: 0;
       // 不需要上边框
       overflow: hidden;
-      ul{
+      ul {
         // 只要我们把ul设置的足够宽，小li就不会掉下去
         width: 252px;
-        li{
+        li {
+          position: relative;
           float: left;
           width: 63px;
           height: 71px;
           border-right: 1px solid #e4e4e4;
           border-bottom: 1px solid #e4e4e4;
           text-align: center;
-          i{
-            display:inline-block;
+          i {
+            display: inline-block;
             width: 24px;
             height: 28px;
             background-color: pink;
             margin-top: 12px;
-            background:url(../images/icons.png) no-repeat -19px -15px;
+            // background:url(../images/icons.png) no-repeat -19px -15px;
+          }
+          &:nth-child(1) i {
+            background: url(../images/icons.png) no-repeat -17px -16px;
+          }
+          &:nth-child(2) i {
+            background: url(../images/icons.png) no-repeat -79px -18px;
+          }
+          &:nth-child(2) img {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          &:nth-child(3) i {
+            background: url(../images/icons.png) no-repeat -141px -16px;
+          }
+
+          &:nth-child(4) i {
+            background: url(../images/icons.png) no-repeat -206px -16px;
+          }
+
+          &:nth-child(5) i {
+            background: url(../images/icons.png) no-repeat -16px -87px;
+          }
+
+          &:nth-child(6) i {
+            background: url(../images/icons.png) no-repeat -77px -87px;
+          }
+
+          &:nth-child(7) i {
+            background: url(../images/icons.png) no-repeat -140px -87px;
+          }
+
+          &:nth-child(8) i {
+            background: url(../images/icons.png) no-repeat -206px -87px;
+          }
+
+          &:nth-child(9) i {
+            background: url(../images/icons.png) no-repeat -16px -158px;
+          }
+
+          &:nth-child(10) i {
+            background: url(../images/icons.png) no-repeat -78px -158px;
+          }
+
+          &:nth-child(11) i {
+            background: url(../images/icons.png) no-repeat -142px -158px;
+          }
+
+          &:nth-child(12) i {
+            background: url(../images/icons.png) no-repeat -205px -158px;
           }
         }
       }
     }
-    .bargin{
+    .bargin {
       margin-top: 5px;
+    }
+  }
+}
+
+// 推荐模块
+.recom {
+  height: 163px;
+  background-color: #ebebeb;
+  margin-top: 12px;
+  .recom-hd {
+    float: left;
+    height: 163px;
+    width: 205px;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+    p {
+      padding-top: 10px;
+      font-size: 18px;
+      a{
+        color: white;
+      }
+    }
+  }
+  .recom-bd {
+    float: left;
+    li {
+      position: relative;
+      float: left;
+      // 切的图包括右边的线，所以这里就不写了
+      // &:nth-child(-n+3)::after{
+      //   content:'';
+      //   position:absolute;
+      //   right:0;
+      //   top:10px;
+      //   width: 1px;
+      //   height:145px;
+      //   background-color: #ddd;
+      // }
+      img {
+        width: 248px;
+        height: 163px;
+      }
+    }
+  }
+}
+
+//猜你喜欢模块
+.like {
+  margin-top: 30px;
+  height: 265px;
+  border-bottom: 1px solid #f2f2f2;
+  .like-hd {
+    height: 35px;
+    position: relative;
+    h3 {
+      float: left;
+      font-size: 18px;
+    }
+    a {
+      float: right;
+      font-size: 12px;
+      margin-right: 20px;
+      &::after {
+        position: absolute;
+        right: 0;
+        font-family: "icomoon";
+        content: "\ea2e";
+      }
+    }
+  }
+
+  ul li {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 260px;
+    text-align: center;
+    &:nth-child(4) img {
+      margin-top: 50px;
+    }
+    img {
+      margin-top: 15px;
+    }
+    p {
+      position: absolute;
+      top: 160px;
+      left: 35px;
+    }
+    h3 {
+      position: absolute;
+      top: 200px;
+      left: 35px;
+      color: #df383b;
+      font-size: 16px;
+    }
+  }
+}
+
+// 楼层区模块
+// 家用电器模块
+.floor {
+  .w {
+    margin-top: 30px;
+  }
+  .jiadian,.shouji,.diannao {
+    .box-hd {
+      height: 30px;
+      border-bottom: 2px solid #c81623;
+      h3 {
+        float: left;
+        font-size: 18px;
+        color: #c81623;
+        font-weight: 400;
+      }
+      .tab-list {
+        float: right;
+        ul li {
+          float: left;
+          line-height: 30px;
+          a {
+            margin: 0 15px;
+          }
+        }
+      }
+    }
+    .box-bd {
+      height: 361px;
+      // background-color: pink;
+      .tab-content {
+        .tab-list-item {
+          & > div {
+            float: left;
+            height: 361px;
+          }
+          .col-210 {
+            width: 210px;
+            background-color: #f9f9f9;
+            text-align: center;
+            // 给大盒子添加了水平居中，里面所有的元素都会居中显示的
+            ul {
+              padding-left: 12px;
+              li {
+                float: left;
+                width: 85px;
+                height: 34px;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+                line-height: 33px;
+                margin-right: 10px;
+              }
+            }
+          }
+          .col-329 {
+            width: 329px;
+          }
+          .col-221 {
+            width:221px;
+            border-right:1px solid #ccc;
+          }
+          .col-219 {
+            width: 219px;
+          }
+          .bb{
+            /* 一般情况下，a如果包含有宽度的盒子，a需要转换为块级元素 */
+            display: block;
+            border-bottom: 1px solid #ededed;
+          }
+        }
+      }
     }
   }
 }

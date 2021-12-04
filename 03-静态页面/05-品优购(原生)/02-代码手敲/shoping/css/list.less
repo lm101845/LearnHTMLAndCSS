@@ -1,0 +1,64 @@
+// 列表页专有的CSS
+
+.nav{
+  overflow: hidden;
+}
+.sk{
+  position: absolute;
+  left: 190px;
+  top: 40px;
+  border-left: 1px solid #c81523;
+  padding: 3px 0 0 14px;
+}
+
+.sk-list{
+  float: left;
+  li{
+    float: left;
+    a{
+      display: block;
+      line-height: 47px;
+      padding: 0 30px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #000;
+    }
+  }
+}
+
+
+.sk-con{
+  float: left;
+  li{
+    float: left;
+    &:last-child a::after{
+      content:'\e91e';
+      font-family:'icomoon';
+    }
+    a{
+      display: block;
+      line-height: 49px;
+      padding: 0 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+.sk-bd ul li{
+  width: 290px;
+  height: 460px;
+  float: left;
+  margin-right: 13px;
+  border:1px solid transparent;
+  overflow:hidden;
+  &:hover{
+    border: 1px solid #c81523;
+  }
+  &:nth-child(4n){
+    margin-right: 0;
+  }
+  img{
+    width: 290px;
+    height: 462px;
+  }
+}
