@@ -1,8 +1,8 @@
 <!--
  * @Author: liming
  * @Date: 2021-04-04 10:52:56
- * @LastEditTime: 2021-04-12 23:32:00
- * @FilePath: \BigScreenProject\我写的代码\index.html
+ * @LastEditTime: 2021-12-05 16:41:17
+ * @FilePath: \01-大屏数据可视化\02-代码手敲\BigScreen\index.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -48,8 +48,10 @@
         }
       </script>
     </header>
+
     <!-- 页面主体部分 -->
     <section class="mainbox">
+      <!-- 一共有3列 -->
       <div class="column">
         <div class="panel bar">
           <!-- panel是公共样式 -->
@@ -59,16 +61,21 @@
           <!-- 因为一共有4个，所以再来一个子元素，再来一个before和after -->
           <!-- 这个盒子必须在页面最底端，宽度和父盒子一样 -->
         </div>
+
         <div class="panel line">
           <!-- panel是公共样式 -->
-          <h2>柱形图-就业行业</h2>
+          <h2>
+            折线图-人员变化
+            <a href="javascript:;">2020</a>
+            <a href="javascript:;">2021</a>
+          </h2>
           <div class="chart">图表</div>
           <div class="panel-footer"></div>
         </div>
 
         <div class="panel pie">
           <!-- panel是公共样式 -->
-          <h2>柱形图-就业行业</h2>
+          <h2>饼形图-年龄分布</h2>
           <div class="chart">图表</div>
           <div class="panel-footer"></div>
         </div>
@@ -90,6 +97,7 @@
             </ul>
           </div>
         </div>
+
         <!-- 地图模块 -->
         <div class="map">
           <div class="map1"></div>
@@ -100,31 +108,35 @@
       </div>
 
       <div class="column">
-        <div class="panel bar">
+        <div class="panel bar2">
           <!-- panel是公共样式 -->
-          <h2>柱形图-就业行业</h2>
+          <h2>折线图-人员变化</h2>
           <div class="chart">图表</div>
           <div class="panel-footer"></div>
           <!-- 因为一共有4个，所以再来一个子元素，再来一个before和after -->
           <!-- 这个盒子必须在页面最底端，宽度和父盒子一样 -->
         </div>
-        <div class="panel line">
+        <div class="panel line2">
           <!-- panel是公共样式 -->
-          <h2>柱形图-就业行业</h2>
+          <h2>折线图-播放量</h2>
           <div class="chart">图表</div>
           <div class="panel-footer"></div>
         </div>
 
-        <div class="panel pie">
+        <div class="panel pie2">
           <!-- panel是公共样式 -->
-          <h2>柱形图-就业行业</h2>
+          <h2>饼形图-地区分布</h2>
           <div class="chart">图表</div>
           <div class="panel-footer"></div>
         </div>
       </div>
     </section>
     <script src="js/flexible.js"></script>
-    <script src='js/echarts.min.js'></script>
-    <script src='js/index.js'></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <!-- 必须先引入china.js这个文件，因为中国地图需要 -->
+    <script src="js/index.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/myMap.js"></script>
   </body>
 </html>

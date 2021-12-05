@@ -1,7 +1,7 @@
 /*
  * @Author: liming
  * @Date: 2021-07-13 01:19:11
- * @LastEditTime: 2021-09-12 07:18:24
+ * @LastEditTime: 2021-12-05 16:37:22
  * @FilePath: \01-大屏数据可视化\02-代码手敲\BigScreen\css\index.less
  */
 * {
@@ -145,6 +145,11 @@ header {
       text-align: center;
       font-size: 0.25rem;
       font-weight: 400;
+      a{
+        color: #fff;
+        text-decoration: none;
+        margin:0 .125rem;
+      }
     }
 
     .chart {
@@ -296,5 +301,17 @@ header {
     to {
       transform: translate(-50%, -50%) rotate(-360deg);
     }
+  }
+}
+
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
   }
 }
