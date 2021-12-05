@@ -1,0 +1,35 @@
+<!--
+ * @Author: liming
+ * @Date: 2021-12-05 18:29:22
+ * @LastEditTime: 2021-12-05 18:57:28
+ * @FilePath: \01-尚硅谷张天禹\02-代码手敲\viewport适配\viewport适配.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- 让布局视口等于设备独立像素值 -->
+  <meta name="viewport" content="width = 375">
+  <!-- 这样写好像可以，把视口给固定死，但是有1px边框问题,边框强制参与适配了 -->
+  <!-- 还有一个致命的问题，有些安卓机不支持具体的值 -->
+  <!-- viewport适配能做适配，但它不是最优秀的，上面放的图片会【失真】 -->
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    #demo{
+      width: 345px;
+      height: 150px;
+      background-color: pink;
+      margin: 15px auto 0;
+      border:1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+</body>
+</html>
