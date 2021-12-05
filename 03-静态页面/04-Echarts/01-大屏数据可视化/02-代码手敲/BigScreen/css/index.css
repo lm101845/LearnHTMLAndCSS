@@ -1,7 +1,7 @@
 /*
  * @Author: liming
  * @Date: 2021-07-13 01:19:11
- * @LastEditTime: 2021-12-05 16:37:22
+ * @LastEditTime: 2021-12-05 16:45:28
  * @FilePath: \01-大屏数据可视化\02-代码手敲\BigScreen\css\index.less
  */
 * {
@@ -53,6 +53,7 @@ header .showTime {
 .mainbox .column:nth-child(2) {
   flex: 5;
   margin: 0 0.125rem 0.1875rem;
+  overflow: hidden;
 }
 .mainbox .panel {
   position: relative;
