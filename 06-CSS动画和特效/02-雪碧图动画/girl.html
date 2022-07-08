@@ -1,0 +1,41 @@
+<!--
+ * @Author: liming
+ * @Date: 2022-07-08 16:15:24
+ * @LastEditTime: 2022-07-08 16:15:26
+ * @FilePath: \04-test\4.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /*给背景颜色更好的看出熊的姿态*/
+            background-color: #ccc;
+        }
+
+        .girl {
+            background: url('girl.png');
+            width: 160px;
+            height: 185px;
+            background-size: 1120px 212px;
+            animation: demo 1s steps(7) infinite;   
+        }
+
+        @keyframes demo{
+            0%{ background-position: 0 0 }
+            100%{ background-position: -1120px 0} 
+}
+    </style>
+</head>
+
+<body>
+    <div class="girl">
+    </div>
+</body>
+
+</html>
