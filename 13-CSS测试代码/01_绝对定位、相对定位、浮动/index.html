@@ -1,0 +1,30 @@
+<!--
+ * @Author liming
+ * @Date 2022/12/6 19:39
+ * https://www.zhangxinxu.com/wordpress/?p=1287
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div { padding:20px; margin-bottom:10px; background-color:#f0f3f9; }
+        .abs { position:absolute; }
+    </style>
+</head>
+<body>
+<!--
+一个div标签默认宽度是100%显示的，但是一旦被absolute属性缠上，则100%默认宽度就会变成自适应内部元素的宽度。
+-->
+<div class="div">
+    <img src="cat.jpg" />
+    <p>无absolute</p>
+</div>
+<div class="div abs">
+    <img src="cat.jpg" />
+    <p>absolute后</p>
+</div>
+
+</body>
+</html>
