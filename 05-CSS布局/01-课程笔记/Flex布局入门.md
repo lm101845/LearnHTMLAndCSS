@@ -129,7 +129,7 @@ Flex是`flexible Box`的缩写，意为"弹性布局"，用来为**盒状模型*
 
 以下由6个属性是对**父元素**设置的
 
-* `flex-direction`：设置主轴的方向
+* `flex-direction`：设置主轴的方向(默认主轴为x轴)
 * `justify-content`：设置主轴上的子元素排列方式
 * `flex-wrap`：设置子元素是否换行
 * `align-items`：设置侧轴上的子元素排列方式（单行）

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400"></canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+
+      // 3. 圆锥渐变createConicGradient(角度，位置x，位置y)
+      let coneGradient = ctx.createConicGradient(Math.PI / 4, 300, 200);
+      coneGradient.addColorStop(0, "red");
+      coneGradient.addColorStop(0.5, "yellow");
+      coneGradient.addColorStop(1, "blue");
+      ctx.fillStyle = coneGradient;
+      ctx.fillRect(0, 0, 600, 400);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400">
+      当前浏览器不支持canvas，请下载最新的浏览器
+      <a href="https://www.google.cn/intl/zh-CN/chrome/">立即下载</a>
+    </canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+
+      // 判断是否有getContext
+      if (!c1.getContext) {
+        console.log("当前浏览器不支持canvas，请下载最新的浏览器");
+      }
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+
+      // 获取图片
+      let img = new Image();
+      img.src = "./imgs/girl.webp";
+      img.onload = function () {
+        // 第一种绘制图片的方式,参数1为图片对象，参数2为将图片渲染到画布的水平位置，参数3将图片渲染到画布的垂直位置;
+        // ctx.drawImage(img, 0, 0);
+        // 第二种绘制图片,参数1为图片对象，参数2为将图片渲染到画布的水平位置，参数3将图片渲染到画布的垂直位置,5将图片缩放到对应的宽度，6将图片缩放到对应的高度
+        // ctx.drawImage(img, 0, 0, 600, 400);
+        // 第三种绘制图片的方式，img参数后面的四个参数分别为源图片上面你要裁剪的起点位置和矩形的宽高，后面四个参数分别为画布的位置和要渲染的矩形宽高
+        ctx.drawImage(img, 0, 0, 600, 400);
+
+        let imageData = ctx.getImageData(0, 0, 600, 400);
+
+        // 获取像素数据
+        console.log(imageData);
+
+        // 循环修改数据
+        for (let i = 0; i < imageData.data.length; i += 4) {
+          // 计算出当前像素的平均值
+          let avg =
+            (imageData.data[i] +
+              imageData.data[i + 1] +
+              imageData.data[i + 2]) /
+            3;
+          imageData.data[i] = avg;
+          imageData.data[i + 1] = avg;
+          imageData.data[i + 2] = avg;
+          imageData.data[i + 3] = 255;
+        }
+
+        // for (let i = 0; i < imageData.data.length; i += 4) {
+        //   imageData.data[i] = 255 - imageData.data[i];
+        //   imageData.data[i + 1] = 255 - imageData.data[i + 1];
+        //   imageData.data[i + 2] = 255 - imageData.data[i + 2];
+        //   imageData.data[i + 3] = 255;
+        // }
+
+        // 将修改后的数据重新渲染到画布上
+        ctx.putImageData(imageData, 0, 0, 300, 200, 300, 200);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400">
+      当前浏览器不支持canvas，请下载最新的浏览器
+      <a href="https://www.google.cn/intl/zh-CN/chrome/">立即下载</a>
+    </canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+
+      // 判断是否有getContext
+      if (!c1.getContext) {
+        console.log("当前浏览器不支持canvas，请下载最新的浏览器");
+      }
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+
+      ctx.beginPath();
+      //  绘制一张脸
+      ctx.arc(75, 75, 50, 0, Math.PI * 2);
+      // 使用moveTo可以绘制1条不连续的路径
+      ctx.moveTo(110, 75);
+
+      // 绘制嘴巴
+      ctx.arc(75, 75, 35, 0, Math.PI);
+      ctx.moveTo(65, 65);
+
+      // 绘制左眼
+      ctx.arc(60, 65, 5, 0, Math.PI * 2);
+      ctx.moveTo(95, 65);
+
+      // 绘制右眼
+      ctx.arc(90, 65, 5, 0, Math.PI * 2);
+
+      ctx.stroke();
+      ctx.closePath();
+    </script>
+  </body>
+</html>

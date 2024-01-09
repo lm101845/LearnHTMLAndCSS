@@ -1,0 +1,62 @@
+<!--
+ * @Author liming
+ * @Date 2022/12/15 14:53
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .tags {
+            display: inline-flex;
+            flex-wrap: wrap;
+            font-size: 32px;
+        }
+
+        .tag {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .tag-text {
+            flex-grow: 1;
+        }
+
+        .tag-icon {
+            margin-left: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="tags">
+  <span class="tag">
+    <span class="tag-text">[文本1神鼎飞]</span>
+    <span class="tag-icon">[图标 1]</span>
+  </span>
+        <span class="tag">
+    <span class="tag-text">[文本1神东方闪电发鼎折覆放到餗砂法]</span>
+    <span class="tag-icon">[图标 1]</span>
+  </span>
+        <span class="tag">
+    <span class="tag-text">[文本 2]</span>
+    <span class="tag-icon">[图标 2]</span>
+  </span>
+        <span class="tag">
+    <span class="tag-text">[文本 3]</span>
+    <span class="tag-icon">[图标 3]</span>
+  </span>
+        ...
+    </div>
+
+</div>
+</body>
+</html>

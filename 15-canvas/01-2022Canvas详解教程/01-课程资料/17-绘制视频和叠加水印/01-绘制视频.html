@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400">
+      当前浏览器不支持canvas，请下载最新的浏览器
+      <a href="https://www.google.cn/intl/zh-CN/chrome/">立即下载</a>
+    </canvas>
+
+    <video src="./imgs/mov_bbb.mp4" controls hidden></video>
+
+    <button id="btn">播放/暂停</button>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+
+      // 判断是否有getContext
+      if (!c1.getContext) {
+        console.log("当前浏览器不支持canvas，请下载最新的浏览器");
+      }
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+
+      // 获取设置视频对象
+      // var video = document.createElement("video");
+      // video.src = "./mov_bbb.mp4";
+
+      var video = document.querySelector("video");
+
+      // 获取按钮
+      let btn = document.querySelector("#btn");
+      btn.onclick = function () {
+        if (video.paused) {
+          video.play();
+          render();
+        } else {
+          video.pause();
+        }
+      };
+
+      // logo图片对象
+      let img = new Image();
+      img.src = "./imgs/logo.png";
+
+      function render() {
+        ctx.drawImage(video, 0, 0, 600, 400);
+        ctx.drawImage(img, 400, 350, 200, 50);
+        requestAnimationFrame(render);
+      }
+    </script>
+  </body>
+</html>

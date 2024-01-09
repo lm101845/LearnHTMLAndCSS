@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400"></canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+      // 3. 绘制图形
+      // 3.1 绘制矩形fillRect(位置x，位置y，宽度，高度)
+
+      ctx.fillStyle = "rgba(0,0,255,1)";
+      ctx.fillRect(300, 200, 100, 100);
+      ctx.globalCompositeOperation = "source-in";
+      ctx.fillStyle = "rgba(255,0,0,1)";
+      ctx.fillRect(250, 150, 100, 100);
+    </script>
+  </body>
+</html>

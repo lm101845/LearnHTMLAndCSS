@@ -1,0 +1,73 @@
+<!--
+ * @Author liming
+ * @Date 2022/12/15 14:37
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father{
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .left{
+            flex:1;
+            background-color: blue;
+
+        }
+
+        .right{
+            flex:3;
+            overflow: hidden;
+        }
+
+        .detail{
+            color: #5774EC;
+            background: rgba(87,116,236,.1);
+            border-radius: 2px;
+            padding: 0.6vw 2.1vw;
+            margin: 2.1%;
+            white-space: nowrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="left"></div>
+        <div class="right">
+            <div class="detail">
+                <span>文字</span>
+                <span>图片</span>
+            </div>
+
+            <div class="detail">
+                <span>文字</span>
+                <span>图片</span>
+            </div>
+
+            <div class="detail">
+                <span>文字</span>
+                <span>图片</span>
+            </div>
+
+            <div class="detail">
+                <span>文字</span>
+                <span>图片</span>
+            </div>
+
+            <div class="detail">
+                <span>文字</span>
+                <span>图片</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

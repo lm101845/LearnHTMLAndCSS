@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400">
+      当前浏览器不支持canvas，请下载最新的浏览器
+      <a href="https://www.google.cn/intl/zh-CN/chrome/">立即下载</a>
+    </canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+
+      // 判断是否有getContext
+      if (!c1.getContext) {
+        console.log("当前浏览器不支持canvas，请下载最新的浏览器");
+      }
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+
+      ctx.beginPath();
+      // 第一点
+      ctx.moveTo(300, 200);
+      // 第二个点和第三个，以及圆弧的半径
+      ctx.arcTo(300, 250, 250, 250, 50);
+      ctx.stroke();
+
+      ctx.closePath();
+    </script>
+  </body>
+</html>

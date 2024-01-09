@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400"></canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+      // 3. 绘制图形
+
+      let radiaGradient = ctx.createRadialGradient(250, 150, 10, 300, 200, 100);
+
+      radiaGradient.addColorStop(0, "#ffcccc");
+      radiaGradient.addColorStop(1, "red");
+      ctx.fillStyle = radiaGradient;
+
+      ctx.arc(300, 200, 100, 0, Math.PI * 2);
+      ctx.fill();
+    </script>
+  </body>
+</html>

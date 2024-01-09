@@ -1,0 +1,17 @@
+/**
+ * @Author liming
+ * @Date 2022/12/9 15:42
+ **/
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}

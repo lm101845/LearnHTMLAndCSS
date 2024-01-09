@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400">
+      当前浏览器不支持canvas，请下载最新的浏览器
+      <a href="https://www.google.cn/intl/zh-CN/chrome/">立即下载</a>
+    </canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+
+      // 判断是否有getContext
+      if (!c1.getContext) {
+        console.log("当前浏览器不支持canvas，请下载最新的浏览器");
+      }
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+
+      // 文字，大小/字体
+      ctx.strokeStyle = "#ff0000";
+
+      ctx.font = "100px Microsoft YaHei";
+      // 填充渲染文字
+      // fillText(文本，文本的起点x,文本起点的y,绘制文字最大的宽度)
+      // ctx.fillText("老陈", 300, 200, 100);
+
+      // 文本对齐选项textAlign,start(默认),end,left,right,center
+      ctx.textAlign = "center";
+      // 文本基线对齐,textBaseline,top,bottom,alphabetic
+      ctx.textBaseline = "middle";
+      // 文本的方向
+      // ctx.direction = "rtl";
+
+      // 预测量文本宽度
+      let text = ctx.measureText("Hello!");
+      console.log(text);
+
+      ctx.strokeText("Hello!", 300, 200);
+
+      ctx.arc(300, 200, 5, 0, 2 * Math.PI);
+      ctx.fill();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      canvas {
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400"></canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+      // 3. 绘制图形
+      // 3.1 绘制矩形fillRect(位置x，位置y，宽度，高度)
+      // scale拉伸坐标系
+      ctx.scale(5, 2);
+      ctx.fillRect(0, 0, 50, 50);
+    </script>
+  </body>
+</html>

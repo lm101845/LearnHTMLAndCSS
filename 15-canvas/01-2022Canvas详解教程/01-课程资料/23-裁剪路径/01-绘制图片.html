@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <canvas id="c1" width="600" height="400">
+      当前浏览器不支持canvas，请下载最新的浏览器
+      <a href="https://www.google.cn/intl/zh-CN/chrome/">立即下载</a>
+    </canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+
+      // 判断是否有getContext
+      if (!c1.getContext) {
+        console.log("当前浏览器不支持canvas，请下载最新的浏览器");
+      }
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+
+      var heartPath = new Path2D();
+
+      console.log(heartPath);
+
+      // 起点
+      heartPath.moveTo(300, 200);
+      // 2个控制点、1个终点
+      heartPath.bezierCurveTo(350, 150, 400, 200, 300, 250);
+      heartPath.bezierCurveTo(200, 200, 250, 150, 300, 200);
+
+      ctx.stroke(heartPath);
+
+      var chatPath = new Path2D();
+
+      chatPath.moveTo(200, 300);
+      chatPath.quadraticCurveTo(150, 300, 150, 200);
+      chatPath.quadraticCurveTo(150, 100, 300, 100);
+      chatPath.quadraticCurveTo(450, 100, 450, 200);
+      chatPath.quadraticCurveTo(450, 300, 250, 300);
+      chatPath.quadraticCurveTo(250, 350, 150, 350);
+      chatPath.quadraticCurveTo(200, 350, 200, 300);
+
+      ctx.clip(chatPath);
+
+      ctx.fill(heartPath);
+
+      // 获取图片
+      let img = new Image();
+      img.src = "./imgs/girl.webp";
+      img.onload = function () {
+        // 第一种绘制图片的方式,参数1为图片对象，参数2为将图片渲染到画布的水平位置，参数3将图片渲染到画布的垂直位置;
+        // ctx.drawImage(img, 0, 0);
+        // 第二种绘制图片,参数1为图片对象，参数2为将图片渲染到画布的水平位置，参数3将图片渲染到画布的垂直位置,5将图片缩放到对应的宽度，6将图片缩放到对应的高度
+        // ctx.drawImage(img, 0, 0, 600, 400);
+        // 第三种绘制图片的方式，img参数后面的四个参数分别为源图片上面你要裁剪的起点位置和矩形的宽高，后面四个参数分别为画布的位置和要渲染的矩形宽高
+        ctx.drawImage(img, 0, 0, 600, 400);
+        ctx.lineWidth = 20;
+        ctx.stroke(chatPath);
+      };
+    </script>
+  </body>
+</html>

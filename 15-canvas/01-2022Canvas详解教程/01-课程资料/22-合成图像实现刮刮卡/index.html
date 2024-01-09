@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #ggk {
+        width: 600px;
+        height: 400px;
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 400px;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        id：标识元素的唯一性
+        width:画布的宽度
+        height:画布的高度
+     -->
+    <div id="ggk">谢谢惠顾</div>
+    <canvas id="c1" width="600" height="400"></canvas>
+
+    <script>
+      // 1. 找到画布
+      var c1 = document.getElementById("c1");
+      // 2. 获取画笔，上下文对象
+      var ctx = c1.getContext("2d");
+      // 3. 绘制图形
+      let img = new Image();
+      img.src = "./imgs/m2.png";
+      img.onload = function () {
+        ctx.drawImage(img, 0, 0, 600, 400);
+      };
+
+      var isDraw = false;
+
+      c1.onmousedown = function () {
+        isDraw = true;
+      };
+      c1.onmouseup = function () {
+        isDraw = false;
+      };
+
+      c1.onmousemove = function (e) {
+        if (isDraw) {
+          var x = e.pageX;
+          var y = e.pageY;
+
+          ctx.globalCompositeOperation = "destination-out";
+
+          ctx.arc(x, y, 20, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      };
+
+      let random = Math.random();
+      if (random < 0.1) {
+        var ggkDiv = document.querySelector("#ggk");
+        ggkDiv.innerHTML = "恭喜您获得IPHONE14 PRO大奖！";
+      }
+    </script>
+  </body>
+</html>
